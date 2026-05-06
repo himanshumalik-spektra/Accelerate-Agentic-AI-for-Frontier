@@ -328,6 +328,13 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     ![](./media/image69.png)
 
+<validation step="7a657a19-9fda-4427-bf5b-4929e924c67c" />        
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.        
+
 ## Task 6: Test the Application
 
 1. Go back to the codespace and copy the **Frontend URL**; it will be used later to launch the application.
@@ -397,6 +404,13 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
     ![](./media/image84.png)
 
     ![](./media/image85.png)
+
+<validation step="0cd5f7a0-43ba-4390-88dd-e8f7a18e6a7e" />        
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.        
 
 ## Summary
 

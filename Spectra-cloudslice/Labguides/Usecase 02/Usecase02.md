@@ -270,7 +270,7 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     ![](./media/image52.png)
 
-1. Backend and frontend container app updated sucessfully
+1. Backend and frontend container app updated successfully
 
      ![](./media/image53.png)
 

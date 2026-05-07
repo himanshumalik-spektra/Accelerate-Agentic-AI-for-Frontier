@@ -289,15 +289,6 @@ incorrect.](./media/image46.png)
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image47.png)
 
-   ### Congratulations!
-
-   You’ve completed the task. Now let’s validate it:
-     
-   - Hit the **Validate** button for the corresponding task.
-   - If successful, proceed to the next task.
-   - If not, retry using the lab guide.
-   - Need help? cloudlabs-support@spektrasystems.com
-   <validation step="ae592ae1-0191-4fbf-87e0-901989639130" />  
 
 ## Task 5: Interact with Your AI Agent Using Predefined Questions
 

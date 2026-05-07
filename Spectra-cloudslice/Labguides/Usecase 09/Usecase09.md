@@ -337,16 +337,6 @@ incorrect.](../Usecase%2008/media/image24.png)
 
     > **Note:** If you get any error while runnnig 2-add-product-index.py file, from the left navigation pane open the .env file and look for the missing variable.
 
-   ### Congratulations!
-
-   You’ve completed the task. Now let’s validate it:
-     
-   - Hit the **Validate** button for the corresponding task.
-   - If successful, proceed to the next task.
-   - If not, retry using the lab guide.
-   - Need help? cloudlabs-support@spektrasystems.com
-   <validation step="245c9775-24f8-4902-95f8-31f0c1dc1f8c" />  
-
 ## Task 5: Environment Setup & Validation
 
 In this task, you will configure and validate your development
@@ -616,17 +606,7 @@ and the Foundry project.
 
     ![](./media/image136.png)
 
-    ![](./media/image137.png)
-
-   ### Congratulations!
-
-   You’ve completed the task. Now let’s validate it:
-     
-   - Hit the **Validate** button for the corresponding task.
-   - If successful, proceed to the next task.
-   - If not, retry using the lab guide.
-   - Need help? cloudlabs-support@spektrasystems.com
-   <validation step="2f00dd66-11f7-44c3-8dab-300ea431c166" />  
+    ![](./media/image137.png) 
 
 ## Task 10: Cora-For-Zava: Getting Started with Your First AI Evaluation Flow
 

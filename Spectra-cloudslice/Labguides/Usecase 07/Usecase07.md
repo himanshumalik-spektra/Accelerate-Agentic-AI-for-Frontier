@@ -88,17 +88,7 @@ In this task, you will create your first AI agent within the Foundry environment
 
 1. The agent is now ready to test in playground
 
-     ![](./media/us17.1.png)
-
-   ### Congratulations!
-
-   You’ve completed the task. Now let’s validate it:
-     
-   - Hit the **Validate** button for the corresponding task.
-   - If successful, proceed to the next task.
-   - If not, retry using the lab guide.
-   - Need help? cloudlabs-support@spektrasystems.com
-   <validation step="99a311b7-2116-4e01-a52a-865355b2ffef" />     
+     ![](./media/us17.1.png)    
 
 ### Task 3: Create Application Insights
 

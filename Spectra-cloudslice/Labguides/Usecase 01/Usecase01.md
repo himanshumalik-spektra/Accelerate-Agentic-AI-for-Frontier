@@ -231,19 +231,19 @@ document and required Role permissions to it.
 
 1. On the AI Search service page, click **Import data** to start importing data into the search index.
 
-   ![image](./media/uc1-40.png)
+    ![image](./media/uc1-40.png)
 
 1. In the **Import data** pane, select **Azure Blob Storage** as the data source to proceed with importing data.
 
-   ![image](./media/uc1-41.png)
+    ![image](./media/uc1-41.png)
 
 1. In the **Import data** workflow, select **RAG** as the scenario to enable AI-powered search over your data.
 
-   ![image](./media/uc1-42.png)
+    ![image](./media/uc1-42.png)
 
 1. In the **Configure your Azure Blob Storage** step, select the **Storage account** **leavepolicystg<inject key="DeploymentID" enableCopy="false"/>** (1), choose the **Blob container** as **document** (2), and click **Next** (3) to proceed.
 
-   ![image](./media/uc1-43.png)
+    ![image](./media/uc1-43.png)
 
 1. In the **Vectorize your text** step, configure the following:
 
@@ -258,19 +258,19 @@ document and required Role permissions to it.
 
 1. In the **Vectorize and enrich your images** step, leave the default options unchanged (no selection) and click **Next** to proceed.
 
-   ![image](./media/uc1-45.png)
+    ![image](./media/uc1-45.png)
 
 1. In the **Vectorize and enrich your images** step, leave the default options unchanged (no selection) and click **Next** to proceed.
 
-   ![image](./media/uc1-46.png)
+    ![image](./media/uc1-46.png)
 
 1. In the **Review and create** step, verify the configuration details and click **Create** to complete the RAG setup.
 
-   ![image](./media/uc1-47.png)
+    ![image](./media/uc1-47.png)
 
 1. Once the setup is complete, click **Close** to view and test your indexed data.
 
-   ![image](./media/uc1-48.png)       
+    ![image](./media/uc1-48.png)       
 
    ### Congratulations!
 

@@ -63,7 +63,7 @@ system** can:
 
 ## Task 1: Register Service provider
 
-1. In the Azure portal search bar, type **Subscriptions** (1), then select **Subscriptions** from the **Services** list (2) to open it.
+1. In the Azure portal search bar, type **Subscriptions (1)**, then select **Subscriptions (2)** from the Services list to open it.
 
     ![](../Usecase%2001/media/uc2-0.png)
 
@@ -71,7 +71,7 @@ system** can:
 
     ![](../Usecase%2001/media/uc2-21.png)
 
-1. In the selected subscription, navigate to **Settings** (1), select **Resource providers** (2), search for **Microsoft.CognitiveServices** (3), and select it from the list (4) and verify that the status is registered with a green tick.
+1. In the selected subscription, navigate to **Settings (1)**, select **Resource providers (2)**, search for **Microsoft.CognitiveServices (3)**, and select it from the **list (4)** and verify that the status is registered with a green tick.
 
     ![](../Usecase%2001/media/rp0.png)
 
@@ -93,16 +93,26 @@ system** can:
 
      ![](./media/image12.png)
 
-2. Click on **fork** to fork the repo. Give unique name to the repo and
-    click on **Create repo** button.
+2. Click on **fork** and select **Create a new fork** to fork the repo. Give unique name to the repo and click on **Create fork** button.
 
-    ![](./media/image13.png)
+    ![](./media/image13(a).png)
+    ![](./media/image13(b).png)
 
-3. Click on **Code -\ Codespaces -\ Codespaces+**
+1. Click on **Code (1)**, switch to the **Codespaces (2)** tab, and select **Create codespace on main (3)** to launch the development environment.
 
-     ![](./media/image14.png)
+    ![](./media/image13(c).png) 
 
-4. Wait for the Codespaces environment to setup .It takes few minutes
+    > If the "This site is trying to open Visual Studio Code" pop-up appears, click **Cancel**.
+
+1. Click the highlighted Back button to navigate back to the previous Github page.
+
+    ![](./media/image13(d).png)
+
+1. Select the **Code (1)** dropdown and navigate to the **Codespaces (2)** tab, select the **ellipsis menu(3)** and choose **Open in Browser (4)**
+
+    ![](./media/image13(e).png)
+
+1. Wait for the Codespaces environment to setup .It takes few minutes
     to setup completely
 
      ![](./media/image15.png)
@@ -201,6 +211,8 @@ incorrect.](./media/image21.png)
 
     ![A screenshot of a computer AI-generated content may be incorrect.](./media/image38.png)
 
+    ![](./media/image31(a).png)
+
 1. Select your subscription
 
      ![](./media/image39.png)
@@ -219,7 +231,7 @@ incorrect.](./media/image21.png)
 
 ## Task 5: Verify deployed resources in the Azure portal
 
-1. Navigate to **Azure protal** and select **Resource groups**
+1. Navigate to **Azure portal** and select **Resource groups**
 
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image45.png)
@@ -260,13 +272,15 @@ incorrect.](./media/image45.png)
 
     ![](./media/image50.png)
 
-1. Go back to resorcegroup and click on **Foundry Project.**
+1. Go back to resourcegroup and click on **Foundry Project.**
 
      ![](./media/image51.png)
 
 1. Click **Go to Foundry portal** to verify that the model has been successfully deployed.    
     
     ![](./media/image52.png)
+
+1. In the Foundry portal at the left click on **Models + endpoints** to see the **models** that have been deployed.
 
     ![](./media/image53.png)
 
@@ -296,7 +310,7 @@ incorrect.](./media/image45.png)
 
 1. Click on Identity Provider dropdown to see a list of identity providers and select the first option **Microsoft** from the drop-down list.
 
-    ![](./media/image57.png)
+    ![](./media/image57(a).png)
 
 1. Select **client secret expiration** under App registration and click on **Add** button
 
@@ -313,7 +327,7 @@ incorrect.](./media/image45.png)
 
     ![](./media/image61.png)
 
-1. Wait for the web application deployment to complete.
+1. Wait for the web application deployment to complete and click on **Accept**
 
     ![](./media/image62.png)
 
@@ -321,7 +335,7 @@ incorrect.](./media/image45.png)
 
 ## Task 7: Review and Explore the Sample Questions for Your Copilot Application
 
-1. Select the Team option from the top-left section, then click Continue after choosing the desired team.
+1. Select the Team option from the top-left section and explore the different teams.
 
     ![](./media/image64.png)
 
@@ -357,7 +371,7 @@ actions.
 
     ![](./media/image70.png)
 
-1. Task: Click **"Approve Task Plan"** Button
+1. Click **"Approve Task Plan"** Button
 
     ![](./media/image71.png)
 
@@ -378,17 +392,19 @@ plan.
 This scenario demonstrates how AI agents streamline marketing content
 creation while ensuring alignment with product details and brand voice.
 
-1. Select the Marketing team, follow the prompts below.
+1. Select the Marketing team, follow the prompts below. 
 
-   **Agents Used:** Product, Marketing , Proxy
+    Click on **Contoso** at the left side.
 
     ![](./media/image73.png)
 
 1. Switch to **"Product Marketing Team"** from the top left section and click **"Continue"** button.
 
+    **Agents Used:** Product, Marketing , Proxy
+
     ![](./media/image74.png)
 
-1. Task: From the Quick Tasks, select **"Draft a press release"** and submit it.
+1. From the Quick Tasks, select **"Draft a press release"** and submit it.
 
     ![](./media/image75.png)
 
@@ -401,7 +417,7 @@ creation while ensuring alignment with product details and brand voice.
     **Observe:** It will trigger the "Generating Plan Action" and give the
     Proposed Plan with 4 or more Steps.
 
-1. Task: Click on **"Approve Task Plan"** Button.
+1. Click on **"Approve Task Plan"** Button.
 
     ![](./media/image77.png)
 
@@ -426,21 +442,17 @@ onboarding activities efficiently and accurately
 
 1. Select the HR team, follow the prompts below.
 
-    **Agents Used:** HR Helper, Technical support , Proxy
+    Click on **Contoso** at the left side.
 
     ![](./media/image79.png)
 
+1. Switch to **"Human Resources Team"** from the top left section and click **"Continue"** button.
+
+    **Agents Used:** HR Helper, Technical support , Proxy
+
     ![](./media/image80.png)
 
-1. The HR Onboarding Scenario allows users to explore and retrieve information related to OnBoarding the Employee. Key tasks include:
-
-     ![](./media/image81.png)
-
-**Sample operation:**
-
-1. Task: Switch to the **"Human Resources Team"** from the top left section and click **"Continue".**
-
-1. Task: From the Quick Tasks, select **"Onboard New Employee"** and submit it.
+1. From the Quick Tasks, select **"Onboard New Employee".**
 
     ![](./media/image81.png)
 
@@ -456,7 +468,7 @@ onboarding activities efficiently and accurately
 
      **Observe:** It will trigger "Generating Plan Action" and "Proposed Plan" with 4 or more Steps.
 
-     **Task**: Click on **"Approve Task Plan"** Button.
+1. Click on **"Approve Task Plan"** Button.
 
       ![](./media/image83.png)
 
@@ -478,22 +490,20 @@ accurately
 
 1. Select the RFP team, follow the prompts below.
 
-   **Agents Used:** RFP Summary, RFP Risk, RFP Compliance
+    Click on **Contoso** at the left side.
 
     ![](./media/image85.png)
+
+1. Switch to **"RFP Team"** from the top left section and click **"Continue"** button.
+
+    **Agents Used:** RFP Summary, RFP Risk, RFP Compliance
 
     ![](./media/image86.png)
 
     The RFP Analysis Scenario allows users to explore and analyze Request
-    for Proposal (RFP) and contract documents. Key tasks include:
+    for Proposal (RFP) and contract documents.
 
-**Sample operation:**
-
-1. **Task**: Switch to the **"RFP Team"** from the top left section and
-    click **"Continue"** button.
-
-1. **Task**: From the Quick Tasks, select **"RFP Document Summary"** and
-    submit it.
+1. From the Quick Tasks, select **"RFP Document Summary".**
 
     ![](./media/image87.png)
 
@@ -501,14 +511,16 @@ accurately
 
     ![](./media/image88.png)
 
-    >**Note:** Average response time is 10-15 minutes.
+    >**Note:** Average response time is 10-15 seconds.
 
-     **Observe**: It will trigger the "Generating Plan Action" and give the
+    **Observe**: It will trigger the "Generating Plan Action" and give the
     Proposed Plan with 5 or more Steps.
 
-     ![](./media/image89.png)
+1. Click on **"Approve Task Plan"** Button.
 
-     ![](./media/image90.png)
+    ![](./media/image89.png)
+
+    ![](./media/image90.png)
 
 ## Task 12: Contract Compliance Review Scenario
 
@@ -525,23 +537,21 @@ contract reviews while keeping humans in control of final decisions.
 
 1. Select the Contract Compliance team, follow the prompts below.
 
-    **Agents Used:** Contract Summary, Contract Risk, Contract Compliance
-
-    The Contract Compliance Review Scenario allows users to explore and
-    analyze NDA and contract documents for compliance and risk assessment.
-    Key tasks include:
+    Click on **Contoso** at the left side.
 
     ![](./media/image91.png)
 
-**Sample operation:**
-
-1. **Task**: Switch to the **"Contract Compliance Review Team"** from the
+1. Switch to the **"Contract Compliance Review Team"** from the
     top left section and click **"Continue"** button.
 
-     ![](./media/image92.png)
+    **Agents Used:** Contract Summary, Contract Risk, Contract Compliance
 
-1. **Task**: From the Quick Tasks, select **"NDA Contract Review"** and
-    submit it.
+    ![](./media/image92.png)
+
+    The Contract Compliance Review Scenario allows users to explore and
+    analyze NDA and contract documents for compliance and risk assessment.
+
+1. From the Quick Tasks, select **"NDA Contract Review".**
 
      ![](./media/image93.png)
 
@@ -554,7 +564,7 @@ contract reviews while keeping humans in control of final decisions.
      **Observe**: It will trigger the "Generating Plan Action" and give the
     Proposed Plan with 4 or more Steps
 
-1. **Task:** Click on **"Approve Task Plan"** Button.
+1. Click on **"Approve Task Plan"** Button.
 
     ![](./media/image95.png)
 

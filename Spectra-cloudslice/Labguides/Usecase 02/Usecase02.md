@@ -80,7 +80,7 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
 ## Task 1: Register Service provider
 
-1. In the Azure portal search bar, type **Subscriptions** (1), then select **Subscriptions** from the **Services** list (2) to open it.
+1. In the Azure portal search bar, type **Subscriptions (1)**, then select **Subscriptions (2)** from the Services list to open it.
 
     ![](../Usecase%2001/media/uc2-0.png)
 
@@ -88,7 +88,7 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     ![](../Usecase%2001/media/uc2-21.png)
 
-1. In the selected subscription, navigate to **Settings** (1), select **Resource providers** (2), search for **Microsoft.CognitiveServices** (3), and select it from the list (4) and verify that the status is registered with a green tick.
+1. In the selected subscription, navigate to **Settings (1)**, select **Resource providers (2)**, search for **Microsoft.CognitiveServices (3)**, and select it from the **list (4)** and verify that the status is registered with a green tick.
 
     ![](../Usecase%2001/media/rp0.png)
 
@@ -106,13 +106,13 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
 ## Task 2: Retrieve resource group name and location
 
-1. In the Azure portal search bar, type **Resource groups** (1), then select **Resource groups** from the **Services** list (2) to open it.
+1. In the Azure portal search bar, type **Resource groups (1)**, then select **Resource groups (2)** from the Services list to open it.
 
-1. Click on your assigned **Resource group**.
-
-    ![](./media/image18.png)
+    ![](./media/image17(a).png)
 
 1. In **Resource group** page, copy **resource group name and location** and paste them in a notepad, then **Save** the notepad to use the information in the upcoming tasks.
+
+    ![](./media/image17(b).png)
 
 ## Task 3: Open Github Codespaces environment
 
@@ -128,17 +128,27 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
     https://github.com/technofocus-pte/MultiAIAgentAccelerator
     ```
 
-1. Click on **Fork** (top-right corner) to create your own copy of the repository.
+1. Click on **Fork** (top-right corner) and select **Create a new fork** to create your own copy of the repository.
 
-    ![](./media/uc2-22.png)
+    ![](./media/image17(c).png)
 
-1. Click on **fork** to fork the repo. Give unique name to the repo and click on **Create repo** button.
+1. And give a unique name to the repo and click on **Create fork** button.
 
     ![](./media/uc2-23.png) 
 
-1. Click on **Code**, switch to the **Codespaces** tab, and select **Create codespace on main** to launch the development environment.
+1. Click on **Code (1)**, switch to the **Codespaces (2)** tab, and select **Create codespace on main (3)** to launch the development environment.
 
     ![](./media/uc2-26.png) 
+
+    > If the "This site is trying to open Visual Studio Code" pop-up appears, click **Cancel**.
+
+1. Click the highlighted Back button to navigate back to the previous Github page.
+
+    ![](./media/image17(d).png)
+
+1. Select the **Code (1)** dropdown and navigate to the **Codespaces (2)** tab, select the **ellipsis menu(3)** and choose **Open in Browser (4)**
+
+    ![](./media/image17(e).png)
 
 1. Wait for the Codespaces environment to setup. It takes few minutes to setup completely.
 
@@ -152,7 +162,37 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
 ## Task 4: Provision Services and deploy application to Azure
 
-1. Run the following command on the Terminal. It generates the code to copy. Copy the code and press Enter.
+1. In the LabVM search bar, type **Docker (1)** and select **Docker Desktop (2)** from the results to open the application.
+
+    ![](./media/uc9-14.png)
+
+    > **Note:** Before moving on to the next steps please make sure your Docker Desktop is up and running. It should not be in stopped state.
+
+1. Click **Accept** to agree to the Docker Subscription Service Agreement and continue.
+
+    ![](./media/uc8-23.png)
+
+1. Click **Skip** to bypass the setup questionnaire and proceed.
+
+    ![](./media/uc8-19.png)
+
+1. Click **Continue without signing in** to proceed without logging into Docker.
+
+    ![](./media/uc8-18.png)
+
+1. Select **Use recommended settings** and click **Finish** to complete the Docker Desktop setup.
+
+    ![](./media/uc8-24.png)  
+
+1. Click the **Close (X)** button to exit the Windows Subsystem for Linux (WSL) welcome screen.
+
+    ![](./media/uc8-17.png)
+
+1. Wait for Docker Desktop to finish starting the Docker Engine before proceeding.
+
+    ![](./media/uc8-16.png)     
+
+1. Navigate back to the Codespace and run the following command on the Terminal. It generates the code to copy. Copy the code and press Enter.
 
     ```
     azd auth login
@@ -178,15 +218,25 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
 1. Run the az login command, copy the displayed authentication code, and complete the sign-in process in your browser to authenticate your environment.
 
+    ```
+    azd login
+    ```
+
     ![](./media/image33.png)
 
     ![](./media/image34.png)
 
     ![](./media/image30.png)
 
+    ![](./media/image31(a).png)
+
     ![](./media/image35.png)
 
 1. Run azd up - This will provision Azure resources
+
+    ```
+    azd up
+    ```
 
     ![](./media/image36.png)
 
@@ -246,7 +296,7 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     ![](./media/image52.png)
 
-1. Backend and frontend container app updated sucessfully
+1. Backend and frontend container app updated successfully
 
      ![](./media/image53.png)
 
@@ -291,7 +341,7 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     ![](./media/image59.png)
 
-1. In Microsoft Foundry, navigate to the **Build** section from the top
+1. In Microsoft Foundry, enable the **New Foundry** option and navigate to the **Build** section from the top
     menu to start creating and managing your AI solutions.
 
     ![](./media/image60.png)

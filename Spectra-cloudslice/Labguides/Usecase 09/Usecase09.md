@@ -606,7 +606,7 @@ and the Foundry project.
 
     ![](./media/image136.png)
 
-    ![](./media/image137.png)
+    ![](./media/image137.png) 
 
 ## Task 10: Cora-For-Zava: Getting Started with Your First AI Evaluation Flow
 

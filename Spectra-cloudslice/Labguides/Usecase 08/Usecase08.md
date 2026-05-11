@@ -289,6 +289,7 @@ incorrect.](./media/image46.png)
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image47.png)
 
+
 ## Task 5: Interact with Your AI Agent Using Predefined Questions
 
 1. Go back to GitHub Codespaces and select the **Endpoint URL**.

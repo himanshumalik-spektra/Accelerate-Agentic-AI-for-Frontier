@@ -4,15 +4,97 @@
 
 ## Overall Estimated Duration: 4 Hours
 
+## Overview
+
+In this lab, you will design, deploy, and govern an end-to-end agentic AI solution using Azure AI Foundry. Working through a realistic retail scenario, you will build Cora, an intelligent customer service assistant for Zava, a home improvement retailer, and apply enterprise-grade observability and safety practices across the full agent lifecycle. Rather than treating AI agents as black boxes, you will instrument them with tracing, Application Insights integration, and structured evaluation frameworks to gain complete visibility into agent behavior. You will run quality and safety evaluations using Azure AI's built-in evaluators, test models for fitness, and validate agent responses against real-world criteria. To harden the solution against adversarial risks, you will leverage Microsoft Foundry's AI Red Teaming capabilities to detect harmful outputs, security gaps, and jailbreak vulnerabilities before they reach production. By combining Azure AI Agent Service, Azure AI Search, multi-agent orchestration, and centralized governance through the Foundry Control Plane, you will build an AI system that is transparent, secure, scalable, and production-ready.
+
+## Objective
+
+By the end of this lab, participants will be able to:
+
+   - Building an Intelligent Retail Assistant Using Azure AI Agent Service and Azure AI Search
+
+   - Orchestrating Multi-Agent Workflows with Azure AI Foundry Agent Framework
+
+   - Evaluating AI Model Quality and Safety Using Azure AI Foundry Evaluation SDK
+
+   - Implementing End-to-End Observability and Tracing with Application Insights and Azure AI Foundry
+
+   - Hardening AI Agents Against Adversarial Risks Using Microsoft Foundry AI Red Teaming
+
+   - Deploying and Governing Production-Ready AI Agents with Azure AI Foundry Control Plane
+
+## Pre-requisites
+
+Participants should have:
+
+   - A working knowledge of Microsoft Azure services, including resource groups, Azure OpenAI, and Azure AI Foundry.
+
+   - Basic experience with Python, including running scripts, working with virtual environments, and using Jupyter notebooks.
+
+   - Familiarity with AI agent concepts such as retrieval-augmented generation (RAG), tool-calling, and multi-agent orchestration.
+
+   - Understanding of Azure AI Search, including index creation, document ingestion, and semantic search configuration.
+
+   - Awareness of AI evaluation concepts such as quality metrics (relevance, coherence, groundedness) and safety risk categories (violence, hate, self-harm, protected material).
+
+   - General understanding of observability practices, including logging, distributed tracing, and monitoring with Application Insights.
+
+   - Basic familiarity with Azure identity and authentication, including DefaultAzureCredential and role-based access control (RBAC).
+
+## Explanation of Components
+
+The architecture for this lab involves the following key components:
+
+1. **Azure AI Foundry**: The unified platform for building, deploying, and governing AI agents.
+
+   - Hosts the AI project, model deployments, and agent configurations.
+   - Provides the control plane for centralized governance and management.
+   - Integrates evaluation, tracing, and red teaming within a single environment.
+
+1. **Azure AI Agent Service**: The runtime for creating and executing intelligent agents.
+
+   - Powers the Cora retail assistant with tool-calling and memory capabilities.
+   - Supports multi-agent orchestration through the Agent Framework.
+   - Connects agents to external data sources via function tools and Azure AI Search.
+
+1. **Azure AI Search**: The retrieval backbone for grounding agent responses.
+
+   - Indexes Zava's product catalog and support documents.
+   - Performs hybrid search (keyword + vector) to surface relevant content.
+   - Ensures agent responses are grounded in verified enterprise data.
+
+1. **Azure OpenAI Service**: Provides the large language models that power the agents.
+
+   - Handles natural language understanding, reasoning, and response generation.
+   - Used as the judge model in AI-assisted quality evaluations.
+   - Drives red teaming simulations to probe agent vulnerabilities.
+
+1. **Azure AI Evaluation SDK**: The framework for measuring agent quality and safety.
+
+   - Runs quality evaluators (relevance, coherence, groundedness, fluency) using LLM-as-judge.
+   - Runs safety evaluators (violence, hate, self-harm, sexual, protected material) via the RAI service.
+   - Produces scored results and defect rates for systematic analysis.
+
+1. **Azure Application Insights**: The observability backend for monitoring agent behavior.
+
+   - Collects distributed traces from agent sessions and tool calls.
+   - Stores span data for analysis, debugging, and performance monitoring.
+   - Enables continuous monitoring of live agent deployments.
+
+1. **Azure AI Tracing (OpenTelemetry)**: The instrumentation layer for capturing agent execution.
+
+   - Records span snapshots for each step in an agent's reasoning chain.
+   - Compatible with OpenAI SDK, LangChain, and custom agent frameworks.
+   - Feeds trace data into Application Insights for end-to-end visibility.
+
+1. **Microsoft Foundry AI Red Teaming**: The adversarial testing capability for hardening agents.
+
+   - Simulates prompt injection, jailbreak, and harmful content attacks.
+   - Identifies safety gaps and unintended behaviors before production deployment.
+   - Produces a structured risk report to guide mitigation actions.
+
 ## Getting Started with the lab
-
-Welcome to your Accelerate Agentic AI for Frontier Workshop, Let's begin by making the most of this experience.
-
-## Virtual Machine & Lab Guide
-
-Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
-
-## Accessing Your Lab Environment
 
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
@@ -23,6 +105,10 @@ Once you're ready to dive in, your virtual machine and **Guide** will be right a
 To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
 ![](./media/gs1.png)
+
+## Virtual Machine & Lab Guide
+
+Your virtual machine is your workhorse throughout the workshop. The guide is your roadmap to success.
 
 ## Exploring Your Lab Resources
 

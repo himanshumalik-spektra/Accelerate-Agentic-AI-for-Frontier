@@ -2,23 +2,13 @@
 
 ## Introduction
 
-This lab demonstrates how to implement **end-to-end agent operations**
-using Azure AI Foundry by building an intelligent retail assistant named
-**Cora** for Zava, a home improvement retailer. It walks through the
-complete lifecycle of an AI solution-from provisioning Azure resources
-and deploying applications to building, orchestrating, and evaluating AI
-agents.
+This lab demonstrates how to implement **end-to-end agent operations** using Microsoft Foundry by building an intelligent retail assistant named **Cora** for Zava, a home improvement retailer. It walks through the complete lifecycle of an AI solution-from provisioning Azure resources and deploying applications to building, orchestrating, and evaluating AI agents.
 
-You will gain hands-on experience with Azure services such as **Azure AI
-Search, Azure AI Agent Service, and model evaluation tools**, enabling
-you to design scalable, intelligent, and production-ready AI
-applications.
+You will gain hands-on experience with Azure services such as **Azure AI Search, Azure AI Agent Service, and model evaluation tools**, enabling you to design scalable, intelligent, and production-ready AI applications.
 
 ## Scenario
 
-Zava is a fictional retail company that sells home improvement products
-such as paints, tools, and hardware. To enhance customer experience,
-Zava introduces **Cora**, an AI-powered shopping assistant.
+Zava is a fictional retail company that sells home improvement products such as paints, tools, and hardware. To enhance customer experience, Zava introduces **Cora**, an AI-powered shopping assistant.
 
 Cora helps customers:
 
@@ -37,10 +27,9 @@ As Zava grows, Cora evolves from a **single-agent system** into a
 
 - Customer Service Agent
 
-Additionally, the solution includes **evaluation pipelines** to ensure
-accuracy, quality, and safety before deployment.
+Additionally, the solution includes **evaluation pipelines** to ensure accuracy, quality, and safety before deployment.
 
-**Objectives**
+## Objectives
 
 By completing this lab, you will be able to:
 
@@ -73,7 +62,7 @@ By completing this lab, you will be able to:
 1. In a new tab, enter the following URL to open the GitHub repository:
 
     ```
-    https://github.com/technofocus-pte observeManageScale-agentic-ai-appsFoundry/tree/feb-2026-refresh
+    https://github.com/technofocus-pte/observeManageScale-agentic-ai-appsFoundry/tree/feb-2026-refresh
     ```
 
 1. Click on **fork** to fork the repo. 
@@ -141,17 +130,17 @@ By completing this lab, you will be able to:
 1. Enter the displayed code in the field and click **Next** to proceed with authentication.
 
     ![A screenshot of a computer error AI-generated content may be
-incorrect.](../Usecase%2008/media/image22.png)
+incorrect.](../Usecase%2008/media/image22new.png)
 
 1. Select your account ODL user account to continue signing in to Azure CLI.
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](../Usecase%2008/media/image23.png)
+incorrect.](../Usecase%2008/media/image23new.png)
 
 1. Click **Continue** to confirm and complete the sign-in to Microsoft Azure CLI.
 
     ![A screenshot of a computer error AI-generated content may be
-incorrect.](../Usecase%2008/media/image24.png)
+incorrect.](../Usecase%2008/media/image24new.png)
 
     ![](./media/image20.png)
 
@@ -169,29 +158,42 @@ incorrect.](../Usecase%2008/media/image24.png)
 
     - Enter branch name: **for-release-1.0.4**
 
-    - Enter environment name: **Ignite-PREL13**
-
-    - Enter Azure region: **swedencentral**
-
-    - Enter Subscription ID: *your subscription id here*
-
-    - Do you want to activate Azure AI Search? (yes/no) [no]: yes
-
-    - Press **Enter** for Enter existing Resource group name field.
-
       ![](./media/image22.png)
+
+    - Enter environment name: **Ignite-PREL13**
 
       ![](./media/image23.png)
 
+    - Enter Azure region: **eastus**
+
       ![](./media/image24.png)
+
+    - Enter Subscription ID: *your subscription id here*
 
       ![](./media/image25.png)
 
-      ![](./media/image26.png)
+      - Navigate to https://portal.azure.com/ and if asked login with the credentials
 
-      ![](./media/image27.png)
+      - In the Azure portal search bar, type **Subscriptions** (1), then select **Subscriptions (2)** from the list to open it.
 
-1. Run this script from root of repo - it will create .env with values extracted by Azure CLI. By default it looks for an  resource group but you can override it.
+        ![](../Usecase%2001/media/uc2-0.png)
+
+      - On the **Subscriptions** page, select the required subscription (e.g., **Sandbox AI DS**) from the list to open its details.
+
+        ![](../Usecase%2001/media/uc2-21.png)
+
+      - Copy the Subscription ID from the overview section
+        ![](./media/subs.png)
+
+    - Do you want to activate Azure AI Search? (yes/no) [no]: yes
+
+      ![](./media/image26new.png)
+
+    - Press **Enter** for all other fields.
+
+      ![](./media/image27new.png)
+
+1. Run this script - it will create .env with values extracted by Azure CLI. By default it looks for an  resource group but you can override it.
 
     ```
     cd ForBeginners/.azd-setup
@@ -201,7 +203,7 @@ incorrect.](../Usecase%2008/media/image24.png)
 
     ![](./media/image28.png)
 
-1. When prompted, type **y** and press Enter to log in to Azure before continuing with the deployment.
+1. When prompted, type **Y** and press Enter to log in to Azure before continuing with the deployment.
 
     ![](./media/image29.png)
 
@@ -210,17 +212,17 @@ incorrect.](../Usecase%2008/media/image24.png)
 1. Enter the displayed code in the field and click **Next** to proceed with authentication.
 
     ![A screenshot of a computer error AI-generated content may be
-incorrect.](../Usecase%2008/media/image22.png)
+incorrect.](../Usecase%2008/media/image22new.png)
 
 1. Select your account ODL user account to continue signing in to Azure CLI.
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](../Usecase%2008/media/image23.png)
+incorrect.](../Usecase%2008/media/image23new.png)
 
 1. Click **Continue** to confirm and complete the sign-in to Microsoft Azure CLI.
 
     ![A screenshot of a computer error AI-generated content may be
-incorrect.](../Usecase%2008/media/image24.png)
+incorrect.](../Usecase%2008/media/image24new.png)
 
 1. This deployment will take *12-15minutes* to provision the resources in your account and set up the solution with sample data.
 
@@ -285,8 +287,7 @@ incorrect.](../Usecase%2008/media/image24.png)
 1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image.
 
     ```
-    How much does the Synthetic Brush set cost and do you have it in
-    stock?
+    How much does the Synthetic Brush set cost and do you have it in stock?
     ```
 
     ![](./media/image47.png)
@@ -304,14 +305,14 @@ incorrect.](../Usecase%2008/media/image24.png)
 1. Run this script from root of repo - it will create .env with values extracted by Azure CLI. By default it looks for an **rg-Ignite-XXX** resource group but you can override it.
 
     ```
+    cd ../..
+    
     ./scripts/1-update-env-selfguided.sh
     ```
 
-1. Enter the resource group name starting **rg-Ignite-XXX**
+1. Press enter to continue with the resource group name starting **rg-Ignite-XXX**
 
-    ![](./media/image49.png)
-
-    ![](./media/image50.png)
+    ![](./media/image49new.png)
 
 1. When prompted to **Enter agent name**, press **Enter** to use the default value (`agent-template-assistant`).
 
@@ -339,10 +340,7 @@ incorrect.](../Usecase%2008/media/image24.png)
 
 ## Task 5: Environment Setup & Validation
 
-In this task, you will configure and validate your development
-environment. This includes selecting the appropriate Python environment,
-installing dependencies, and verifying connectivity to Azure services
-and the Foundry project.
+In this task, you will configure and validate your development environment. This includes selecting the appropriate Python environment, installing dependencies, and verifying connectivity to Azure services and the Foundry project.
 
 1. Navigate to the **labs/0-setup/** folder and open the **00-validate-setup.ipynb** notebook to begin the environment setup lab.
 
@@ -356,13 +354,15 @@ and the Foundry project.
 
     ![](./media/image57.png)
 
-1. To import required libraries, run the first cell in the notebook
+1. To import required libraries , run the first cell in the notebook
 
     ![](./media/image58.png)
 
+1. To import required environment variables , run the Validate Azure Environment Variables cell
+
     ![](./media/image59.png)
 
-1. Click the **Run (▶)** button to execute the cell and verify that all required Azure AI Foundry environment variables are properly set.
+1. Click the **Run (▶)** button to execute the cell and verify that all required Microsoft Foundry environment variables are properly set.
 
     ![](./media/image60.png)
 
@@ -374,7 +374,24 @@ and the Foundry project.
 
 1. Click the **Run (▶)** button to execute the cell and confirm that all embedding model configuration variables are properly set.
 
-    ![](./media/image63.png)
+    ![](./media/img64.png)
+
+1. Click the **Run (▶)** button to execute the cell and confirm that all Container Apps and registry configuration variables are properly set.
+
+    ![](./media/img65.png)
+
+1. Click the **Run (▶)** button to execute the cell and confirm that all Monitoring and Tracing configuration variables are properly set.
+
+    ![](./media/img66.png)
+
+1. Click the **Run (▶)** button to execute the cell and confirm that all Tracing configuration variables are properly set.
+
+    ![](./media/img67.png)
+
+1. Click the **Run (▶)** button to execute the cell to see the Validation summary.
+
+    ![](./media/img68.png)
+
 
 ## Task 6: Build "Cora for Zava" - An AI-Powered Retail Shopping Assistant Using Azure AI Agent Service
 
@@ -394,11 +411,7 @@ and the Foundry project.
 
     ![](./media/image66.png)
 
-1. Click the **Run (▶)** button to execute the cell and confirm that all required environment variables are loaded and ready.
-
-    ![](./media/image67.png)
-
-1. Click the **Run (▶)** button to execute the cell and establish a connection to Azure AI Foundry using the configured credentials.
+1. Click the **Run (▶)** button to execute the cell and establish a connection to Microsoft Foundry using the configured credentials.
 
     ![](./media/image68.png)
 
@@ -453,6 +466,8 @@ and the Foundry project.
 
     ![](./media/image82.png)
 
+    ![](./media/img82.png)
+
     ![](./media/image83.png)
 
     ![](./media/image84.png)
@@ -460,6 +475,8 @@ and the Foundry project.
     ![](./media/image85.png)
 
     ![](./media/image86.png)
+
+1. Run the cell to view full conversation history
 
     ![](./media/image87.png)
 
@@ -481,7 +498,11 @@ and the Foundry project.
 
     ![](./media/image91.png)
 
+1. Click the **Run (▶)** button to execute the cell and import all Python libraries .
+
     ![](./media/image92.png)
+
+1. Click the **Run (▶)** button to execute the cell and load configurations .
 
     ![](./media/image93.png)
 
@@ -497,9 +518,11 @@ and the Foundry project.
 
     ![](./media/image96.png)
 
+1. Run the cell to define the Product Inventory Agent instructions and display a confirmation message along with the instruction length.
+
     ![](./media/image97.png)
 
-1. Run the cell to create the Product Inventory Agent with Azure AI Search capabilities and display a confirmation message indicating that the agent has been successfully created.
+1. Run the cell to create the customer service Agent with Azure AI Search capabilities and display a confirmation message indicating that the agent has been successfully created.
 
     ![](./media/image98.png)
 
@@ -517,11 +540,17 @@ and the Foundry project.
 
     ![](./media/image103.png)
 
+1. Run the cell to build the smart router that automatically sends request to right agent based on the question.
+
     ![](./media/image104.png)
+
+1. Run the cell to test the smart router.
 
     ![](./media/image105.png)
 
     ![](./media/image106.png)
+
+1. Run the cell to clean-up the resources.
 
     ![](./media/image107.png)
 
@@ -537,34 +566,49 @@ and the Foundry project.
 
     ![](./media/image109.png)
 
-1. Click **Run All** to execute all the cells in the notebook and
-    observe the outputs.
-
-    ![](./media/image110.png)
+1. Run the cell to **load environment variables** from the .env file and validate that all required Azure OpenAI and Azure AI Search credentials are present before proceeding.
 
     ![](./media/image111.png)
 
+1. Run the cell to read the Azure AI Search connection parameters (endpoint, API key, and index name) from environment variables and confirm the index is configured.
+
     ![](./media/image112.png)
+
+1. Run the cell to create an **AzureOpenAIModelConfiguration** object using your environment credentials, which the simulator will use to generate synthetic queries and responses.
 
     ![](./media/image113.png)
 
+1. Run the cell to instantiate the **Azure AI Evaluation Simulator** with the model configuration, making it ready to produce synthetic dataset entries.
+
     ![](./media/image114.png)
+
+1. Run the cell to define the **search_index_for_content function**, which queries your Azure AI Search index via REST API and returns the top matching product content for a given search query.
 
     ![](./media/image115.png)
 
+1. Run the cell to **test the search function** with a sample query ("eggshell paint") and verify that content is successfully retrieved from the Azure AI Search index.
+
     ![](./media/image116.png)
+
+1. Run the cell to define the **rag_application_callback async function**, which extracts the user query from a message, retrieves relevant context from Azure AI Search, and generates a grounded response using Azure OpenAI.
 
     ![](./media/image117.png)
 
+1. Run the cell to confirm that retrieved content is available and non-empty, ensuring the simulator has valid product catalog text to work with before generating data.
+
     ![](./media/image118.png)
+
+1. Run the cell to execute the simulator against the RAG callback, **generating 10 synthetic single-turn query-response pairs** grounded in your product catalog content.
 
     ![](./media/image119.png)
 
+1. Run the cell to serialize all **generated simulator outputs** to a 21-simulate-datasets.jsonl file in JSON Lines format, ready for use in downstream evaluation workflows.
+
     ![](./media/image120.png)
 
-    ![](./media/image121.png)
+1. Run the cell to **load the saved .jsonl dataset** into a pandas DataFrame and display a preview of the generated query-response-context triples to verify structure and data quality.
 
-    ![](./media/image122.png)
+    ![](./media/image121.png)
 
 ## Task 9: Cora-For-Zava: Evaluating and Selecting the Best AI Model
 
@@ -610,14 +654,9 @@ and the Foundry project.
 
 ## Task 10: Cora-For-Zava: Getting Started with Your First AI Evaluation Flow
 
-**Cora** is a customer service chatbot for **Zava** - a fictitious
-retailer of home improvement goods for DIY enthusiasts. Before deploying
-Cora to help customers, you need to ensure it provides accurate, safe,
-and helpful responses. Evaluation is the foundation of trust in AI
-applications, making it a critical part of the Generative AI Ops
-(GenAIOps) lifecycle. Without rigorous evaluation, Cora could produce
-content that is fabricated, irrelevant, harmful, or vulnerable to
-adversarial attacks.
+**Cora** is a customer service chatbot for **Zava** - a fictitious retailer of home improvement goods for DIY enthusiasts. Before deploying
+Cora to help customers, you need to ensure it provides accurate, safe, and helpful responses. Evaluation is the foundation of trust in AI
+applications, making it a critical part of the Generative AI Ops (GenAIOps) lifecycle. Without rigorous evaluation, Cora could produce content that is fabricated, irrelevant, harmful, or vulnerable to adversarial attacks.
 
 1. Navigate to the **labs/** **4-evaluation/** folder and open the **41-first-evaluation-run.ipynb** notebook to begin the environment setup lab.
 
@@ -661,13 +700,8 @@ adversarial attacks.
 
 ## Task 11: Cora-For-Zava: Exploring AI Response Quality Evaluators
 
-**Cora** is a customer service chatbot for **Zava** - a fictitious
-retailer of home improvement goods for DIY enthusiasts. Cora must
-provide accurate, relevant, and coherent responses about hardware and
-home improvement products to Zava customers. This notebook helps you
-assess response quality using specialized evaluators for groundedness,
-relevance, coherence, fluency, and similarity-ensuring Cora meets the
-high standards expected in a production retail environment.
+**Cora** is a customer service chatbot for **Zava** - a fictitious retailer of home improvement goods for DIY enthusiasts. Cora must provide accurate, relevant, and coherent responses about hardware and
+home improvement products to Zava customers. This notebook helps you assess response quality using specialized evaluators for groundedness, relevance, coherence, fluency, and similarity-ensuring Cora meets the high standards expected in a production retail environment.
 
 1. Navigate to the **labs/** **4-evaluation/** folder and open the **42-evaluate-quality.ipynb** notebook to begin the environment setup lab.
 
@@ -677,47 +711,79 @@ high standards expected in a production retail environment.
 
     ![](./media/image155.png)
 
-1. Click **Run All** to execute all the cells in the notebook and observe the outputs.
-
-    ![](./media/image110.png)
+1. Run the cell to verify you are authenticated with Azure by displaying the currently signed-in user's account details..
 
     ![](./media/image156.png)
 
+1. Run the cell to create a **DefaultAzureCredential** object that will be used to authenticate all subsequent SDK calls against Azure services.
+
     ![](./media/image157.png)
+
+1. Run the cell to read Azure subscription, resource group, project, and Foundry service name from environment variables and construct both the project dictionary and the project URL needed for portal integration.
 
     ![](./media/image158.png)
 
+1. Run the cell to **load environment variables** from the .env file and create an AzureOpenAIModelConfiguration object that points to the judge model used by all AI-assisted evaluators.
+
     ![](./media/image159.png)
+
+1. Coherence: Run the cell to instantiate the **CoherenceEvaluator** and score a sample Cora response on how logically connected and easy to follow it reads (scale 1–5).
 
     ![](./media/image160.png)
 
+1. Fluency: Run the cell to instantiate the **FluencyEvaluator** and score a sample Cora response on grammatical accuracy, vocabulary range, and overall readability (scale 1–5).
+
     ![](./media/image161.png)
+
+1. Composite QA: Run the cell to instantiate the **QAEvaluator** and score a single Cora response across six quality dimensions — Relevance, Groundedness, Fluency, Coherence, Similarity, and F1 — in one call.
 
     ![](./media/image162.png)
 
+1. Retrieval: Run the cell to instantiate the **RetrievalEvaluator** and score how well the retrieved context chunks address the query and rank the most relevant chunks at the top.
+
     ![](./media/image163.png)
+
+1. Groundedness: Run the cell to instantiate the **GroundednessEvaluator** and verify that Cora's response stays within the bounds of the provided product context without fabricating information.
 
     ![](./media/image164.png)
 
-    ![](./media/image165.png)
+1. Coherence (pprint): Run the cell to run the **CoherenceEvaluator** on a screwdriver-related query and display the full structured result dictionary including score, reasoning, and pass/fail threshold.
 
     ![](./media/image166.png)
 
+1. Response Completeness: Run the cell to instantiate the **ResponseCompletenessEvaluator** and measure how much of the expected ground truth information is covered in Cora's response.
+
     ![](./media/image167.png)
+
+1. Similarity: Run the cell to instantiate the **SimilarityEvaluator** and score the semantic closeness between Cora's response and the ground truth using an LLM-as-judge approach (scale 1–5).
 
     ![](./media/image168.png)
 
+1. F1 Score: Run the cell to instantiate the **F1ScoreEvaluator** and measure the token-overlap precision and recall between Cora's response and the ground truth as a 0–1 score.
+
     ![](./media/image169.png)
+
+1. BLEU Score: Run the cell to instantiate the **BleuScoreEvaluator** and score the n-gram overlap between Cora's response and the ground truth using the standard BLEU metric.
 
     ![](./media/image170.png)
 
+1. GLEU Score: Run the cell to instantiate the **GleuScoreEvaluator** and compute the Google-BLEU score, which improves on BLEU by applying a per-sentence reward objective for both precision and recall.
+
     ![](./media/image171.png)
+
+1. ROUGE Score: Run the cell to instantiate the **RougeScoreEvaluator** and measure recall-oriented n-gram overlap between the response and ground truth using ROUGE-L, returning precision, recall, and F1 scores.
 
     ![](./media/image172.png)
 
+1. METEOR Score: Run the cell to instantiate the **MeteorScoreEvaluator** and score response similarity against the ground truth while accounting for synonyms, stemming, and paraphrasing beyond simple token overlap.
+
     ![](./media/image173.png)
 
+1. Custom Evaluators: Run the cell to define and test two **custom evaluators** — a function-based response_length evaluator that counts characters, and a class-based BlocklistEvaluator that flags responses containing restricted words.
+
     ![](./media/image174.png)
+
+1. Run All Evaluators: Run the cell to execute a full **multi-evaluator run** using evaluate() against the 42-evaluate-quality.jsonl dataset, scoring every row across Content Safety, Coherence, Relevance, Groundedness, Fluency, and Similarity, then publishing results to both the Microsoft Foundry portal and a local JSON file.
 
     ![](./media/image175.png)
 
@@ -727,14 +793,7 @@ high standards expected in a production retail environment.
 
 ## Task 12: Cora-For-Zava: Exploring AI Safety Evaluators for Secure Responses
 
-**Cora** is a customer service chatbot for **Zava** - a fictitious
-retailer of home improvement goods for DIY enthusiasts. Before deploying
-Cora to serve Zava customers, you must ensure it generates safe,
-appropriate content and is protected against adversarial attacks. This
-notebook guides you through Azure AI Foundry's safety evaluators,
-helping you identify and mitigate risks like harmful content, jailbreak
-attempts, and protected material violations to maintain a secure and
-trustworthy customer experience.
+**Cora** is a customer service chatbot for **Zava** - a fictitious retailer of home improvement goods for DIY enthusiasts. Before deploying Cora to serve Zava customers, you must ensure it generates safe, appropriate content and is protected against adversarial attacks. This notebook guides you through Microsoft Foundry's safety evaluators, helping you identify and mitigate risks like harmful content, jailbreak attempts, and protected material violations to maintain a secure and trustworthy customer experience.
 
 1. Navigate to the **labs/** **4-evaluation/** folder and open the **43-evaluate-safety.ipynb** notebook to begin the environment setup lab.
 
@@ -758,10 +817,7 @@ trustworthy customer experience.
 
 ## Summary
 
-In this lab, you implemented a complete **end-to-end AI solution** for a
-retail assistant using Azure AI Foundry. Starting from environment setup
-and deployment, you built Cora, enhanced it with search capabilities,
-and evolved it into a multi-agent system.
+In this lab, you implemented a complete **end-to-end AI solution** for a retail assistant using Microsoft Foundry. Starting from environment setup and deployment, you built Cora, enhanced it with search capabilities, and evolved it into a multi-agent system.
 
 You also explored critical aspects of production AI systems, including:
 
@@ -773,6 +829,4 @@ You also explored critical aspects of production AI systems, including:
 
 - Safety and quality validation
 
-By the end of this exercise, you gained practical experience in
-designing, deploying, and managing **scalable, intelligent AI
-applications** that deliver real-world business value.
+By the end of this exercise, you gained practical experience in designing, deploying, and managing **scalable, intelligent AI applications** that deliver real-world business value.

@@ -2,18 +2,9 @@
 
 ## Scenario
 
-Zava is a fast-growing technology and services company that manages
-large volumes of internal documentation, product manuals, training
-material, and customer-support knowledge. Employees frequently need
-quick, accurate responses without manually searching through dozens of
-files and knowledge repositories.
+Zava is a fast-growing technology and services company that manages large volumes of internal documentation, product manuals, training material, and customer-support knowledge. Employees frequently need quick, accurate responses without manually searching through dozens of files and knowledge repositories.
 
-To improve efficiency, Zava wants to deploy an intelligent AI-powered
-assistant that can read, understand, and retrieve answers from its
-internal documents. The company chooses Azure AI Agent Service to build
-an interactive chat interface, where employees can simply ask a question
-and receive a precise, citation-supported answer grounded in Zava's
-internal knowledge.
+To improve efficiency, Zava wants to deploy an intelligent AI-powered assistant that can read, understand, and retrieve answers from its internal documents. The company chooses Azure AI Agent Service to build an interactive chat interface, where employees can simply ask a question and receive a precise, citation-supported answer grounded in Zava's internal knowledge.
 
 ![Architecture diagram showing that user input is provided to the Azure
 Container App, which contains the app code. With user identity and
@@ -23,52 +14,37 @@ resources deployed in the solution: Application Insights, Microsoft
 Foundry Project, Foundry Tools, Storage account, Azure Container App,
 and Log Analytics Workspace.](./media/image1.png)
 
-**Introduction**
+## Introduction
 
-As organizations adopt AI agents to automate workflows, answer
-questions, and retrieve internal knowledge, ensuring these systems
-behave safely and reliably becomes critical. Zava, a fast-growing
-technology company, is deploying an internal AI knowledge assistant to
-help employees quickly retrieve information from documents, manuals, and
-training materials. To protect this AI agent against harmful behavior,
-security gaps, or unintended responses, Zava leverages Microsoft
-Foundry's AI Red Teaming capabilities. 
-This use case demonstrates how to build a secure end-to-end AI agent,
-evaluate its behavior, detect risks through automated red teaming, and
-monitor its performance using Azure's observability tools. Through
-guided steps, you will deploy the agent, test its retrieval
-capabilities, run red teaming evaluations, and enforce continuous
-monitoring to ensure safety, accuracy, and compliance.
+As organizations adopt AI agents to automate workflows, answer questions, and retrieve internal knowledge, ensuring these systems
+behave safely and reliably becomes critical. Zava, a fast-growing technology company, is deploying an internal AI knowledge assistant to help employees quickly retrieve information from documents, manuals, and
+training materials. To protect this AI agent against harmful behavior, security gaps, or unintended responses, Zava leverages Microsoft Foundry's AI Red Teaming capabilities.
 
-**Objectives**
+This use case demonstrates how to build a secure end-to-end AI agent, evaluate its behavior, detect risks through automated red teaming, and monitor its performance using Azure's observability tools. Through guided steps, you will deploy the agent, test its retrieval capabilities, run red teaming evaluations, and enforce continuous monitoring to ensure safety, accuracy, and compliance.
 
-- Understand how to build a document-aware AI knowledge assistant using
-  Azure AI Agent Service.
+## Objectives
 
-- Deploy Azure resources and configure the full solution using Azure
-  Developer CLI.
+- Understand how to build a document-aware AI knowledge assistant using Azure AI Agent Service.
 
-- Interact with the AI agent using predefined and custom prompts to
-  validate retrieval accuracy.
+- Deploy Azure resources and configure the full solution using Azure Developer CLI.
 
-- Execute built-in evaluators to measure agent quality, safety, intent
-  resolution, and tool-call correctness.
+- Interact with the AI agent using predefined and custom prompts to validate retrieval accuracy.
 
-- Run automated AI Red Teaming tests to identify vulnerabilities,
-  harmful behaviors, or safety violations.
+- Execute built-in evaluators to measure agent quality, safety, intent resolution, and tool-call correctness.
 
-- Analyze red teaming results in Microsoft Foundry, including attack
-  strategies and failure cases.
+- Run automated AI Red Teaming tests to identify vulnerabilities, harmful behaviors, or safety violations.
 
-- Enable tracing, monitoring, and continuous evaluation to track
-  real-time agent behavior in production.
+- Analyze red teaming results in Microsoft Foundry, including attack strategies and failure cases.
 
-- Learn best practices for securing AI agents through consistent
-  testing, observability, and model governance.
+- Enable tracing, monitoring, and continuous evaluation to track real-time agent behavior in production.
+
+- Learn best practices for securing AI agents through consistent testing, observability, and model governance.
 
 ## Task 1: Register Service provider
 
-1. In the Azure portal search bar, type **Subscriptions** (1), then select **Subscriptions** from the **Services** list (2) to open it.
+1. Navigate to https://portal.azure.com/ and if asked login with the credentials
+
+1. In the Azure portal search bar, type **Subscriptions** (1), then select **Subscriptions (2)** from the list to open it.
 
     ![](../Usecase%2001/media/uc2-0.png)
 
@@ -76,11 +52,13 @@ monitoring to ensure safety, accuracy, and compliance.
 
     ![](../Usecase%2001/media/uc2-21.png)
 
-1. In the selected subscription, navigate to **Settings** (1), select **Resource providers** (2), search for **Microsoft.CognitiveServices** (3), and select it from the list (4) and verify that the status is registered with a green tick.
+1. In the selected subscription, navigate to **Settings (1)**, select **Resource providers (2)**, search for **Microsoft.CognitiveServices (3)**, and select it from the **list (4)** and verify that the status is registered with a green tick.
 
     ![](../Usecase%2001/media/rp0.png)
 
 1. Similarly, search for **Microsoft.AlertsManagement** and verify that the status is registered with a green tick.
+
+    ![](./media/image0.png)
 
 ## Task 2: Open Github Codespaces environment
 
@@ -162,17 +140,17 @@ incorrect.](./media/image21.png)
 1. Enter the displayed code in the field and click **Next** to proceed with authentication.
 
     ![A screenshot of a computer error AI-generated content may be
-incorrect.](./media/image22.png)
+incorrect.](./media/image22new.png)
 
 1. Select your account ODL user account to continue signing in to Azure CLI.
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image23.png)
+incorrect.](./media/image23new.png)
 
 1. Click **Continue** to confirm and complete the sign-in to Microsoft Azure CLI.
 
     ![A screenshot of a computer error AI-generated content may be
-incorrect.](./media/image24.png)
+incorrect.](./media/image24new.png)
 
 1. Verify that authentication is successful (logged in message appears), then proceed with the next command in the terminal.
 
@@ -203,7 +181,9 @@ incorrect.](./media/image28.png)
 
     - **Select an Azure Subscription to use** : Select your subscription
 
-    - **azureAiServiceLocation**: Sweden Central
+    - **azureAiServiceLocation**: East US 2, East US, West US , West US 3 , Sweden Central 
+
+    >**Note** - If it throws quota issue try with other location
 
       ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image29.png)
@@ -261,7 +241,7 @@ incorrect.](./media/uc8-49.png)
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/uc8-50.png)
 
-1. From the left navigation menu, click on **Containers**, Make sure data should be deployed successfully
+1. From the left navigation menu, click on **Containers** inside data storage , Make sure data should be deployed successfully
 
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image42.png)
@@ -269,7 +249,7 @@ incorrect.](./media/image42.png)
 1. Go back to resorcegroup and click on **Foundry Project.**
 
     ![A screenshot of a computer AI-generated content may be
- incorrect.](./media/image43.png)
+ incorrect.](./media/image43new.png)
 
 1. Click **Go to Foundry portal** to verify that the model has been successfully deployed.
 
@@ -277,12 +257,12 @@ incorrect.](./media/image42.png)
 incorrect.](./media/image44.png)
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image45.png)
+incorrect.](./media/image45new.png)
 
 1. In the top navigation, select **Build.**
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image46.png)
+incorrect.](./media/image46new.png)
 
 1. From the left menu, click **Agents (1)**, then select the **agent-template-assistant (2)** agent from the list to open it.
 
@@ -310,8 +290,7 @@ incorrect.](./media/image47.png)
 1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image.
 
     ```
-    What's the best tent under $200 for two people, and what features
-    does it include?
+    What's the best tent under $200 for two people, and what features does it include?
     ```
 
     ![A screenshot of a computer AI-generated content may be
@@ -402,15 +381,8 @@ incorrect.](./media/image64.png)
 
 ## Task 7: Agent Evaluation
 
-Azure AI Foundry offers a number of built-in evaluators to measure the
-quality, efficiency, risk and safety of your agents. For example, intent
-resolution, tool call accuracy, and task adherence evaluators are
-targeted to assess the end-to-end and tool call process quality of agent
-workflow, while content safety evaluator checks for inappropriate
-content in the responses such as violence or hate. You can also create
-custom evaluators tailored to your specific requirements, including
-custom prompt-based evaluators or code-based evaluators that implement
-your unique assessment criteria.
+Microsoft Foundry offers a number of built-in evaluators to measure the quality, efficiency, risk and safety of your agents. For example, intent resolution, tool call accuracy, and task adherence evaluators are
+targeted to assess the end-to-end and tool call process quality of agent workflow, while content safety evaluator checks for inappropriate content in the responses such as violence or hate. You can also create custom evaluators tailored to your specific requirements, including custom prompt-based evaluators or code-based evaluators that implement your unique assessment criteria.
 
 1. Go back to **GitHub Codespaces**, open the terminal, and run the Python requirements script below to set up your environment
 
@@ -436,7 +408,7 @@ your unique assessment criteria.
 
 1. Copy the **Microsoft Foundry project endpont**.
 
-    ![A screenshot of a computer AI-generated content may be incorrect.](./media/image67.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](./media/image67new.png)
 
 1. Go back to Github Cospaces and select the **test_utils.py** under the **test** folder in the left hand panel.
 
@@ -445,8 +417,9 @@ your unique assessment criteria.
 1. Run the below script below
 
     ```
-    export AZURE_EXISTING_AIPROJECT_ENDPOINT="Microsoft Foundry project endpont"
+    export AZURE_EXISTING_AIPROJECT_ENDPOINT="Paste you AZURE_EXISTING_AIPROJECT_ENDPOINT here"
     ```
+    >**Note**- Don't forget to paste your endpoints in the command before running it
 
 1. Run the below script below.
 
@@ -457,7 +430,7 @@ your unique assessment criteria.
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image68.png)
 
-1. Upon completion, the test will display an URL in the output where you can review the detailed evaluation results in the Azure AI Foundry UI, including individual evaluator passing scores and explanations.
+1. Upon completion, the test will display an URL in the output where you can review the detailed evaluation results in the Microsoft Foundry UI, including individual evaluator passing scores and explanations.
 
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image69.png)
@@ -472,14 +445,10 @@ incorrect.](./media/image71.png)
 
 ## Task 8: AI Red Teaming Agent
 
-The AI Red Teaming Agent is a powerful tool designed to help
-organizations proactively find security and safety risks associated with
-generative AI systems during design and development of generative AI
-models and applications.
+The AI Red Teaming Agent is a powerful tool designed to help organizations proactively find security and safety risks associated with
+generative AI systems during design and development of generative AI models and applications.
 
-In the red teaming test script, you will be able to set up an AI Red
-Teaming Agent to run an automated scan of your agent in this sample. The
-test demonstrates how to:
+In the red teaming test script, you will be able to set up an AI Red Teaming Agent to run an automated scan of your agent in this sample. The test demonstrates how to:
 
 - Create a red-teaming evaluation
 
@@ -549,7 +518,7 @@ incorrect.](./media/image79.png)
 
 ## Task 10: Console traces
 
-1. You can view console traces in the Azure portal. You can get the link to the resource group with the azd tool:
+1. You can view console traces in the Azure portal by executing the below command. You can get the link to the resource group with the azd tool:
 
     ```
     azd show
@@ -589,19 +558,12 @@ incorrect.](./media/image85.png)
 
 ## Task 12: Continuous Evaluation
 
-Continuous evaluation is an automated monitoring capability that
-continuously assesses your agent's quality, performance, and safety as
-it handles real user interactions in production.
+Continuous evaluation is an automated monitoring capability that continuously assesses your agent's quality, performance, and safety as it handles real user interactions in production.
 
-During container startup, continuous evaluation is enabled by default
-and pre-configured with a sample evaluator set to evaluate up to 5 agent
-responses per hour. Continuous evaluation does not generate test
-inputs-instead, it evaluates real user conversations as they occur. This
-means evaluation runs are triggered only when actual users interact with
-your agent, and if there are no user interactions, there will be no
-evaluation entries.
+During container startup, continuous evaluation is enabled by default and pre-configured with a sample evaluator set to evaluate up to 5 agent responses per hour. Continuous evaluation does not generate test
+inputs-instead, it evaluates real user conversations as they occur. This means evaluation runs are triggered only when actual users interact with your agent, and if there are no user interactions, there will be no evaluation entries.
 
-To customize continuous evaluation from the Azure AI Foundry:
+To customize continuous evaluation from the Microsoft Foundry:
 
 1. Select **Monitor.** Choose the agent you want to enable continuous evaluation for from the agent list and click on **Settings**
 
@@ -611,10 +573,10 @@ To customize continuous evaluation from the Azure AI Foundry:
 1. Enable **Continuous evaluation (1)**, set the **Sample rate** as 1 (2), and click **Submit (3)** to apply the monitoring settings.
 
     ![A screenshot of a computer AI-generated content may be
- incorrect.](./media/uc8-52.png)
+ incorrect.](./media/uc8-52new.png)
 
     ![A screenshot of a computer AI-generated content may be
- incorrect.](./media/image89.png)
+ incorrect.](./media/image89new.png)
 
 ## Summary
 

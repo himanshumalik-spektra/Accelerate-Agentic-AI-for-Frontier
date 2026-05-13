@@ -98,11 +98,11 @@ agent activity, collect telemetry data, and analyze system performance.
 This is a critical step in understanding how your agent behaves in
 real-time and identifying potential issues.
 
-1. On the Microsoft Foundry home page, select the **Traces (1)** tab. Then  click **Create (2)** Application Insights to set up monitoring for your project.
+1. On the Microsoft Foundry home page, select the **Traces (1)** tab. Then  click **Connect (2)** Application Insights to set up monitoring for your project.
 
-     ![](./media/us18.png)
+     ![](./media/us18new.png)
 
-1. To Create App Insights  under Application insinghts resource: **Create new resource(1)**, accept the default values in the other fields and click on **Create (2)**.
+1. To Create App Insights  under Application insinghts resource: **Create new resource (1)**, accept the default values in the other fields and click on **Create (2)**.
 
      ![](./media/us19.png)
 
@@ -112,17 +112,13 @@ real-time and identifying potential issues.
 
 ### Task 4: Test the Agent Prompt
 
-In this task, you will refine and test your agent’s behavior using
-prompt engineering. You will define clear instructions for the agent,
-execute sample queries, and evaluate the responses. This helps ensure
-that the agent provides accurate, relevant, and user-friendly outputs
-while adhering to its intended role
+In this task, you will refine and test your agent’s behavior using prompt engineering. You will define clear instructions for the agent , execute sample queries, and evaluate the responses. This helps ensure that the agent provides accurate, relevant, and user-friendly outputs while adhering to its intended role
 
 1. Navigate to the **Playground** tab,  to test your agent prompt and view responses.
 
      ![](./media/us21.png)
 
-1. In the Playground tab, update the Instructions (1) section with your  agent prompt, and click on **Save (2)**
+1. In the Playground tab, update the **Instructions (1)** section with your  agent prompt, and click on **Save (2)**
 
     ```
     You are the Contoso Travel Concierge, a friendly and knowledgeable
@@ -201,9 +197,9 @@ while adhering to its intended role
 
      ![](./media/us27.png)
 
-1. Select **Configuration**
+1. Select **Configure**
 
-     ![](./media/us28.png)
+     ![](./media/us28new.png)
 
 1. Enter the details
 
@@ -233,7 +229,7 @@ while adhering to its intended role
 
         ![](./media/us29.png)
 
-1. In the Test pane, enter the below and click **Send.**
+1. In the Test pane select **new chat (1)** , enter the below **prompt (2)** and click **Send.**
 
      ```
      I want to plan a multi-day travel itinerary 
@@ -245,7 +241,7 @@ while adhering to its intended role
 
      ![](./media/us31.png)
 
-1. Enter the following text and click on the **Submit icon** as shown in the below image.
+1. Enter the following text in the same chat and click on the **Submit icon** .
 
      ```
      Hi! I'm thinking about planning a trip to Paris from Jul 1–4 with my family (3 people total). We are vegetarian. We love sports, historic homes, art and food tours
@@ -257,7 +253,7 @@ while adhering to its intended role
 
      ![](./media/us33.1.png)
 
-1. Click the **Traces** tab - you should see rows for each conversation run
+1. Click the **Traces (1)** tab and select **Responses (2)** - you should see rows for each **conversation run (3)** .
 
      ![](./media/us34.1.png)
 
@@ -324,7 +320,7 @@ also invoke *code-first*.
 
 1. Filter to see evaluators for a particular category - e.g., agents
 
-     ![](./media/us47.png)
+     ![](./media/us47new.png)
 
      ![](./media/us48.png)
 
@@ -358,11 +354,11 @@ robustness and safety of your AI agent. By simulating adversarial
 scenarios, you can identify vulnerabilities and ensure that the agent
 behaves responsibly under different conditions.
 
-1. Navigate to the **Evaluations (1)** section, select the **Red team (Preview) (2)** tab, then click **Create (3)** to start a new red teaming run.
+1. Navigate to the **Evaluations (1)** section, select the **Red team (2)** tab, then click **Create (3)** to start a new red teaming run.
 
-     ![](./media/us53.png)
+     ![](./media/us53new.png)
 
-1. For now, select the **Model (1)** option and pick the default model used  in your agent e.g, gpt-4.1(2) and click **Next (3)**
+1. For now, select the **Model (1)** option and pick the default model used  in your agent e.g, **gpt-4.1 (2)** and click **Next (3)**
 
      ![](./media/us54.png)
 
@@ -372,7 +368,7 @@ behaves responsibly under different conditions.
 
 1. Submit the scan. This takes a while to complete - we will revisit it later.
 
-     ![](./media/us56.png)
+     ![](./media/us56new.png)
 
      ![](./media/us57.png)
 
@@ -402,18 +398,18 @@ Codespace, and prepare your workspace for development.
 1. Open your browser, navigate to the address bar, type or paste the following URL:
 
      ```
-     https://github.com/technofocus-pte Foundry-Control-Plane-agent-observability          
+     https://github.com/technofocus-pte/Foundry-Control-Plane-agent-observability          
      ```
 
      ![](./media/usx1.png)
 
 1. Click on **fork** to fork the repo. 
 
-     ![](./media/usx2.png)
+     ![](./media/usx3.png)
 
 1. Give the name to the repo as **Foundry-Control-<inject key="DeploymentID" enableCopy="false"/> (1)** and click on **Create Fork (2)** .
 
-     ![](./media/usx3.png)
+     ![](./media/usx2.png)
 
 1. Click on **Code (1) -\> Codespaces (2) -\> Create Codespace (3)**
 
@@ -431,7 +427,7 @@ Codespace, and prepare your workspace for development.
 
      ![](./media/usx6.png)
 
-1. It should prompt you to log into Azure as shown. Complete this step, then let the script run till complete. 
+1. It should prompt you to log into Azure as shown. Open the link shown in terminal and Complete this step, then let the script run till complete. 
 
      ![](./media/usx7.png)
 
@@ -478,13 +474,13 @@ and the Foundry project.
 
 1. If prompted to select the path, then select the **Python** version  i.e **3.12.13**
 
-     ![](./media/usx17.png)
+     ![](./media/usx17new.png)
 
 1. To install dependencies, run the first cell in the notebook
 
      ![](./media/usx18.png)
 
-1. Restart the Kernel by clicking on **Restart**.In the pop-up that appears click on Restart again
+1. Restart the Kernel by clicking on **Restart** . In the pop-up that appears click on **Restart** again
    
      ![](./media/usx21.png)
 
@@ -494,7 +490,7 @@ and the Foundry project.
 
      ![](./media/usx20.png)
 
-1. Verify that you can connect to your Microsoft Foundry project using the SDK by running the 3^(rd) cell in the notebook.
+1. Verify that you can connect to your Microsoft Foundry project using the SDK by running the 3<sup>rd</sup> cell in the notebook.
 
      ![](./media/usx22.png)
 
@@ -506,7 +502,7 @@ and the Foundry project.
 
      ![](./media/usx25.png)
 
-1. Explore the Contoso Travel sample data by running the 5^(th), 6^(th), 7^(th) and 8^(th) cells in the notebook.
+1. Explore the Contoso Travel sample data by running the 5<sup>th</sup>, 6<sup>th</sup>, 7<sup>th</sup> and 8<sup>th</sup> cells in the notebook.
 
      ![](./media/usx26.png)
     
@@ -578,7 +574,7 @@ responses.
 
      ![](./media/usx44.png)
 
-1. Click **Select Kernel**, then choose the **Python 3.12.13**  environment to run the Lab 02 notebook.
+1. Click **Select Kernel**, then choose the **Python 3.12.13**  environment to run the Lab 03a notebook.
 
      ![](./media/usx45.png)
 
@@ -608,7 +604,7 @@ responses.
 
      ![](./media/usx53.png)
 
-1. Run the cell under **Test: Flight Search** to test the agent’s ability to call the **search_flights** tool and return relevantresults.
+1. Run the cell under **Test: Flight Search** to test the agent’s ability to call the **search_flights** tool and return relevant results.
 
      ![](./media/usx54.png)
 
@@ -639,7 +635,7 @@ complete travel planning experience.
 
      ![](./media/usx60.png)
 
-1. Click **Select Kernel**, then choose the **Python 3.12.13** environment to run the Lab 02 notebook.
+1. Click **Select Kernel**, then choose the **Python 3.12.13** environment to run the Lab 03b notebook.
 
      ![](./media/usx61.png)
 
@@ -657,7 +653,7 @@ complete travel planning experience.
 
      ![](./media/usx65.png)
 
-     ![](./media/usx66.png)
+     ![](./media/usx66new.png)
 
 1. Run the cell under **Create the Workflow Agent** to register the workflow in Microsoft Foundry and create the workflow agent.
 
@@ -692,7 +688,7 @@ requests.
 
      ![](./media/usx74.png)
 
-1. Click **Select Kernel**, then choose the **Python 3.12.13** environment to run the Lab 02 notebook.
+1. Click **Select Kernel**, then choose the **Python 3.12.13** environment to run the Lab 04 notebook.
 
      ![](./media/usx75.png)
 
@@ -773,7 +769,7 @@ identify areas for improvement.
 
      ![](./media/usx95.png)
 
-1. Click **Select Kernel**, then choose the **Python 3.12.13** environment to run the Lab 02 notebook.
+1. Click **Select Kernel**, then choose the **Python 3.12.13** environment to run the Lab 05 notebook.
 
      ![](./media/usx96.png)
 
@@ -807,7 +803,7 @@ identify areas for improvement.
 
      ![](./media/usx105.png)
 
-     ![](./media/usx106png)
+     ![](./media/usx106.png)
 
 1. Run the cell under **Define Safety Evaluators** to configure safety checks such as violence, hate, and self-harm detection for agent responses.
 
@@ -831,7 +827,7 @@ identify areas for improvement.
 
      ![](./media/usx113.png)
 
-     ![](./media/usx114.png)
+     ![](./media/usx114new.png)
 
 1. Run the cell under **Run the Agentic Evaluation** to evaluate the agent using context and ground truth for more advanced assessment.
 
@@ -843,7 +839,7 @@ identify areas for improvement.
 
      ![](./media/usx117.png)
 
-     ![](./media/usx118.png)
+     ![](./media/usx118new.png)
 
 1. Back in the Foundry portal, select **Agents**, then click on the **contoso-travel-eval** agent to view its details and evaluation results.
 
@@ -879,7 +875,7 @@ the agent operates safely and adheres to responsible AI principles.
 
      ![](./media/usx125.png)
 
-1. Click **Select Kernel**, then choose the **Python 3.12.13** environment to run the Lab 02 notebook.
+1. Click **Select Kernel**, then choose the **Python 3.12.13** environment to run the Lab 06 notebook.
 
      ![](./media/usx126.png)
 
@@ -908,6 +904,8 @@ the agent operates safely and adheres to responsible AI principles.
 1. Run the cell to **monitor the red team run status**, polling until  the evaluation is completed.
 
      ![](./media/usx133.png)
+
+1. Run the cell under **Review Results** to fetch the output items from the completed run and save them for analysis
 
      ![](./media/usx134.png)
 

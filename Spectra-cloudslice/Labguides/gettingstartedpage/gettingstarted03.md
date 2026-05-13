@@ -1,18 +1,70 @@
-# Hands-on Labs - Day 3
+# Hands - on Labs - Day 3
 
 # Trust, Security, and Control for Enterprise AI Agents
 
 ## Overall Estimated Duration: 4 Hours
 
-## Getting Started with the lab
+## Overview
 
-Welcome to your Accelerate Agentic AI for Frontier Workshop, Let's begin by making the most of this experience.
+In this lab, you will design, deploy, and govern an end-to-end agentic AI solution using Microsoft Foundry. Working through a realistic retail scenario, you will build Cora, an intelligent customer service assistant for Zava, a home improvement retailer, and apply enterprise-grade observability and safety practices across the full agent lifecycle. Rather than treating AI agents as black boxes, you will instrument them with tracing, Application Insights integration, and structured evaluation frameworks to gain complete visibility into agent behavior. You will run quality and safety evaluations using Azure AI's built-in evaluators, test models for fitness, and validate agent responses against real-world criteria. To harden the solution against adversarial risks, you will leverage Microsoft Foundry's AI Red Teaming capabilities to detect harmful outputs, security gaps, and jailbreak vulnerabilities before they reach production. By combining Azure AI Agent Service, Azure AI Search, multi-agent orchestration, and centralized governance through the Foundry Control Plane, you will build an AI system that is transparent, secure, scalable, and production-ready.
 
+## Objective
+
+By the end of this lab, participants will be able to:
+
+   - Building an Intelligent Retail Assistant Using Azure AI Agent Service and Azure AI Search
+
+   - Orchestrating Multi-Agent Workflows with Microsoft Foundry Agent Framework
+
+   - Evaluating AI Model Quality and Safety Using Microsoft Foundry Evaluation SDK
+
+   - Implementing End-to-End Observability and Tracing with Application Insights and Microsoft Foundry
+
+   - Hardening AI Agents Against Adversarial Risks Using Microsoft Foundry AI Red Teaming
+
+   - Deploying and Governing Production-Ready AI Agents with Microsoft Foundry Control Plane
+
+## Pre-requisites
+
+Participants should have:
+
+   - A working knowledge of Microsoft Azure services, including resource groups, Azure OpenAI, and Microsoft Foundry.
+
+   - Basic experience with Python, including running scripts, working with virtual environments, and using Jupyter notebooks.
+
+   - Familiarity with AI agent concepts such as retrieval-augmented generation (RAG), tool-calling, and multi-agent orchestration.
+
+   - Understanding of Azure AI Search, including index creation, document ingestion, and semantic search configuration.
+
+   - Awareness of AI evaluation concepts such as quality metrics (relevance, coherence, groundedness) and safety risk categories (violence, hate, self-harm, protected material).
+
+   - General understanding of observability practices, including logging, distributed tracing, and monitoring with Application Insights.
+
+   - Basic familiarity with Azure identity and authentication, including DefaultAzureCredential and role-based access control (RBAC).
+
+## Explanation of Components
+
+1. **Microsoft Foundry**: A unified platform for building, managing, and evaluating AI applications and agents on Azure. It provides tools for orchestration, model integration, monitoring, and governance across the AI lifecycle.
+
+1. **Azure AI Agent Service**: A managed Azure service for creating AI-powered agents that can reason, use tools, retrieve data, and automate workflows. It simplifies deploying enterprise-grade conversational and autonomous AI experiences.
+
+1. **Azure AI Search**: A cloud-based search and retrieval service that enables indexing, semantic search, vector search, and retrieval-augmented generation (RAG) for AI applications. It helps applications quickly find and rank relevant information from large datasets.
+
+1. **Azure OpenAI Service**: A Microsoft Azure service that provides secure access to advanced OpenAI models such as GPT and embedding models. It enables organizations to build generative AI solutions with enterprise security, compliance, and scalability.
+
+1. **Azure AI Evaluation SDK**: A software development kit used to assess the quality, safety, relevance, and performance of AI applications and models. It helps developers benchmark outputs and automate evaluation workflows.
+
+1. **Azure Application Insights**: An application performance monitoring service that collects telemetry, logs, traces, and diagnostics from applications. It helps developers monitor reliability, performance, and user interactions in real time.
+
+1. **Azure AI Tracing (OpenTelemetry)**: A tracing and observability capability that uses OpenTelemetry standards to capture AI workflow execution details, requests, and dependencies. It helps diagnose issues and analyze end-to-end AI application behavior.
+
+1. **Microsoft Foundry AI Red Teaming**: A security testing approach within Microsoft AI ecosystems used to evaluate AI systems for vulnerabilities, harmful outputs, safety risks, and policy violations. It helps improve the robustness and trustworthiness of generative AI applications.
+  
 ## Virtual Machine & Lab Guide
 
-Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
+Your virtual machine is your workhorse throughout the workshop. The guide is your roadmap to success.
 
-## Accessing Your Lab Environment
+## Getting Started with the lab
 
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 

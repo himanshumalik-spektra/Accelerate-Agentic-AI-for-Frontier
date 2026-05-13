@@ -381,7 +381,7 @@ incorrect.](./media/image64.png)
 
 ## Task 7: Agent Evaluation
 
-Azure AI Foundry offers a number of built-in evaluators to measure the quality, efficiency, risk and safety of your agents. For example, intent resolution, tool call accuracy, and task adherence evaluators are
+Microsoft Foundry offers a number of built-in evaluators to measure the quality, efficiency, risk and safety of your agents. For example, intent resolution, tool call accuracy, and task adherence evaluators are
 targeted to assess the end-to-end and tool call process quality of agent workflow, while content safety evaluator checks for inappropriate content in the responses such as violence or hate. You can also create custom evaluators tailored to your specific requirements, including custom prompt-based evaluators or code-based evaluators that implement your unique assessment criteria.
 
 1. Go back to **GitHub Codespaces**, open the terminal, and run the Python requirements script below to set up your environment
@@ -430,7 +430,7 @@ targeted to assess the end-to-end and tool call process quality of agent workflo
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image68.png)
 
-1. Upon completion, the test will display an URL in the output where you can review the detailed evaluation results in the Azure AI Foundry UI, including individual evaluator passing scores and explanations.
+1. Upon completion, the test will display an URL in the output where you can review the detailed evaluation results in the Microsoft Foundry UI, including individual evaluator passing scores and explanations.
 
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image69.png)
@@ -563,7 +563,7 @@ Continuous evaluation is an automated monitoring capability that continuously as
 During container startup, continuous evaluation is enabled by default and pre-configured with a sample evaluator set to evaluate up to 5 agent responses per hour. Continuous evaluation does not generate test
 inputs-instead, it evaluates real user conversations as they occur. This means evaluation runs are triggered only when actual users interact with your agent, and if there are no user interactions, there will be no evaluation entries.
 
-To customize continuous evaluation from the Azure AI Foundry:
+To customize continuous evaluation from the Microsoft Foundry:
 
 1. Select **Monitor.** Choose the agent you want to enable continuous evaluation for from the agent list and click on **Settings**
 

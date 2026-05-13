@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab demonstrates how to implement **end-to-end agent operations** using Azure AI Foundry by building an intelligent retail assistant named **Cora** for Zava, a home improvement retailer. It walks through the complete lifecycle of an AI solution-from provisioning Azure resources and deploying applications to building, orchestrating, and evaluating AI agents.
+This lab demonstrates how to implement **end-to-end agent operations** using Microsoft Foundry by building an intelligent retail assistant named **Cora** for Zava, a home improvement retailer. It walks through the complete lifecycle of an AI solution-from provisioning Azure resources and deploying applications to building, orchestrating, and evaluating AI agents.
 
 You will gain hands-on experience with Azure services such as **Azure AI Search, Azure AI Agent Service, and model evaluation tools**, enabling you to design scalable, intelligent, and production-ready AI applications.
 
@@ -362,7 +362,7 @@ In this task, you will configure and validate your development environment. This
 
     ![](./media/image59.png)
 
-1. Click the **Run (▶)** button to execute the cell and verify that all required Azure AI Foundry environment variables are properly set.
+1. Click the **Run (▶)** button to execute the cell and verify that all required Microsoft Foundry environment variables are properly set.
 
     ![](./media/image60.png)
 
@@ -411,7 +411,7 @@ In this task, you will configure and validate your development environment. This
 
     ![](./media/image66.png)
 
-1. Click the **Run (▶)** button to execute the cell and establish a connection to Azure AI Foundry using the configured credentials.
+1. Click the **Run (▶)** button to execute the cell and establish a connection to Microsoft Foundry using the configured credentials.
 
     ![](./media/image68.png)
 
@@ -783,7 +783,7 @@ home improvement products to Zava customers. This notebook helps you assess resp
 
     ![](./media/image174.png)
 
-1. Run All Evaluators: Run the cell to execute a full **multi-evaluator run** using evaluate() against the 42-evaluate-quality.jsonl dataset, scoring every row across Content Safety, Coherence, Relevance, Groundedness, Fluency, and Similarity, then publishing results to both the Azure AI Foundry portal and a local JSON file.
+1. Run All Evaluators: Run the cell to execute a full **multi-evaluator run** using evaluate() against the 42-evaluate-quality.jsonl dataset, scoring every row across Content Safety, Coherence, Relevance, Groundedness, Fluency, and Similarity, then publishing results to both the Microsoft Foundry portal and a local JSON file.
 
     ![](./media/image175.png)
 
@@ -793,7 +793,7 @@ home improvement products to Zava customers. This notebook helps you assess resp
 
 ## Task 12: Cora-For-Zava: Exploring AI Safety Evaluators for Secure Responses
 
-**Cora** is a customer service chatbot for **Zava** - a fictitious retailer of home improvement goods for DIY enthusiasts. Before deploying Cora to serve Zava customers, you must ensure it generates safe, appropriate content and is protected against adversarial attacks. This notebook guides you through Azure AI Foundry's safety evaluators, helping you identify and mitigate risks like harmful content, jailbreak attempts, and protected material violations to maintain a secure and trustworthy customer experience.
+**Cora** is a customer service chatbot for **Zava** - a fictitious retailer of home improvement goods for DIY enthusiasts. Before deploying Cora to serve Zava customers, you must ensure it generates safe, appropriate content and is protected against adversarial attacks. This notebook guides you through Microsoft Foundry's safety evaluators, helping you identify and mitigate risks like harmful content, jailbreak attempts, and protected material violations to maintain a secure and trustworthy customer experience.
 
 1. Navigate to the **labs/** **4-evaluation/** folder and open the **43-evaluate-safety.ipynb** notebook to begin the environment setup lab.
 
@@ -817,7 +817,7 @@ home improvement products to Zava customers. This notebook helps you assess resp
 
 ## Summary
 
-In this lab, you implemented a complete **end-to-end AI solution** for a retail assistant using Azure AI Foundry. Starting from environment setup and deployment, you built Cora, enhanced it with search capabilities, and evolved it into a multi-agent system.
+In this lab, you implemented a complete **end-to-end AI solution** for a retail assistant using Microsoft Foundry. Starting from environment setup and deployment, you built Cora, enhanced it with search capabilities, and evolved it into a multi-agent system.
 
 You also explored critical aspects of production AI systems, including:
 

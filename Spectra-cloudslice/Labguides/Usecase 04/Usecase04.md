@@ -584,10 +584,14 @@ contextual connections in your data.
      ![](./media/image101.png)
 
 1. Select the Workspace as **Fabric IQ Ontology**, Lakehouse as **IQ_Lakehouse**, Table as **Orders**, Source Column as **OrderID**, then click on **Apply**
+
      ![](./media/image102.png)
 
+1. After configuring the relationship you will be getting relationship pane as shown in below.
 
      ![](./media/image103.png)
+
+1. Select Order under entity type and Add the relationship.
 
      ![](./media/image104.png)
 
@@ -890,7 +894,6 @@ publishing details** to review the agent deployment.
      ![](./media/image141.png)
 
 12. In the Choose a knowledge type window, first select the **Storage account** and **Container name** that were created in the previous steps. Then select Chat completions model as gpt-4.1 and click on **Create**.
-
 
      ![](./media/image142.png)
 

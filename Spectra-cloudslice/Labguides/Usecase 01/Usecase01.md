@@ -70,7 +70,7 @@ incorrect.](./media/uc1-5.png)
 
     ![A](./media/f1.png) 
 
-1. In the AI Search service, go to **Identity**, switch the **Status** to **On (1)** to enable the system-assigned managed identity, and then click **Save (2)** to apply the changes.
+1. In the AI Search service, go to **Identity (1)**, switch the **Status** to **On (2)** to enable the system-assigned managed identity, and then click **Save** to apply the changes.
 
     ![A](./media/f2.png) 
 

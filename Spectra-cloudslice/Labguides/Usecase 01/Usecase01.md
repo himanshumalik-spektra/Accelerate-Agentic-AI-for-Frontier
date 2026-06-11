@@ -355,6 +355,10 @@ document and required Role permissions to it.
 
     ![A screenshot of a computer AI-generated content may be incorrect.](./media/uc1-51.png)
 
+## Important
+
+   > **Note**: Please delete the resources that you have created in the **AgenticAI** resource group. 
+
 ## Summary
 
 In this lab, we have learnt to connect the agent to a Azure AI Search

@@ -471,7 +471,7 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
    <validation step="0cd5f7a0-43ba-4390-88dd-e8f7a18e6a7e" />
 
 
-        >**Note**: Please delete the resources that you have created in the AgenticAI resource group. 
+     > **Note**: Please delete the resources that you have created in the AgenticAI resource group. 
 
 ## Summary
 

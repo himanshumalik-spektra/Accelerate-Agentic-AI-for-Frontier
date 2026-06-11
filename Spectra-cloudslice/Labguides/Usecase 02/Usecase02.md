@@ -460,6 +460,13 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     ![](./media/image85.png)       
 
+## Important
+
+   > **Note**: Please delete the resources that you have created in the **AgenticAI** resource group. 
+
+   ![](./media/f13.png) 
+
+
    ### Congratulations!
 
    You’ve completed the task. Now let’s validate it:

@@ -784,6 +784,12 @@ applications, making it a critical part of the Generative AI Ops (GenAIOps) life
 
     ![](./media/image150.png)
 
+    
+    >**Note:** You may encounter the following error while running the ViolenceEvaluator:
+    **EvaluationException: (UserError) The needed capability 'content harm' is not supported by the RAI service in this region.**
+    This happens because the selected Azure region does not support the required Responsible AI (RAI) content safety features. **You can safely ignore this error and continue with the remaining steps**, as it will not impact the rest of the lab execution.
+
+
     ![](./media/image151.png)
 
     ![](./media/image152.png)
@@ -906,6 +912,12 @@ home improvement products to Zava customers. This notebook helps you assess resp
     ![](./media/image182.png)
 
     ![](./media/image183.png)
+
+    
+    >**Note:** You may encounter the following error while running the safety evaluator:
+    **EvaluationException: (UserError) The needed capability 'content harm' is not supported by the RAI service in this region.**
+    This occurs when the selected Azure region does not support the required Responsible AI (RAI) content safety capabilities. **You can safely ignore this error and proceed with the remaining steps**, as it does not block further progress in this lab.
+
 
 ## Summary
 

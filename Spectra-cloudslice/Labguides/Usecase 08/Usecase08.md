@@ -82,7 +82,7 @@ This use case demonstrates how to build a secure end-to-end AI agent, evaluate i
 
 1. Click **Code (1)**, go to the **Codespaces (2)** tab, and select **Create codespace on main (3)** to launch the environment.
 
-    ![](./media/uc8-22.png)
+    ![](./media/aaau8t2s3.png)
 
 1. Wait for the Codespaces environment to setup .It takes few minutes to setup completely.
 
@@ -90,6 +90,8 @@ This use case demonstrates how to build a secure end-to-end AI agent, evaluate i
 incorrect.](./media/image18.png)
 
     ![](./media/image19.png)
+
+    > **Note:** It can take a few minutes for the codespace to spin up completely
 
 ## Task 3: Provision Services and deploy application to Azure
 
@@ -103,25 +105,25 @@ incorrect.](./media/image18.png)
 
     ![](./media/uc8-23.png)
 
-1. Click **Skip** to bypass the setup questionnaire and proceed.
+1. Select **Use recommended settings** and click **Finish** to complete the Docker Desktop setup.
 
-    ![](./media/uc8-19.png)
+    ![](./media/uc8-24.png)
 
 1. Click **Continue without signing in** to proceed without logging into Docker.
 
     ![](./media/uc8-18.png)
 
-1. Select **Use recommended settings** and click **Finish** to complete the Docker Desktop setup.
+1. Click **Skip** to bypass the setup questionnaire and proceed.
 
-    ![](./media/uc8-24.png)  
-
-1. Click the **Close (X)** button to exit the Windows Subsystem for Linux (WSL) welcome screen.
-
-    ![](./media/uc8-17.png)
+    ![](./media/uc8-19.png)  
 
 1. Wait for Docker Desktop to finish starting the Docker Engine before proceeding.
 
-    ![](./media/uc8-16.png)     
+    ![](./media/uc8-16.png)
+
+    >**Note:** It may take a few minutes to complete the setup. Please wait until the process finishes.     
+
+    >**Note:** Click the **Close (X)** button to exit the Windows Subsystem for Linux (WSL) welcome screen.![](./media/uc8-17.png)
 
 1. Navigate back to the Codespace in the in the browser, run the following command in the Terminal and press Enter.
 
@@ -130,12 +132,12 @@ incorrect.](./media/image18.png)
     ```
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image20.png)
+incorrect.](./media/aaau8t3s8.png)
 
 1. Copy the displayed authentication code from the terminal, press **Enter**, and complete the Azure login in the browser.
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image21.png)
+incorrect.](./media/aaau8t3s9.png)
 
 1. Enter the displayed code in the field and click **Next** to proceed with authentication.
 
@@ -155,7 +157,7 @@ incorrect.](./media/image24new.png)
 1. Verify that authentication is successful (logged in message appears), then proceed with the next command in the terminal.
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image25.png)
+incorrect.](./media/aaau8t3s13.png)
 
 1. Run the following command in the terminal to create a new environment.
 
@@ -185,6 +187,7 @@ incorrect.](./media/image28.png)
 
     >**Note** - If it throws quota issue try with other location
 
+    >**Note:** If prompted with **“Would you like to check your Azure development tools? [Y/n]”**, type **n** and press **Enter** to skip the check and continue with the setup. ![](./media/aaau8t3s16.png
       ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image29.png)
 
@@ -210,38 +213,33 @@ incorrect.](./media/image37.png)
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/uc8-15.png)
 
-1. From the **Resource groups** list, select the newly created resource group with prifix **rg-ai-agent-xxxxxx** to open it.
+1. From the **Resource groups** list, select the newly created resource group with prifix **rg-ai-agent-<inject key="DeploymentID" enableCopy="false"/>** to open it.
 
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/uc8-48.png)
 
-1. Make sure the below resource got deployed successfully
+1. Make sure the below resources got deployed successfully:
 
-    - Foundry
+    - Foundry  
+    - Foundry project  
+    - Application Insights  
+    - Container App  
+    - Container Apps Environment  
+    - Container registry  
+    - Managed Identity  
+    - Log Analytics workspace  
+    - Storage account  
 
-    - Foundry project
-
-    - Container App
-
-    - Container registry
-
-    - Container App Environment
-
-    - Azure Cosmos DB account
-
-    - Search service
-
-    - Azure Storage account
 
       ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/uc8-49.png)
+incorrect.](./media/aaau8t4s3.png)
 
 1. In the resource group and click on **Azure Storage account.**
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/uc8-50.png)
+incorrect.](./media/aaau8t4s4.png)
 
-1. From the left navigation menu, click on **Containers** inside data storage , Make sure data should be deployed successfully
+1. From the left navigation menu, click on **Containers** under **Data storage**, Make sure data should be deployed successfully
 
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image42.png)
@@ -249,26 +247,27 @@ incorrect.](./media/image42.png)
 1. Go back to resorcegroup and click on **Foundry Project.**
 
     ![A screenshot of a computer AI-generated content may be
- incorrect.](./media/image43new.png)
+ incorrect.](./media/aaau8t4s6.png)
 
-1. Click **Go to Foundry portal** to verify that the model has been successfully deployed.
+1. Click **Go to Foundry portal** to verify that the model has been successfully deployed, it will navigate you to the **Microsoft Foundry** tab in your browser.
 
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image44.png)
 
+1. Copy the **Project endpoint** and save it for future use, as it is required while configuring the application and connecting to the Azure AI Project in subsequent steps.
+
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image45new.png)
+incorrect.](./media/aaau8t4s7.0.png)
 
 1. In the top navigation, select **Build.**
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image46new.png)
+incorrect.](./media/aaau8t4s8.png)
 
 1. From the left menu, click **Agents (1)**, then select the **agent-template-assistant (2)** agent from the list to open it.
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image47.png)
-
+incorrect.](./media/aaau8t4s9.png)
 
 ## Task 5: Interact with Your AI Agent Using Predefined Questions
 
@@ -285,7 +284,7 @@ incorrect.](./media/image47.png)
 1. Wait for the web application deployment to complete.
 
     ![A screenshot of a computer AI-generated content may be
- incorrect.](./media/image50.png)
+ incorrect.](./media/aaau8t5s3.png)
 
 1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image.
 
@@ -294,10 +293,10 @@ incorrect.](./media/image47.png)
     ```
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image51.png)
+incorrect.](./media/aaau8t5s4.png)
 
     ![A screenshot of a chat AI-generated content may be
-incorrect.](./media/image52.png)
+incorrect.](./media/aaau8t5s4.0.png)
 
 1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image.
 
@@ -306,10 +305,10 @@ incorrect.](./media/image52.png)
    ```
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image53.png)
+incorrect.](./media/aaau8t5s5.png)
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image54.png)
+incorrect.](./media/aaau8t5s5.0.png)
 
 1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image.
 
@@ -318,10 +317,10 @@ incorrect.](./media/image54.png)
     ```
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image55.png)
+incorrect.](./media/aaau8t5s6.png)
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image56.png)
+incorrect.](./media/aaau8t5s6.0.png)
 
 1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image.
 
@@ -330,10 +329,10 @@ incorrect.](./media/image56.png)
    ```
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image57.png)
+incorrect.](./media/aaau8t5s7.png)
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image58.png)
+incorrect.](./media/aaau8t5s7.0.png)
 
 4. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image.
 
@@ -342,17 +341,17 @@ incorrect.](./media/image58.png)
    ```
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image59.png)
+incorrect.](./media/aaau8t5s8.png)
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image60.png)
+incorrect.](./media/aaau8t5s8.0.png)
 
 ## Task 6: Sample Prompts for Azure AI Search
 
 1. In the **agent-template-assistant** web app page, select **New Chat.**
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image61.png)
+incorrect.](./media/aaau8t6s1.png)
 
 2. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image.
 
@@ -361,10 +360,10 @@ incorrect.](./media/image61.png)
    ```
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image62.png)
+incorrect.](./media/aaau8t6s2.png)
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image63.png)
+incorrect.](./media/aaau8t6s2.0.png)
 
 1. In the **agent-template-assistant** web app page, enter the following prompts and review the response.
 
@@ -377,7 +376,7 @@ incorrect.](./media/image63.png)
     ```
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image64.png)
+incorrect.](./media/aaau8t6s3.png)
 
 ## Task 7: Agent Evaluation
 
@@ -394,6 +393,15 @@ targeted to assess the end-to-end and tool call process quality of agent workflo
 
     ![A screenshot of a computer AI-generated content may be incorrect.](./media/image66.png)
 
+    
+    > **Note:** If you encounter dependency conflict errors during installation, run the following commands to remove the conflicting package and reinstall the required dependencies:
+    >
+    > ```bash
+    > pip uninstall api -y
+    > python -m pip install -r src/requirements.txt
+    > ```
+
+
 1. Run the below script to set the variable.
 
     ```
@@ -404,15 +412,9 @@ targeted to assess the end-to-end and tool call process quality of agent workflo
     export AZURE_AI_AGENT_NAME="agent-template-assistant"
     ```
 
-1. Go back to the Microsoft Foundry
+1. Select the **test_utils.py** under the **test** folder in the left hand panel.
 
-1. Copy the **Microsoft Foundry project endpont**.
-
-    ![A screenshot of a computer AI-generated content may be incorrect.](./media/image67new.png)
-
-1. Go back to Github Cospaces and select the **test_utils.py** under the **test** folder in the left hand panel.
-
-1. Paste the endpoint between the empty double quotes on line 40 after **AZURE_EXISTING_AIPROJECT_ENDPOINT**.
+1. Paste the endpoint that you copied in **Task 4 and Step 8** between the empty double quotes **""** on line 40 after **AZURE_EXISTING_AIPROJECT_ENDPOINT**.
 
 1. Run the below script below
 
@@ -428,7 +430,7 @@ targeted to assess the end-to-end and tool call process quality of agent workflo
     ```
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image68.png)
+incorrect.](./media/aaau8t7s10.png)
 
 1. Upon completion, the test will display an URL in the output where you can review the detailed evaluation results in the Microsoft Foundry UI, including individual evaluator passing scores and explanations.
 
@@ -441,8 +443,7 @@ incorrect.](./media/image69.png)
 incorrect.](./media/image70.png)
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image71.png)
-
+incorrect.](./media/aaau8t7s10.0.png)
 ## Task 8: AI Red Teaming Agent
 
 The AI Red Teaming Agent is a powerful tool designed to help organizations proactively find security and safety risks associated with
@@ -534,25 +535,27 @@ incorrect.](./media/image80.png)
 You can view both the server-side and client-side traces, cost and
 evaluation data in Microsoft Foundry.
 
-1. Go back the Microsoft Foundry and select agent.
+1. Go back the Microsoft Foundry and From the left navigation pane, select **Agents (1)**, and then click on **agent-template-assistant (2)** from the list to open the agent details..
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image81.png)
+incorrect.](./media/aaau8t11s1.png)
 
 1. Select the **Traces**
 
     ![A screenshot of a computer AI-generated content may be
- incorrect.](./media/image82.png)
+ incorrect.](./media/aaau8t11s2.png)
 
-    ![Tracing Tab](./media/image83.png)
+    ![Tracing Tab](./media/aaau8t11s2.0.png)
 
 1. Click on the **Monitor** tab to view the agent’s performance metrics and activity.
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image84.png)
+incorrect.](./media/aaau8t11s3.png)
+
+1. Scroll down in the **Monitor tab**, and check the **Operational metrics** section.
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image85.png)
+incorrect.](./media/aaau8t11s4.png)
 
     ![Monitor Dashboard](./media/image86.png)
 
@@ -565,13 +568,12 @@ inputs-instead, it evaluates real user conversations as they occur. This means e
 
 To customize continuous evaluation from the Microsoft Foundry:
 
-1. Select **Monitor.** Choose the agent you want to enable continuous evaluation for from the agent list and click on **Settings**
+1. Select **Monitor(1)** Choose the agent you want to enable continuous evaluation for from the agent list and click on **Settings (2)**
 
     ![A screenshot of a computer AI-generated content may be
- incorrect.](./media/image87.png)
+ incorrect.](./media/aaau8t12s1.png)
 
-1. Enable **Continuous evaluation (1)**, set the **Sample rate** as 1 (2), and click **Submit (3)** to apply the monitoring settings.
-
+1. In the **Monitor settings** pane, enable **Continuous evaluation (1)**, set **Maximum runs per hour** to **1** **(2)**, and then click **Submit (3)**.
     ![A screenshot of a computer AI-generated content may be
  incorrect.](./media/uc8-52new.png)
 

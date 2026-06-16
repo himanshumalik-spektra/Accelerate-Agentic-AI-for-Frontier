@@ -91,7 +91,7 @@ By completing this lab, you will be able to:
 
 1. In the LabVM search bar, type **Docker (1)** and select **Docker Desktop (2)** from the results to open the application.
 
-    ![](../Usecase%2008/media/uc9-14.png)
+    ![](./media/aaau9t2s1.png)
 
     > **Note:** Before moving on to the next steps please make sure your Docker Desktop is up and running. It should not be in stopped state.
 
@@ -99,25 +99,26 @@ By completing this lab, you will be able to:
 
     ![](../Usecase%2008/media/uc8-23.png)
 
-1. Click **Skip** to bypass the setup questionnaire and proceed.
+1. Select **Use recommended settings** and click **Finish** to complete the Docker Desktop setup.
 
-    ![](../Usecase%2008/media/uc8-19.png)
+    ![](../Usecase%2008/media/uc8-24.png)
 
 1. Click **Continue without signing in** to proceed without logging into Docker.
 
-    ![](../Usecase%2008/media/uc8-18.png)
+    ![](../Usecase%2008/media/uc8-18.png) 
 
-1. Select **Use recommended settings** and click **Finish** to complete the Docker Desktop setup.
+1. Click **Skip** to bypass the setup questionnaire and proceed.
 
-    ![](../Usecase%2008/media/uc8-24.png)  
-
-1. Click the **Close (X)** button to exit the Windows Subsystem for Linux (WSL) welcome screen.
-
-    ![](../Usecase%2008/media/uc8-17.png)
+    ![](../Usecase%2008/media/uc8-19.png) 
 
 1. Wait for Docker Desktop to finish starting the Docker Engine before proceeding.
 
     ![](../Usecase%2008/media/uc8-16.png) 
+
+
+    >**Note:** It may take a few minutes to complete the setup. Please wait until the process finishes.     
+
+    >**Note:** Click the **Close (X)** button to exit the Windows Subsystem for Linux (WSL) welcome screen. ![](../Usecase%2008/media/uc8-17.png)
 
 1. Navigate back to the Codespace in the in the browser, run the following command in the Terminal and press Enter.
 
@@ -294,7 +295,91 @@ incorrect.](../Usecase%2008/media/image24new.png)
 
     ![](./media/image48.png)
 
-## Task 4: Set up .env variables
+### Task 4: Deploy an Embedding Model in Azure AI Foundry
+
+
+1. From the left navigation pane, select **Models**, and then click on **Deploy a base model**.
+
+    ![](./media/0.png)
+
+1. From the list of available models, locate and select **text-embedding-3-large** under the *Embeddings* section.
+
+    ![](./media/1.png)
+
+1. On the **text-embedding-3-large** model page, click on **Deploy (1)**, and then select **Default settings (2)**.
+
+    ![](./media/2.png)
+
+1. After the deployment is completed, verify that the **Provisioning state** shows **Succeeded**, and note down the **Deployment name** under *Deployment info* for use in your `.env` file.
+
+    ![](./media/3.png)
+
+    >**Note:** Configure Environment Variables from Azure Portal.
+    
+        1. Open the **Azure Portal** and navigate to your resources created as part of the lab.
+        2. Go to **Azure AI Foundry**:
+        - Select your project
+        - Navigate to **Models / Deployments**
+        - Copy the deployment names:
+            - For chat model → copy and set:
+            ```env
+            AZURE_AI_AGENT_DEPLOYMENT_NAME="gpt-5-mini"
+            AZURE_OPENAI_CHAT_DEPLOYMENT="gpt-5-mini"
+            ```
+            - For embedding model → copy and set:
+            ```env
+            AZURE_AI_EMBED_DEPLOYMENT_NAME="text-embedding-3-large"
+            ```
+
+        3. Go to **Container Apps Environment**:
+        - Search for **Container Apps Environments**
+        - Open your environment
+        - Copy the **Name** and set:
+            ```env
+            AZURE_CONTAINER_ENVIRONMENT_NAME="<environment-name>"
+            ```
+
+        4. Go to **Azure Container Registry (ACR)**:
+        - Search for **Container Registries**
+        - Open your registry
+        - Copy the **Login server**
+        - Set:
+            ```env
+            AZURE_CONTAINER_REGISTRY_ENDPOINT="<login-server>"
+            ```
+
+        5. Go to **Azure Container Apps**:
+        - Open your **API Container App**
+        - From the **Overview** tab:
+            - Copy the **Name**:
+            ```env
+            SERVICE_API_NAME="<container-app-name>"
+            ```
+            - Copy the **Application URL**:
+            ```env
+            SERVICE_API_URI="https://<your-app-url>"
+            ```
+
+        6. Go to **Application Insights**:
+        - Search for **Application Insights**
+        - Open the resource linked to your application
+        - From the **Overview** page:
+            - Copy **Connection String**:
+            ```env
+            APPLICATIONINSIGHTS_CONNECTION_STRING="<connection-string>"
+            APPLICATION_INSIGHTS_CONNECTION_STRING="<connection-string>"
+            ```
+            - Copy **Instrumentation Key**:
+            ```env
+            APPLICATIONINSIGHTS_INSTRUMENTATION_KEY="<instrumentation-key>"
+            ```
+
+        7. Set remaining variables (if not already present):
+        ```env
+        SERVICE_API_ENDPOINTS='[]'
+
+
+## Task 5: Set up .env variables
 
 1. Make sure you are authenticated with Azure CLI. We will use this to retrieve and create a .env file based on the scripts/.env.sample format
 
@@ -305,8 +390,6 @@ incorrect.](../Usecase%2008/media/image24new.png)
 1. Run this script from root of repo - it will create .env with values extracted by Azure CLI. By default it looks for an **rg-Ignite-XXX** resource group but you can override it.
 
     ```
-    cd ../..
-    
     ./scripts/1-update-env-selfguided.sh
     ```
 
@@ -338,7 +421,9 @@ incorrect.](../Usecase%2008/media/image24new.png)
 
     > **Note:** If you get any error while runnnig 2-add-product-index.py file, from the left navigation pane open the .env file and look for the missing variable.
 
-## Task 5: Environment Setup & Validation
+    > **Note:** Copy the following **AZURE_AI_AGENT_DEPLOYMENT_NAME**, **AZURE_AI_EMBED_DEPLOYMENT_NAME** and paste them into your `.env` file.
+
+## Task 6: Environment Setup & Validation
 
 In this task, you will configure and validate your development environment. This includes selecting the appropriate Python environment, installing dependencies, and verifying connectivity to Azure services and the Foundry project.
 
@@ -360,7 +445,7 @@ In this task, you will configure and validate your development environment. This
 
 1. To import required environment variables , run the Validate Azure Environment Variables cell
 
-    ![](./media/image59.png)
+    ![](./media/aaau9t5s5.png)
 
 1. Click the **Run (▶)** button to execute the cell and verify that all required Microsoft Foundry environment variables are properly set.
 
@@ -393,7 +478,7 @@ In this task, you will configure and validate your development environment. This
     ![](./media/img68.png)
 
 
-## Task 6: Build "Cora for Zava" - An AI-Powered Retail Shopping Assistant Using Azure AI Agent Service
+## Task 7: Build "Cora for Zava" - An AI-Powered Retail Shopping Assistant Using Azure AI Agent Service
 
 **Cora** is a customer service chatbot for **Zava** - a fictitious retailer of home improvement goods for DIY enthusiasts. Zava offers a wide range of products including paint, power tools, hand tools, hardware, electrical supplies, and plumbing materials. Cora helps customers find products, check inventory, and provides personalized assistance for home improvement projects.
 
@@ -410,6 +495,8 @@ In this task, you will configure and validate your development environment. This
 1. Click the **Run (▶)** button to execute the cell and load environment variables from the .env file into your notebook.
 
     ![](./media/image66.png)
+
+    > **Note:** Ensure that the `.env` file contains the correct deployment configuration as **AZURE_OPENAI_DEPLOYMENT="gpt-4.1"**.
 
 1. Click the **Run (▶)** button to execute the cell and establish a connection to Microsoft Foundry using the configured credentials.
 
@@ -482,7 +569,7 @@ In this task, you will configure and validate your development environment. This
 
     ![](./media/image88.png)
 
-## Task 7: Cora-For-Zava: Building a Multi-Agent Retail Assistant System
+## Task 8: Cora-For-Zava: Building a Multi-Agent Retail Assistant System
 
 **Cora** is a customer service chatbot for **Zava** - a fictitious retailer of home improvement goods for DIY enthusiasts. As Zava retail stores grow, Cora needs to handle more complex customer needs. This notebook shows you how to evolve from a single agent to a multi-agent system, with specialized agents for inventory management and customer service. You'll learn to orchestrate multiple agents working together to provide sophisticated and role-specific assistance.
 
@@ -554,11 +641,11 @@ In this task, you will configure and validate your development environment. This
 
     ![](./media/image107.png)
 
-## Task 8: Cora-For-Zava: Generating Synthetic Test Datasets for Evaluation
+## Task 9: Cora-For-Zava: Generating Synthetic Test Datasets for Evaluation
 
 **Cora** is a customer service chatbot for **Zava** - a fictitious retailer of home improvement goods for DIY enthusiasts. To ensure Cora provides accurate and helpful responses about hardware and home improvement products, you need quality test data. This notebook helps you generate synthetic query-response pairs based on your product catalog, creating a robust evaluation dataset to measure Cora's performance before deployment.
 
-1. Navigate to the **labs/2-models/** folder and open the **21-simulated-dataset.ipynb** notebook to begin the environment setup lab.
+1. Navigate to the **labs/2-models/** folder and open the **21-simulate-dataset.ipynb** notebook to begin the environment setup lab.
 
     ![](./media/image108.png)
 
@@ -610,7 +697,7 @@ In this task, you will configure and validate your development environment. This
 
     ![](./media/image121.png)
 
-## Task 9: Cora-For-Zava: Evaluating and Selecting the Best AI Model
+## Task 10: Cora-For-Zava: Evaluating and Selecting the Best AI Model
 
 **Cora** is a customer service chatbot for **Zava** - a fictitious retailer of home improvement goods for DIY enthusiasts. To ensure Cora provides the best customer experience, you need to select the right foundation model. With multiple Azure OpenAI models available (GPT-4o, GPT-4o-mini, GPT-4), you need to evaluate which model delivers the best balance of quality, safety, and performance for your retail use case.
 
@@ -628,11 +715,16 @@ In this task, you will configure and validate your development environment. This
 
     ![](./media/image125.png)
 
-    ![](./media/image126.png)
+    ![](./media/aaau9t9s3.2.png)
+
+    
+    > **Note:** Ensure that the `models_to_evaluate` list contains only the deployed model. It should be set exactly as:
+    > models_to_evaluate = ["gpt-4.1"]
+
 
     ![](./media/image127.png)
 
-    ![](./media/image128.png)
+    ![](./media/aaau9t9s3.4.png)
 
     ![](./media/image129.png)
 
@@ -652,7 +744,7 @@ In this task, you will configure and validate your development environment. This
 
     ![](./media/image137.png) 
 
-## Task 10: Cora-For-Zava: Getting Started with Your First AI Evaluation Flow
+## Task 11: Cora-For-Zava: Getting Started with Your First AI Evaluation Flow
 
 **Cora** is a customer service chatbot for **Zava** - a fictitious retailer of home improvement goods for DIY enthusiasts. Before deploying
 Cora to help customers, you need to ensure it provides accurate, safe, and helpful responses. Evaluation is the foundation of trust in AI
@@ -692,13 +784,19 @@ applications, making it a critical part of the Generative AI Ops (GenAIOps) life
 
     ![](./media/image150.png)
 
+    
+    >**Note:** You may encounter the following error while running the ViolenceEvaluator:
+    **EvaluationException: (UserError) The needed capability 'content harm' is not supported by the RAI service in this region.**
+    This happens because the selected Azure region does not support the required Responsible AI (RAI) content safety features. **You can safely ignore this error and continue with the remaining steps**, as it will not impact the rest of the lab execution.
+
+
     ![](./media/image151.png)
 
     ![](./media/image152.png)
 
     ![](./media/image153.png)
 
-## Task 11: Cora-For-Zava: Exploring AI Response Quality Evaluators
+## Task 12: Cora-For-Zava: Exploring AI Response Quality Evaluators
 
 **Cora** is a customer service chatbot for **Zava** - a fictitious retailer of home improvement goods for DIY enthusiasts. Cora must provide accurate, relevant, and coherent responses about hardware and
 home improvement products to Zava customers. This notebook helps you assess response quality using specialized evaluators for groundedness, relevance, coherence, fluency, and similarity-ensuring Cora meets the high standards expected in a production retail environment.
@@ -791,7 +889,7 @@ home improvement products to Zava customers. This notebook helps you assess resp
 
     ![](./media/image177.png)
 
-## Task 12: Cora-For-Zava: Exploring AI Safety Evaluators for Secure Responses
+## Task 13: Cora-For-Zava: Exploring AI Safety Evaluators for Secure Responses
 
 **Cora** is a customer service chatbot for **Zava** - a fictitious retailer of home improvement goods for DIY enthusiasts. Before deploying Cora to serve Zava customers, you must ensure it generates safe, appropriate content and is protected against adversarial attacks. This notebook guides you through Microsoft Foundry's safety evaluators, helping you identify and mitigate risks like harmful content, jailbreak attempts, and protected material violations to maintain a secure and trustworthy customer experience.
 
@@ -814,6 +912,12 @@ home improvement products to Zava customers. This notebook helps you assess resp
     ![](./media/image182.png)
 
     ![](./media/image183.png)
+
+    
+    >**Note:** You may encounter the following error while running the safety evaluator:
+    **EvaluationException: (UserError) The needed capability 'content harm' is not supported by the RAI service in this region.**
+    This occurs when the selected Azure region does not support the required Responsible AI (RAI) content safety capabilities. **You can safely ignore this error and proceed with the remaining steps**, as it does not block further progress in this lab.
+
 
 ## Summary
 

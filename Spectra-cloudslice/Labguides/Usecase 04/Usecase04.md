@@ -175,7 +175,7 @@ In this exercise, you will create an Azure AI Search resource from the Azure por
 
 12. Click on **+Select members**, search for and select your **user name**, **<inject key="AzureAdUserEmail"></inject>**.Username and then click on **Select**. This adds the Storage Blob Data Reader role to your user id.
 
-    ![](./media/126.png)
+     ![](./media/126.png)
 
 13. Select **Managed identity (1)** and then select **+ Select members (2)**. Select **Search service (3)** under **Managed identity** and select the **searchleaves (4)** search service that gets listed, then click on **Select (5)**.
 
@@ -361,7 +361,29 @@ In this task, you create a Fabric workspace. The workspace contains all the item
 
      ![](./media/image65.png)
 
-     > **Note:** If you encounter the “TooManyRequestsForCapacity” error while loading data, it indicates a capacity/rate limit issue rather than an SKU configuration issue. Either restart the Fabric Capcity from the Azure portal or wait for 20-25 minutes and retry loading the data. The operation should complete successfully once the capacity becomes available.
+     > **Note:** If you encounter the “TooManyRequestsForCapacity” error while loading data, it indicates a capacity/rate limit issue rather than an SKU configuration issue wait for 20-25 minutes and retry loading the data. The operation should complete successfully once the capacity becomes available.
+
+     >**Note:** If you still face issues in loading the tables, restart the Fabric Capcity from the Azure portal. FOllow the steps below: 
+
+     - In the Azure portal search bar, search and select Resource groups.
+
+     - From Resource groups list, select **lab-vm** resource group.
+
+        ![](./media/img4.png)
+
+     - Open the **capacity<inject key="DeploymentID" enableCopy="false"/>** Fabric resource from the **lab-vm** resource group to manage and configure the Microsoft Fabric capacity used in the lab environment.
+
+        ![](./media/img5.png)
+
+     - Click **Pause** **(1)** on the Fabric Capacity resource, and then select **Yes** **(2)** to confirm and pause the capacity when it is not in use.
+
+        ![](./media/img7.png)
+
+     - Wait for 2-3 minutes and click **Resume** **(1)** on the Fabric Capacity resource, and then select **Yes** **(2)** to confirm and restart the capacity before continuing with the lab. 
+
+        ![](./media/img6.png)
+
+     - Now, try to load the tables in the lakehouse.
 
 10. From the left navigation bar, select **Fabric IQ Ontology**.
 
@@ -758,9 +780,9 @@ Follow these steps to create a new data agent that connects to your ontology (pr
 
 10. Save the **Workspace ID** and **AISkills ID(Artifact ID)** in **Notepad** for later use.
 
-    ![](./media/image127.png)
+     ![](./media/image127.png)
 
-    ![](./media/image128.png)
+     ![](./media/image128.png)
 
 11. Test the agent by entering the following prompt in the chat pane, and verify that the agent returns a response identifying products with a higher risk of stock depletion based on recent order activity.
 

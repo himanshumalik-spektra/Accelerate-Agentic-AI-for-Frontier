@@ -206,7 +206,6 @@ To solve this, the organization adopts an **AI-driven solution using Azure Found
 
 11. Select your subscription
 
-
 12. Now please change the terminal from bash to powershell.
 
      ![](./media/138.png)

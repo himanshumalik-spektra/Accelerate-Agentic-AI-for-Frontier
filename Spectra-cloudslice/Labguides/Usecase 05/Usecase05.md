@@ -303,6 +303,16 @@ To solve this, the organization adopts an **AI-driven solution using Azure Found
 
      ![](./media/image55.png)
 
+   ### Congratulations!
+
+   You’ve completed the task. Now let’s validate it:
+     
+   - Hit the **Validate** button for the corresponding task.
+   - If successful, proceed to the next task.
+   - If not, retry using the lab guide.
+   - Need help? cloudlabs-support@spektrasystems.com
+   <validation step="de2b1018-70da-48f1-ad71-acbcb0801ffd" />
+
 ## Task 5: Test the Application – Housing Affordability & Report Analysis
 
 1. Return to the application to continue testing the Housing Affordability and Report Analysis features.

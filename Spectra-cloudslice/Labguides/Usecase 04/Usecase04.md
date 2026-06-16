@@ -2,43 +2,27 @@
 
 ## Introduction
 
-This use case focuses on building an intelligent **customer resolution
-agent** for Contoso Electronics by integrating multiple Microsoft AI
-capabilities, including Azure AI Search, Microsoft Fabric, and Microsoft
-Foundry
+This use case focuses on building an intelligent **customer resolution agent** for Contoso Electronics by integrating multiple Microsoft AI capabilities, including Azure AI Search, Microsoft Fabric, and Microsoft Foundry
 
-The solution simulates a real-world operations and support environment
-where customer issues such as shipment delays, refunds, and escalations
-are handled using AI-driven insights. The agent leverages structured
-data (orders, inventory, support tickets), unstructured data (emails),
-and policy knowledge to provide accurate recommendations and automate
-responses. This creates a unified Copilot-like experience that enhances
-operational efficiency and customer satisfaction.
+The solution simulates a real-world operations and support environment where customer issues such as shipment delays, refunds, and escalations are handled using AI-driven insights. The agent leverages structured data (orders, inventory, support tickets), unstructured data (emails), and policy knowledge to provide accurate recommendations and automate responses. This creates a unified Copilot-like experience that enhances operational efficiency and customer satisfaction.
 
 ## Objectives
 
 The main objectives of this use case are:
 
-- To create and configure an **Azure AI Search** service for indexing
-  and retrieving enterprise documents.
+- To create and configure an **Azure AI Search** service for indexing and retrieving enterprise documents.
 
-- To set up a **storage account** and ingest policy and operational
-  documents for knowledge grounding.
+- To set up a **storage account** and ingest policy and operational documents for knowledge grounding.
 
-- To build a **Foundry Agent** that acts as a customer support and
-  operations assistant.
+- To build a **Foundry Agent** that acts as a customer support and operations assistant.
 
-- To create a **Microsoft Fabric workspace and lakehouse** for storing
-  and managing business data such as customers, orders, and shipments.
+- To create a **Microsoft Fabric workspace and lakehouse** for storing and managing business data such as customers, orders, and shipments.
 
-- To design an **Ontology model** that defines relationships between
-  entities like Customers, Orders, Support Tickets, and Refund Claims.
+- To design an **Ontology model** that defines relationships between entities like Customers, Orders, Support Tickets, and Refund Claims.
 
-- To develop a **Fabric Data Agent** that can interpret business data
-  and provide insights.
+- To develop a **Fabric Data Agent** that can interpret business data and provide insights.
 
-- To integrate **Work IQ (email), Foundry IQ (policies), and Fabric IQ
-  (data)** into a unified agent.
+- To integrate **Work IQ (email), Foundry IQ (policies), and Fabric IQ (data)** into a unified agent.
 
 - To enable the agent to:
 
@@ -55,13 +39,9 @@ The main objectives of this use case are:
 
 ## Task 1: Create an Azure AI Search resource
 
-In this exercise, you will create an Azure AI Search resource from the
-Azure portal. This will be used to search the documents using AI
-capability.
+In this exercise, you will create an Azure AI Search resource from the Azure portal. This will be used to search the documents using AI capability.
 
-**Azure AI Search** is a cloud-based service for searching within your
-privately curated data. It uses a combination of Microsoft’s AI and
-JSON-based indexes to provide fast, relevant search results.
+**Azure AI Search** is a cloud-based service for searching within your privately curated data. It uses a combination of Microsoft’s AI and JSON-based indexes to provide fast, relevant search results.
 
 1. Open a browser and login to Azure portal at <https://portal.azure.com/> with your credentials.
 
@@ -73,56 +53,61 @@ JSON-based indexes to provide fast, relevant search results.
 
       ![Enter Your Password](./media/gs2.png)
 
-1. From the Home page of the Azure portal, select **Microsoft Foundry** and
-select **Microsoft Foundry** under Services.
+2. From the Home page of the Azure portal, select **Microsoft Foundry** and select **Microsoft Foundry** under Services.
 
-   ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image2.png)
+   ![A screenshot of a computer AI-generated content may be incorrect.](./media/image2.png)
 
-2. In the **AI Foundry page**, select **AI Search** under **Use with Foundry** from the left pane and then select **+ Create**.
+3. In the **AI Foundry page**, select **AI Search** under **Use with Foundry** from the left pane and then select **+ Create**.
 
     ![](./media/image3.png)
 
-3. Enter the below details and select **Review + create (4)**.
+4. Enter the below details and select **Review + create (4)**.
 
     - Subscription - Select your **assigned subscription**
 
-    - Service name -
-      **searchleaves<inject key="DeploymentID" enableCopy="false"/> (1)**
+    - Service name - **searchleaves<inject key="DeploymentID" enableCopy="false"/> (1)**
 
     - Resource group - **AgenticAI (2)**
 
     - Location - **Central US (3)**
 
-      ![A screenshot of a search service AI-generated content may be
-incorrect.](./media/111.png)
+      ![A screenshot of a search service AI-generated content may be incorrect.](./media/111.png)
 
-4. Once the validation passes, select **Create**.
+5. Once the validation passes, select **Create**.
 
-    ![A screenshot of a search engine AI-generated content may be
-incorrect.](./media/112.png)
+    ![A screenshot of a search engine AI-generated content may be incorrect.](./media/112.png)
 
-5. The deployment takes around 10 minutes to complete. Select **Go to resource** once the search service is created.
+6. The deployment takes around 10 minutes to complete. Select **Go to resource** once the search service is created.
 
      ![](./media/113.png)
 
-6. From the **Overview** page, copy the **Url** value and save it in a notepad to be used in a future exercise.
+7. From the **Overview** page, copy the **Url** value and save it in a notepad to be used in a future exercise.
 
     ![](./media/t9-21.png)
 
-7. Select **Keys (1)** under **Settings + networking** from the left pane. Copy the **Primary admin key (2)** and save it in a notepad for using it in the upcoming exercises.
+8. Select **Keys (1)** under **Settings + networking** from the left pane. Copy the **Primary admin key (2)** and save it in a notepad for using it in the upcoming exercises.
 
      ![](./media/t9-22.png)
 
-8. Select **Identity (1)** under **Settings + networking** from the left pane.
+9. Select **Identity (1)** under **Settings + networking** from the left pane.
 
-9. Toggle the Status to **On (2)** under **System assigned** and then click on **Save (3)**.
+10. Toggle the Status to **On (2)** under **System assigned** and then click on **Save (3)**.
 
-    ![](./media/new1.png)
+     ![](./media/new1.png)
 
-10. Select **Yes** in the **Enable system assigned managed identity** confirmation dialog.
+11. Select **Yes** in the **Enable system assigned managed identity** confirmation dialog.
 
      ![](./media/new2.png)
+
+   ### Congratulations!
+
+   You’ve completed the task. Now let’s validate it:
+     
+   - Hit the **Validate** button for the corresponding task.
+   - If successful, proceed to the next task.
+   - If not, retry using the lab guide.
+   - Need help? cloudlabs-support@spektrasystems.com
+   <validation step="e46c5880-4c0e-4f70-902c-73fa8fa74b66" />
 
 ## Task 2: Create a Storage account
 
@@ -198,22 +183,27 @@ incorrect.](./media/112.png)
 
      ![](./media/new30.png)
 
+   ### Congratulations!
+
+   You’ve completed the task. Now let’s validate it:
+     
+   - Hit the **Validate** button for the corresponding task.
+   - If successful, proceed to the next task.
+   - If not, retry using the lab guide.
+   - Need help? cloudlabs-support@spektrasystems.com
+   <validation step="c016be93-c858-4a03-ac4b-e7987023fc85" />
+
 ## Task 3: Create Foundry resource
 
-In this task, you will create a Foundry resource which is required to
-access the Microsoft Foundry.
+In this task, you will create a Foundry resource which is required to access the Microsoft Foundry.
 
-1. From the Home page of the Azure
-    portal [https://portal.azure.com](https://portal.azure.com/),
-    select **Foundry**.
+1. From the Home page of the Azure portal [https://portal.azure.com](https://portal.azure.com/), select **Foundry**.
 
-     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image32.png)
+     ![A screenshot of a computer AI-generated content may be incorrect.](./media/image32.png)
 
 2. Select **Foundry** from the left pane, and then select **+ Create** to create the Foundry resource.
 
-     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image33.png)
+     ![A screenshot of a computer AI-generated content may be incorrect.](./media/image33.png)
 
 3. Enter the below details and select **Review + create (5)**.
 
@@ -275,10 +265,7 @@ incorrect.](./media/image33.png)
 
 ## Task 4 : Create a Fabric workspace
 
-In this task, you create a Fabric workspace. The workspace contains all
-the items needed for this lakehouse tutorial, which includes lakehouse,
-dataflows, Data Factory pipelines, the notebooks, Power BI datasets, and
-reports.
+In this task, you create a Fabric workspace. The workspace contains all the items needed for this lakehouse tutorial, which includes lakehouse, dataflows, Data Factory pipelines, the notebooks, Power BI datasets, and reports.
 
 1. Open your browser, navigate to the address bar, and type or paste the following URL: https://app.fabric.microsoft.com/ then press the **Enter** button and sign in with your credentials
 
@@ -297,6 +284,7 @@ reports.
 5. In the **Create a workspace** pane that appears on the right side, enter the following details, and click on the **Apply** button.
 
      - Name: **Fabric IQ Ontology-<inject key="DeploymentID" enableCopy="false"/> (1)**
+
      - Expand the **Advanced (2)** section to configure additional workspace settings.
             
        ![](./media/new21.png)
@@ -333,14 +321,13 @@ reports.
 
 2. On the Upload files tab, click on the folder under the Files
 
-      ![](./media/image53.png)
+     ![](./media/image53.png)
 
 3. Browse to **C:\LabFiles\lab file\Usecase 4\Fabric (1)** on your VM, then select  **all csv (2)** files and click on **Open (3)** button.
 
      ![](./media/new23.png)
 
-4. Then, click on the **Upload** button and close the **Upload
-    files** dialog by selecting the **X** icon for the dialog.
+4. Then, click on the **Upload** button and close the **Upload files** dialog by selecting the **X** icon for the dialog.
 
      ![](./media/image55.png)
 
@@ -382,12 +369,11 @@ reports.
 
 ## Task 7: Create ontology (preview) item
 
-1. In your Fabric workspace, select **+ New item**. Search for and
-    select the **Ontology (preview)** item.
+1. In your Fabric workspace, select **+ New item**. Search for and select the **Ontology (preview)** item.
 
      ![](./media/image67.png)
 
-     > **Note:** In some cases, the “Ontology (preview)” item may not appear immediately in the “+ New item” search results. If this occurs, sign out of the Fabric portal, sign in again, and retry the search.
+      > **Note:** In some cases, the “Ontology (preview)” item may not appear immediately in the “+ New item” search results. If this occurs, sign out of the Fabric portal, sign in again, and retry the search.
 
 2. Enter **NetworkOperationsOntology** **(1)** as the ontology name, verify the workspace location, and then click **Create** **(2)** to create the ontology.
 
@@ -403,9 +389,7 @@ reports.
 
 ## Task 8: Create Entity Types and Data Bindings
 
- Entity types represent categories of objects in your business domain.
- For this schema, you will create two entity
- types: **Tickets** and **Inspections**.
+Entity types represent categories of objects in your business domain. For this schema, you will create two entity types: **Tickets** and **Inspections**.
 
 1. From the top ribbon or the center of the configuration canvas,
     select **Add entity type**.
@@ -492,10 +476,7 @@ reports.
 
      ![](./media/new37.png)
 
-18. Follow the same steps that you used for the **Store** entity type to
-    create the entity types described in the following table. Each
-    entity has a static data binding with the default columns from its
-    source table.
+18. Follow the same steps that you used for the **Store** entity type to create the entity types described in the following table. Each entity has a static data binding with the default columns from its source table.
 
      | Entity type name        | Source table in IQ_Lakehouse | Entity type key |
      |-------------------------|------------------------------|-----------------|
@@ -537,24 +518,24 @@ Next, create relationship types between the entity types to represent contextual
 
       ![](./media/t9-1.png)
 
-5. Confirm that the relationship type updated successfully, then select Cancel to close the configuration options. 
+5. Click **Home** to return to the ontology home page after verifying the relationship between the **Customer** and **Order** entities.
 
-6. Now the first relationship is created, and bound to data in your source table. Continue to the next section to create another relationship type.       
+      ![](./media/l1-0.png)
 
-7. Follow the same steps that you used for the first relationship type to create the relationship type described in the following table.
+6. Follow the same steps that you used for the first relationship type to create the relationship type described in the following table.
 
      | Relationship type name | Source data table                          | Source entity type        |
      |------------------------|--------------------------------------------|---------------------------|
      | Contains               | Tutorial workspace → Lakehouse → Order     | Products (OrderItem)      |
      | hasSupportTicket       | Order                                      | SupportTicket             |
      | hasTrackingEvent       | Order                                      | ShipmentTrackingEvent     |
-     | mayLeadTo              | OrderItem                                  | RefundClaim               |     
+     | mayLeadTo              | OrderItem                                  | RefundClaim               |  
 
-8. Select the Customer entity type from the Explorer, then select **Add Relationship** from the menu ribbon. 
+7. Select the **Order** entity type **(1)** from the **Explorer** pane, and then click **+ Add relationship** **(2)** to define a new relationship for the selected entity.
 
-     ![](./media/image.png)
+     ![](./media/l1-2.png)
 
-9. Enter the following relationship type details and then click **Create (4)**.
+8. Enter the following relationship type details and then click **Create (4)**.
 
     - **Relationship type name**: **Contains (1)**
 
@@ -562,36 +543,85 @@ Next, create relationship types between the entity types to represent contextual
 
     - **Target entity type**: **OrderItem (3)**
 
-       ![](./media/t9-0.png)
+       ![](./media/t9-0.png)      
 
-10. The relationship is added to the semantic canvas. Select **View Relationship Type details** to open the relationship details configuration. Observe the sections of the configuration page.
+9. Click **View Relationship Type details** to review and manage the relationships defined between the entity types in the ontology.
 
-11. In the middle section, enter the following details and Save the relationship. 
+      ![](./media/l1-3.png) 
 
-    - Mapping table: Select **orders** table from the drop-down
-    
-    - Browse available sources and select the customers table. This table in the source data can link **OrderID** entities together. 
+10. Select **orderitems** as the **Mapping table** **(1)**, set **OrderID** **(2)** and **OrderItemID** **(3)** as the matching keys, click **Save** **(4)** to create the relationship, and then select **Home** **(5)** to return to the ontology home page.
 
-    - Then **Save** the relationship type.    
+     ![](./media/l1-1.png) 
 
-      ![](./media/t9-3.png)
+11. Select the **Order** entity type **(1)** from the **Explorer** pane, and then click **+ Add relationship** **(2)** to define a new relationship for the selected entity.
 
-12. Save the relationship type. Confirm that the relationship type updated successfully, then select Cancel to close the configuration options. 
+     ![](./media/l1-2.png)
 
-13. Now, continue creating other relationships and bound to data in your source table. Continue to the next section to create another relationship type. 
+12. Enter the following relationship type details and then click **Create (4)**.
 
-14. Follow the same steps that you used for the previous relationship type to create the relationship type described in the following table.
+     - **Relationship type name**: **hasSupportTicket (1)**
 
-     | Relationship type name | Source data table                          | Source entity type        |
-     |------------------------|--------------------------------------------|---------------------------|
-     | hasSupportTicket       | Order                                      | SupportTicket             |
-     | hasTrackingEvent       | Order                                      | ShipmentTrackingEvent     |
-     | mayLeadTo              | OrderItem                                  | RefundClaim               |   
+     - **Source entity type**: **Order (2)**
+
+     - **Target entity type**: **SupportTicket (3)**
+
+        ![](./media/t9-4.png)    
+
+13. Click **View Relationship Type details** to review and manage the relationships defined between the entity types in the ontology.
+
+      ![](./media/l1-3.png) 
+
+14. Select **supporttickets** as the **Mapping table** **(1)**, set **TicketID** for both the **Matched Order: OrderID** **(2)** and **Matched SupportTicket: TicketID** **(3)** fields, click **Save** **(4)** to create the relationship, and then select **Home** **(5)** to return to the ontology home page.
+
+      ![](./media/l1-4.png) 
+
+15. Select the **Order** entity type **(1)** from the **Explorer** pane, and then click **+ Add relationship** **(2)** to define a new relationship for the selected entity.
+
+     ![](./media/l1-2.png)
+
+16. Enter the following relationship type details and then click **Create (4)**.
+
+     - **Relationship type name**: **hasTrackingEvent (1)**
+
+     - **Source entity type**: **Order (2)**
+
+     - **Target entity type**: **ShipmentTrackingEvent (3)**
+
+        ![](./media/t9-7.png)    
+
+17. Click **View Relationship Type details** to review and manage the relationships defined between the entity types in the ontology.
+
+      ![](./media/l1-3.png)  
+
+18. Select **shipmenttracking** as the **Mapping table** **(1)**, set **OrderID** **(2)** and **TrackingID** **(3)** as the matching keys, click **Save** **(4)** to create the relationship, and then select **Home** **(5)** to return to the ontology home page.
+
+      ![](./media/l1-6.png) 
+
+19. Select the **OrderItem** entity type **(1)** from the **Explorer** pane, and then click **+ Add relationship** **(2)** to define a new relationship for the selected entity.
+
+     ![](./media/l1-7.png)
+
+20. Enter the following relationship type details and then click **Create (4)**.
+
+     - **Relationship type name**: **mayLeadTo (1)**
+
+     - **Source entity type**: **OrderItem (2)**
+
+     - **Target entity type**: **RefundClaim (3)**
+
+        ![](./media/t9-11.png)    
+
+21. Click **View Relationship Type details** to review and manage the relationships defined between the entity types in the ontology.
+
+      ![](./media/l1-3.png) 
+
+22. Select **refundclaims** as the **Mapping table** **(1)**, set **OrderID** **(2)** and **ClaimID** **(3)** as the matching keys, click **Save** **(4)** to create the relationship, and then select **Home** **(5)** to return to the ontology home page.
+
+      ![](./media/l1-8.png)
 
 ## Task 10: Create data agent with ontology (preview) source
 
-Follow these steps to create a new data agent that connects to your
-ontology (preview) item.
+Follow these steps to create a new data agent that connects to your ontology (preview) item.
 
 1. Now, click on **Fabric IQ Ontology** on the left-sided navigation pane.
 
@@ -615,11 +645,11 @@ ontology (preview) item.
 
      ![](./media/image121.png)
 
-19. Select **Agent instructions** to configure and customize the behavior of the agent.
+6. Select **Agent instructions** to configure and customize the behavior of the agent.
 
      ![](./media/image122.png)
 
-20. Enter the following data into the **Instructions** section, then select **Publish**.
+7. Enter the following data into the **Instructions** section, then select **Publish**.
 
     ```
      You are a customer operations and order resolution analytics agent.
@@ -648,11 +678,9 @@ ontology (preview) item.
     
      - An order can contain multiple products.
     
-     - An order can have shipment incidents, tracking events, support
-     tickets, and refund claims.
+     - An order can have shipment incidents, tracking events, support tickets, and refund claims.
     
-     - A customer can also have account notes that provide relationship or
-     operational context.
+     - A customer can also have account notes that provide relationship or operational context.
     
      - Inventory reflects current stock availability by SKU and warehouse.
     
@@ -662,66 +690,53 @@ ontology (preview) item.
     
      - Use Customers, Orders, OrderItems, and AccountNotes.
     
-     - When asked about a customer’s background, summarize recent orders,
-     important account notes, and notable support or shipment history.
+     - When asked about a customer’s background, summarize recent orders, important account notes, and notable support or shipment history.
     
      2. Shipment and delivery issues
     
      - Use Orders, ShipmentIncidents, ShipmentTracking, and SupportTickets.
     
-     - When asked about delays, damaged shipments, shortages, or delivery
-     problems, prioritize these sources.
+     - When asked about delays, damaged shipments, shortages, or delivery problems, prioritize these sources.
     
      3. Refunds and replacements
     
      - Use RefundClaims, ShipmentIncidents, SupportTickets, and Orders.
     
-     - When asked whether a refund or replacement is appropriate, look for
-     shipment issues, customer complaints, and prior claim patterns.
+     - When asked whether a refund or replacement is appropriate, look for shipment issues, customer complaints, and prior claim patterns.
     
      4. Product and stock availability
     
      - Use Inventory and OrderItems.
     
-     - When asked whether a replacement can be fulfilled, check whether the
-     requested SKU is available in stock.
+     - When asked whether a replacement can be fulfilled, check whether the requested SKU is available in stock.
     
     5. Trend and historical analysis
     
-     - Use Orders, ShipmentIncidents, RefundClaims, SupportTickets, and
-     ShipmentTracking.
+     - Use Orders, ShipmentIncidents, RefundClaims, SupportTickets, and ShipmentTracking.
     
-     - When asked for trends, summarize patterns by month, issue type,
-     customer, or product where appropriate.
+     - When asked for trends, summarize patterns by month, issue type, customer, or product where appropriate.
     
      Important interpretation rules:
     
-     - “Issue”, “problem”, or “complaint” may refer to shipment incidents,
-     support tickets, or refund claims.
+     - “Issue”, “problem”, or “complaint” may refer to shipment incidents, support tickets, or refund claims.
     
-     - “Replacement” and “reshipment” should be treated as operational
-     recovery actions.
+     - “Replacement” and “reshipment” should be treated as operational recovery actions.
     
-     - “Escalation” usually refers to urgent or unresolved support or
-     delivery issues.
+     - “Escalation” usually refers to urgent or unresolved support or delivery issues.
     
-     - “High-risk customer” may indicate repeated shipment issues, open
-     tickets, unresolved claims, or negative account notes.
+     - “High-risk customer” may indicate repeated shipment issues, open tickets, unresolved claims, or negative account notes.
     
-     - “Historical trend” means analysis over time, usually by month unless
-     otherwise specified.
+     - “Historical trend” means analysis over time, usually by month unless otherwise specified.
     
      Response guidance:
     
      - Prefer summaries over raw data dumps.
     
-     - If the user asks for trends, provide a short interpretation in
-     addition to the numbers.
+     - If the user asks for trends, provide a short interpretation in addition to the numbers.
     
      - If there is insufficient data, clearly say so.
     
-     - If multiple records exist, prioritize the most recent and most
-     severe items.
+     - If multiple records exist, prioritize the most recent and most severe items.
     
      - If asked for a recommendation, provide a business-oriented
      recommendation based on the available evidence.
@@ -733,26 +748,33 @@ ontology (preview) item.
 
     ![](./media/image124.png)
 
-21. After publishing, verify the success message and select **View publishing details** to review the agent deployment.
+8. After publishing, verify the success message and select **View publishing details** to review the agent deployment.
 
     ![](./media/image125.png)
 
-22. Copy the **Published URL** and paste it into Notepad for use in the next task.
+9. Copy the **Published URL** and paste it into Notepad for use in the next task.
 
       ![](./media/image126.png)
 
-23. Save the **Workspace ID** and **AISkills ID(Artifact ID)** in **Notepad** for later use.
-  
+10. Save the **Workspace ID** and **AISkills ID(Artifact ID)** in **Notepad** for later use.
 
     ![](./media/image127.png)
 
     ![](./media/image128.png)
 
+11. Test the agent by entering the following prompt in the chat pane, and verify that the agent returns a response identifying products with a higher risk of stock depletion based on recent order activity.
+
+     ```
+     Predict which products may run out of stock soon.
+     ```
+
+      ![](./media/l1-9.png)
+
 ## Task 11: Create Foundry agent that unifies all IQ’s data
 
 1. Open a browser go to [https://portal.azure.com](https://portal.azure.com/) and sign in with your cloud slice account below.
 
-2. Select your **Resource group**, **AgenticAI**.
+2. Select your **AgenticAI** Resource group.
 
      ![](./media/image130.png)
 
@@ -786,30 +808,23 @@ ontology (preview) item.
     
      Your job is to:
     
-     1. Review customer and internal emails to understand the issue and
-     urgency.
+     1. Review customer and internal emails to understand the issue and urgency.
     
-     2. Use the Fabric Data Agent to validate customer, order, inventory,
-     shipment, and support facts.
+     2. Use the Fabric Data Agent to validate customer, order, inventory, shipment, and support facts.
     
-     3. Use Foundry IQ to apply Contoso’s internal policies, SLA guidance,
-     escalation criteria, and communication standards.
+     3. Use Foundry IQ to apply Contoso’s internal policies, SLA guidance, escalation criteria, and communication standards.
     
      4. Recommend the best next action based on both data and policy.
     
-     5. Draft clear, professional customer-facing or internal responses
-     when requested.
+     5. Draft clear, professional customer-facing or internal responses when requested.
     
      Always:
     
-     - Validate facts using available business data before making a
-     recommendation.
+     - Validate facts using available business data before making a recommendation.
     
-     - Use policy documents when deciding replacement, refund, escalation,
-     or SLA handling.
+     - Use policy documents when deciding replacement, refund, escalation, or SLA handling.
     
-     - Distinguish between confirmed facts, likely causes, and recommended
-     actions.
+     - Distinguish between confirmed facts, likely causes, and recommended actions.
     
      - If inventory is available and policy supports replacement,
      prioritize fast resolution for Premium customers.
@@ -831,22 +846,21 @@ ontology (preview) item.
 
      ![](./media/image140.png)
 
-11. In the **Choose a knowledge type** window, select **Azure Blob Storage**, then click **Connect** to proceed.
+11. Select the **Foundry IQ resource** as **searchleaves<inject key="DeploymentID" enableCopy="false"/> (1)** from the drop-down, ensure **API Key** **(2)** is chosen as the authentication type, and then click **Connect** **(3)** to establish the connection with the Foundry IQ knowledge base.
+
+     ![](./media/l1-10.png)
+
+12. In the **Choose a knowledge type** window, select **Azure Blob Storage**, then click **Connect** to proceed.
 
      ![](./media/UC2-T11-S11.1.png)
 
-12. Click on the Azure AI Search resource dropdown and select the appropriate Azure AI Search resource. Then click on the Auth Type dropdown, select **API Key**, and click on **Connect**.
+     ![](./media/image141.png)     
 
-     ![](./media/UC2-T11-S11.png)
-
-     ![](./media/image141.png)
-
-12. In the Choose a knowledge type window, first select the **Storage account** and **Container name** that were created in the previous steps. Then select Chat completions model as gpt-4.1 and click on **Create**.
+13. In the Choose a knowledge type window, first select the **Storage account** and **Container name** that were created in the previous steps. Then select Chat completions model as gpt-4.1 and click on **Create**.
 
      ![](./media/img2.png)
 
-13. After configuring the knowledge base details, select **Save
-    knowledge base** to create and save it.
+14. After configuring the knowledge base details, select **Save knowledge base** to create and save it.
 
      ![](./media/image143.png)
 
@@ -854,53 +868,51 @@ ontology (preview) item.
 
      ![](./media/image145.png)
 
-14. Verify that the knowledge source is added successfully and its
-    status is **Active**.
+15. Verify that the knowledge source is added successfully and its status is **Active**.
 
      ![](./media/image146.png)
 
      > **Note:** If the status is not displayed as “Active”, refresh the page once and verify the status again.
 
-
-11. Select **Use in an agent**, then choose the created agent (for example, **IQAgent**) to associate the knowledge base with it
+16. Select **Use in an agent**, then choose the created agent (for example, **IQAgent**) to associate the knowledge base with it
 
      ![](./media/image147.png)
 
      ![](./media/image148.png)
 
-12. In the **Tools** section, select **Add**, then choose **Browse all tools** to view and configure additional tools for the agent.
+17. In the **Tools** section, select **Add**, then choose **Browse all tools** to view and configure additional tools for the agent.
 
      ![](./media/image149.png)
 
-13. In the **Catalog** tab, search for **Work IQ**, select **Work IQ Mail**, and then click **Create** to add the tool to the agent.
+18. In the **Catalog** tab, search for **Work IQ**, select **Work IQ Mail**, and then click **Create** to add the tool to the agent.
 
      ![](./media/image150.png)
 
-14. In the **Connect the Work IQ Mail tool** window, review the default settings and select **Connect** to complete the configuration.
+19. In the **Connect the Work IQ Mail tool** window, review the default settings and select **Connect** to complete the configuration.
 
      ![](./media/image151.png)
 
-15. Verify that **Work IQ Mail** is connected successfully.
+20. Verify that **Work IQ Mail** is connected successfully.
 
      ![](./media/image152.png)
 
-16. In the **Tools** section, select **Add**, then choose **Browse all tools** to view and configure additional tools for the agent.
+21. In the **Tools** section, select **Add**, then choose **Browse all tools** to view and configure additional tools for the agent.
 
      ![](./media/image153.png)
 
-17. Select **Fabric Data Agent**, and then click **Create** to add the tool to the agent.
+22. Search for **Fabric Data Agent** under the **Configured** tab, select the **Fabric Data Agent** tool, and then click **Add tool** to add it to the agent.
 
-     ![](./media/image154.png)
+     ![](./media/img3.png)
 
-18. In the **Connect to Fabric Data Agent** window, enter the required **Workspace ID** and **Artifact ID**, then select **Connect** to complete the setup.
+23. In the **Connect to Fabric Data Agent** window, enter the required **Workspace ID** and **Artifact ID**, then select **Connect** to complete the setup.
 
      ![](./media/image155.png)
 
-19. Verify that **Fabric Data Agent** and **Work IQ Mail** is connected successfully.
+24. Verify that **Fabric Data Agent** and **Work IQ Mail** is connected successfully.
 
      ![](./media/image156.png)
 
-20. A chat panel will open where you can enter your prompts. The agent will now respond.
+25. A chat panel will open where you can enter your prompts. The agent will now respond.
 
      ```
      Review the latest Apex Legal email and tell me what happened.
@@ -908,15 +920,15 @@ ontology (preview) item.
 
       ![](./media/image157.png)
 
-21. Select **Approve** to grant the required permissions and continue.
+26. Select **Approve** to grant the required permissions and continue.
 
      ![](./media/image158.png)
 
-22. Select **Always Approve this tool**
+27. Select **Always Approve this tool**
 
      ![](./media/image159.png)
 
-23. A chat panel will open where you can enter your prompts. The agent will now respond
+28. A chat panel will open where you can enter your prompts. The agent will now respond
 
      ```
      Is this customer eligible for replacement based on our policy?
@@ -926,7 +938,7 @@ ontology (preview) item.
 
       ![](./media/image161.png)
 
-25. A chat panel will open where you can enter your prompts. The agent will now respond
+29. A chat panel will open where you can enter your prompts. The agent will now respond
 
      ```
      Do we have enough stock to resolve this today?
@@ -936,7 +948,7 @@ ontology (preview) item.
 
         ![](./media/image163.png)
 
-26. A chat panel will open where you can enter your prompts. The agent will now respond.
+30. A chat panel will open where you can enter your prompts. The agent will now respond.
 
      ```
      Should this issue be escalated?
@@ -946,7 +958,7 @@ ontology (preview) item.
 
        ![](./media/image165.png)
 
-27. A chat panel will open where you can enter your prompts. The agent will now respond.
+31. A chat panel will open where you can enter your prompts. The agent will now respond.
 
      ```
      Draft a customer response based on the issue and our communication standards.
@@ -954,7 +966,7 @@ ontology (preview) item.
 
         ![](./media/image166.png)
 
-28. A chat panel will open where you can enter your prompts. The agent will now respond
+32. A chat panel will open where you can enter your prompts. The agent will now respond
 
      ```
      What is the best operational resolution for order O5001?
@@ -964,16 +976,7 @@ ontology (preview) item.
 
       ![](./media/image168.png)
 
-> **Summary**
->
-> In this use case, you successfully built an end-to-end **AI-powered
-> customer resolution system** by combining data, knowledge, and
-> communication tools. The agent can intelligently analyze customer
-> complaints, validate order and shipment details, apply organizational
-> policies, and recommend the best course of action.
->
-> By integrating Work IQ, Foundry IQ, and Fabric IQ, the solution
-> demonstrates how organizations can move from reactive support
-> processes to proactive, data-driven decision-making. This approach not
-> only improves resolution time and accuracy but also enhances customer
-> experience and operational productivity.
+## Summary
+
+In this use case, you successfully built an end-to-end **AI-powered customer resolution system** by combining data, knowledge, and communication tools. The agent can intelligently analyze customer complaints, validate order and shipment details, apply organizational policies, and recommend the best course of action.
+By integrating Work IQ, Foundry IQ, and Fabric IQ, the solution demonstrates how organizations can move from reactive support processes to proactive, data-driven decision-making. This approach not only improves resolution time and accuracy but also enhances customer experience and operational productivity.

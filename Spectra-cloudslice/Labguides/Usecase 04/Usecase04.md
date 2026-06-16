@@ -174,35 +174,29 @@ incorrect.](./media/112.png)
 
 9. Select the **all documents** from **C:\Labfiles\lab file\Usecase4\Foundry** and then click on **Upload**.
 
-     ![](./media/image22.png)
+     ![](./media/new12.png)
 
      ![](./media/image23.png)
 
-     ![](./media/image24.png)
+     ![](./media/new13.png)
 
-10. Navigate to the **iqlab<inject key="DeploymentID" enableCopy="false"/>** Storage account (Select **Storageaccounts** from the **Home page** of the Azure portal and select **Access Control (IAM)** from the left pane. Select **Add -\> Add role assignment**).
+10. Navigate to the **storage<inject key="DeploymentID" enableCopy="false"/>** Storage account (Select **Storageaccounts** from the **Home page** of the Azure portal and select **Access Control (IAM)** from the left pane. Select **Add -\> Add role assignment**).
 
-     ![](./media/image25.png)
+     ![](./media/new14.png)
 
 11. Search for **Storage Blob Data Reader (1)**, **select it (2)** and click on **Next (3)**.
 
      ![](./media/125.png)
 
-12. Click on **+Select members**, search for and select your **user name**, <inject key="AzureAdUserEmail"></inject>.Username and then click on **Select**. This adds the Storage Blob Data Reader role to your user id.
+12. Click on **+Select members**, search for and select your **user name**, **<inject key="AzureAdUserEmail"></inject>**.Username and then click on **Select**. This adds the Storage Blob Data Reader role to your user id.
 
     ![](./media/126.png)
 
-13. Select **Managed identity** and then select **+ Select members**. Select **Search service** under **Managed identity** and select the **searchleaves** search service that gets listed.
+13. Select **Managed identity (1)** and then select **+ Select members (2)**. Select **Search service (3)** under **Managed identity** and select the **searchleaves (4)** search service that gets listed, then click on **Select (5)**.
 
-     ![](./media/image28.png)
+14. Select **Review + assign (6)** in the next 2 screens.
 
-14. Select **Review + assign** in the next 2 screens.
-
-     ![](./media/image29.png)
-
-     ![](./media/image30.png)
-
-     ![](./media/image31.png)
+     ![](./media/new30.png)
 
 ## Task 3: Create Foundry resource
 
@@ -210,7 +204,7 @@ In this task, you will create a Foundry resource which is required to
 access the Microsoft Foundry.
 
 1. From the Home page of the Azure
-    portal[https://portal.azure.com](https://portal.azure.com/),
+    portal [https://portal.azure.com](https://portal.azure.com/),
     select **Foundry**.
 
      ![A screenshot of a computer AI-generated content may be
@@ -221,13 +215,17 @@ incorrect.](./media/image32.png)
      ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image33.png)
 
-3. Enter the below details and select **Review + create**.
+3. Enter the below details and select **Review + create (5)**.
 
-    - Name - **agentic-<inject key="DeploymentID" enableCopy="false"/>**
+    - Resource group - **AgenticAI (1)**
 
-    - Default project name- **agentic-ai-project-<inject key="DeploymentID" enableCopy="false"/>**
+    - Name - **agentic-<inject key="DeploymentID" enableCopy="false"/> (2)**
 
-      ![](./media/127.png)
+    - Region - Keep region as default
+
+    - Default project name- **agentic-ai-project-<inject key="DeploymentID" enableCopy="false"/> (4)**
+
+      ![](./media/new31.png)
 
 4. Select **Create** once validated.
 
@@ -247,7 +245,7 @@ incorrect.](./media/image33.png)
 
 8. In the top navigation, select **Build**
 
-     ![](./media/image39.png)
+     ![](./media/new16.png)
 
      > **Note :** If you are getting permission issues follow the below steps. 
     
@@ -265,15 +263,15 @@ incorrect.](./media/image33.png)
 
        ![](./media/132.png) 
 
-9. Select **Create agent** to create a new agent.
+9. Navigate to the **Agents** page **(1)**, click **New agent** **(2)**, and then select **Build an agent** **(3)** to create a new agent using the visual builder.
 
-    ![](./media/image40.png)
+    ![](./media/new17.png)
 
-10. Enter a unique agent name e.g., **IQAgent** and click **Create** to create the new agent.
+10. Enter **IQAgent** **(1)** as the agent name, and then click **Create and open playground** **(2)** to create the agent and launch the playground.
 
-     ![](./media/image41.png)
+     ![](./media/new18.png)
 
-     ![](./media/image42.png)
+     ![](./media/new19.png)
 
 ## Task 4 : Create a Fabric workspace
 
@@ -284,29 +282,28 @@ reports.
 
 1. Open your browser, navigate to the address bar, and type or paste the following URL: https://app.fabric.microsoft.com/ then press the **Enter** button and sign in with your credentials
 
-     | Field    | Value                                              |
-     |----------|----------------------------------------------------|
-     | Username | **<inject key="AzureAdUserEmail"></inject>**  |
-     | Password | <inject key="AzureAdUserPassword"></inject>   |
+2. Enter your Microsoft Fabric **Username** **<inject key="AzureAdUserEmail"></inject>** **(1)**, and then click **Submit** **(2)** to proceed with the account verification process.
 
-2. In the Workspaces pane, click on **+ New workspace** tile
+     ![](./media/new20.png)
+
+3. Then enter the following Password:
+
+    - Password: **<inject key="AzureAdUserPassword"></inject>**  
+
+4. In the Workspaces pane, click on **+ New workspace** tile
 
      ![](./media/image43.png)
 
-3. In the **Create a workspace** pane that appears on the right side, enter the following details, and click on the **Apply** button.
+5. In the **Create a workspace** pane that appears on the right side, enter the following details, and click on the **Apply** button.
 
-     | Field     | Value                                                     |
-     |-----------|-----------------------------------------------------------|
-     | Name      | Fabric IQ Ontology |
-     | Advanced  | Under License mode, select Fabric                         |
-     | Default   | Small dataset storage format                              |
+     - Name: **Fabric IQ Ontology-<inject key="DeploymentID" enableCopy="false"/> (1)**
+     - Expand the **Advanced (2)** section to configure additional workspace settings.
+            
+       ![](./media/new21.png)
 
-     ![](./media/image44.png)
+6. Select the **Fabric** as workspace type **(1)**, choose the appropriate **capacity-<inject key="DeploymentID" enableCopy="false"/>** **(2)**, ensure **Small semantic model storage format** **(3)** is selected, and then click **Apply** **(4)** to create the workspace.
 
-     ![](./media/image45.png)
-
-     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image46.png)
+     ![](./media/new22.png)
 
 ## Task 5: Create a lakehouse
 
@@ -338,10 +335,9 @@ incorrect.](./media/image46.png)
 
       ![](./media/image53.png)
 
-3. Browse to **C:\LabFiles\lab file\Usecase 4\Fabric** on your VM, then
-    select  **all** tables and click on **Open** button.
+3. Browse to **C:\LabFiles\lab file\Usecase 4\Fabric (1)** on your VM, then select  **all csv (2)** files and click on **Open (3)** button.
 
-     ![](./media/image54.png)
+     ![](./media/new23.png)
 
 4. Then, click on the **Upload** button and close the **Upload
     files** dialog by selecting the **X** icon for the dialog.
@@ -354,17 +350,13 @@ incorrect.](./media/image46.png)
 
       ![](./media/image57.png)
 
-6. In the **Lakehouse** page, Under the Explorer pane select **Files**.
-    Now, hover your mouse over the **Customer.csv** file. Click on the
-    horizontal ellipses **(…)** beside **Customer.csv**. Navigate and
-    click on **Load Table**, then select **New table**.
+6. In the **Lakehouse** page, under the Explorer pane select **Files**. Now, hover your mouse over the **Customer.csv** file. Click on the horizontal ellipses **(…)** beside **Customer.csv**. Navigate and click on **Load Table**, then select **New table**.
 
      ![](./media/133.png)
 
      ![](./media/134.png)
 
-7. In the **Load file to new table** dialog box, click on
-    the **Load** button.
+7. In the **Load file to new table** dialog box, click on the **Load** button.
 
      ![](./media/image60.png)
 
@@ -382,8 +374,7 @@ incorrect.](./media/image46.png)
 
      ![](./media/image65.png)
 
-     > **Note:** If you encounter the “TooManyRequestsForCapacity” error while loading data, it indicates a capacity/rate limit issue rather than an SKU configuration issue. Wait for 20-25 minutes and retry loading the data. The operation should complete successfully once the capacity becomes available.
-
+     > **Note:** If you encounter the “TooManyRequestsForCapacity” error while loading data, it indicates a capacity/rate limit issue rather than an SKU configuration issue. Either restart the Fabric Capcity from the Azure portal or wait for 20-25 minutes and retry loading the data. The operation should complete successfully once the capacity becomes available.
 
 10. From the left navigation bar, select **Fabric IQ Ontology**.
 
@@ -395,19 +386,20 @@ incorrect.](./media/image46.png)
     select the **Ontology (preview)** item.
 
      ![](./media/image67.png)
+
      > **Note:** In some cases, the “Ontology (preview)” item may not appear immediately in the “+ New item” search results. If this occurs, sign out of the Fabric portal, sign in again, and retry the search.
 
-2. Enter **NetworkOperationsOntology** for the **Name** of your ontology and select **Create**.
+2. Enter **NetworkOperationsOntology** **(1)** as the ontology name, verify the workspace location, and then click **Create** **(2)** to create the ontology.
 
-     ![](./media/image68.png)
+     ![](./media/new24.png)
 
-    > **Note:** Ontology names can include numbers, letters, and underscores. Don't use spaces or dashes.
+     > **Note:** Ontology names can include numbers, letters, and underscores. Don't use spaces or dashes.
 
 3. The ontology opens when it's ready.
 
       ![](./media/image69.png)
 
-1. Next, create entity types, data bindings, and relationships based on data from your lakehouse tables.
+4. Next, create entity types, data bindings, and relationships based on data from your lakehouse tables.
 
 ## Task 8: Create Entity Types and Data Bindings
 
@@ -424,80 +416,81 @@ incorrect.](./media/image46.png)
 
      ![](./media/image71.png)
 
-3. The **Tickets** entity type appears on the configuration canvas and
-    the **Entity type configuration** pane opens.
+3. On the configuration canvas, select **(...) (1)** next to the entity name and select **Bind data (2)**. 
 
-     ![](./media/image72.png)
+     ![](./media/new25.png)
 
-4. Switch to the **Bindings** tab and select **Add data to entity type**.
+3. Select **Add data binding (1) > Lakehouse table (2)**. 
 
-     ![](./media/image73.png)
+     ![](./media/new26.png)
 
-5. Choose your data source: a. Select your **Lakehouse** and
-    select **Add**. 
+4. Select the **IQ_Lakehouse** lakehouse **(1)** as the data source, and then click **Next** **(2)** to continue configuring the ontology.
 
-     ![](./media/image74.png)
+     ![](./media/new27.png)
 
-6. Select the **Customers** table and select **Next**. 
+5. Expand the **Tables** folder **(1)** under **IQ_Lakehouse**, select the **customers** table **(2)**, and then click **Select** **(3)** to add the table to the ontology.
 
-     ![](./media/image75.png)
+     ![](./media/new28.png)
 
-7. Configure a **Static** data binding:
+6. Select **Define entity type key** at the top of the configuration. 
 
-    - For **Binding type**, keep the default **Static**.
+     ![](./media/new33.png)
 
-    - Under **Bind your properties**, the columns from the tickets table
-  populate automatically:
+7. Select **customer_id** as the key property and select **Save**. 
 
-    - Select **Save**.
+     ![](./media/new34.png)
 
-      ![](./media/image76.png)
+8. Click on **Save** to save the data binding. 
 
-8. Back in the Entity type configuration pane, select **Add entity type
-    key**. 
+     ![](./media/new35.png)
 
-     ![](./media/image77.png)
+9. Confirm that the entity type updated successfully, then select **Cancel** to close the configuration options. 
 
-9. Select **customer_id** as the key property and select **Save**.
+     ![](./media/new36.png)
 
-     ![](./media/image78.png)
+10. Select **+ Add entity type** from the ribbon. 
 
-10. Select **Add entity type** from the ribbon. 
-
-     ![](./media/image79.png)
+     ![](./media/new37.png)
 
 11. Enter **Order** as the name and select **Add Entity Type**. 
 
      ![](./media/image80.png)
 
-12. Switch to the **Bindings** tab, then click on **Add data to entity type**. 
+12. On the configuration canvas, select **(...) (1)** next to the entity name and select **Bind data (2)**. 
 
-     ![](./media/image81.png)
+     ![](./media/new25.png)
 
-13. Choose your data source, select your **Lakehouse** and
-    select **Add**. 
+13. Select **Add data binding (1) > Lakehouse table (2)**. 
 
-     ![](./media/image82.png)
+     ![](./media/new26.png)
 
-14. Select the **orders** table and select **Next**.
+14. Select the **IQ_Lakehouse** lakehouse **(1)** as the data source, and then click **Next** **(2)** to continue configuring the ontology.
 
-      ![](./media/image83.png)
+     ![](./media/new27.png)
 
-15. Configure a **Static** data binding with the following columns:
+15. Expand the **Tables** folder **(1)** under **IQ_Lakehouse**, select the **orders** table **(2)**, and then click **Select** **(3)** to add the table to the ontology.
 
-    - Select **Save**.
+     ![](./media/new28.png)
 
-      ![](./media/image84.png)
+16. Select **Define entity type key** at the top of the configuration. 
 
-16. Select **Add entity type key** 
+     ![](./media/new33.png)
 
-     ![](./media/image85.png)
+17. Select **OrderID** as the key property and select **Save**. 
 
-17. Select **OrderID** as the key property and select **Save**.
+     ![](./media/new34.png)
 
-     ![](./media/image86.png)
+18. Click on **Save** to save the data binding. 
 
-     ![](./media/image87.png)
+     ![](./media/new35.png)
+
+19. Confirm that the entity type updated successfully, then select **Cancel** to close the configuration options. 
+
+     ![](./media/new36.png)
+
+20. Select **+ Add entity type** from the ribbon. 
+
+     ![](./media/new37.png)
 
 18. Follow the same steps that you used for the **Store** entity type to
     create the entity types described in the following table. Each
@@ -511,131 +504,104 @@ incorrect.](./media/image46.png)
      | RefundClaim             | RefundClaims                 | ClaimID         |
      | ShipmentTrackingEvent   | ShipmentTracking             | TrackingID      |
 
-     ![](./media/image88.png)
-
-     ![](./media/image89.png)
-
-     ![](./media/image90.png)
-
-     ![](./media/image91.png)
-
-     ![](./media/image92.png)
-
-     ![](./media/image93.png)
-
-     ![](./media/image94.png)
-
-     ![](./media/image95.png)
 
 ## Task 9: Create relationship types
 
-Next, create relationship types between the entity types to represent
-contextual connections in your data.
+Next, create relationship types between the entity types to represent contextual connections in your data.
 
-1. Select **Add relationship** from the menu ribbon.
+1. Select the Customer entity type from the Explorer, then select **Add Relationship** from the menu ribbon. 
 
-     ![](./media/image96.png)
+     ![](./media/image.png)
 
-2. Enter the following relationship type details and select **Add
-    relationship type**.
+2. Enter the following relationship type details and then click **Create (4)**.
 
-    - **Relationship type name**: Places
+    - **Relationship type name**: **Places (1)**
 
-    - **Source entity type**: Customer
+    - **Source entity type**: **Customer (2)**
 
-    - **Target entity type**: Order
+    - **Target entity type**: **Order (3)**
 
-      ![](./media/image97.png)
+       ![](./media/t9-0.png)
 
-3. The **Relationship configuration** pane opens, where you can
-    configure additional information. Enter the following details (some
-    fields become visible based on other selections) and
-    select **Create**.
+3. The relationship is added to the semantic canvas. Select **View Relationship Type details** to open the relationship details configuration. Observe the sections of the configuration page 
 
-    1. **Source data**: Select your tutorial workspace, the **Fabric IQ
-        Ontology_Lakehouse** lakehouse, and the **Customers** table.
+     ![](./media/img1.png)
 
-        ![](./media/image98.png)
+4. In the middle section, enter the following details. 
 
-        ![](./media/image99.png)
+    - Mapping table: Select **customers** table from the drop-down
+    
+    - Browse available sources and select the customers table. This table in the source data can link **customer_id** entities together. 
 
-     Now the first relationship is created, and bound to data in your source
-     table. Continue to the next section to create another relationship type.
+    - Then **Save** the relationship type.
 
-     **Products soldIn SaleEvent**
+      ![](./media/t9-1.png)
 
-4. Follow the same steps that you used for the first relationship type to create the relationship type described in the following table.
+5. Confirm that the relationship type updated successfully, then select Cancel to close the configuration options. 
+
+6. Now the first relationship is created, and bound to data in your source table. Continue to the next section to create another relationship type.       
+
+7. Follow the same steps that you used for the first relationship type to create the relationship type described in the following table.
 
      | Relationship type name | Source data table                          | Source entity type        |
      |------------------------|--------------------------------------------|---------------------------|
      | Contains               | Tutorial workspace → Lakehouse → Order     | Products (OrderItem)      |
      | hasSupportTicket       | Order                                      | SupportTicket             |
      | hasTrackingEvent       | Order                                      | ShipmentTrackingEvent     |
-     | mayLeadTo              | OrderItem                                  | RefundClaim               |
-     
+     | mayLeadTo              | OrderItem                                  | RefundClaim               |     
 
-     ![](./media/image100.png)
+8. Select the Customer entity type from the Explorer, then select **Add Relationship** from the menu ribbon. 
 
-1. Choose the relationship type name as **Contains**, Source entity type as **Order** and Target entity type as **OrderItem**,then click on **Add relationship type**
+     ![](./media/image.png)
 
-     ![](./media/image101.png)
+9. Enter the following relationship type details and then click **Create (4)**.
 
-1. Select the Workspace as **Fabric IQ Ontology**, Lakehouse as **IQ_Lakehouse**, Table as **Orders**, Source Column as **OrderID**, then click on **Apply**
+    - **Relationship type name**: **Contains (1)**
 
-     ![](./media/image102.png)
+    - **Source entity type**: **Order (2)**
 
-1. After configuring the relationship you will be getting relationship pane as shown in below.
+    - **Target entity type**: **OrderItem (3)**
 
-     ![](./media/image103.png)
+       ![](./media/t9-0.png)
 
-1. Select Order under entity type and Add the relationship.
+10. The relationship is added to the semantic canvas. Select **View Relationship Type details** to open the relationship details configuration. Observe the sections of the configuration page.
 
-     ![](./media/image104.png)
+11. In the middle section, enter the following details and Save the relationship. 
 
-1. Choose the relationship type name as **hasSupportTicket**,Select the Workspace as **Fabric IQ Ontology**, Lakehouse as **IQ_Lakehouse**, Table as **Orders**, Source Column as **OrderID**, then click on **Apply**
+    - Mapping table: Select **orders** table from the drop-down
+    
+    - Browse available sources and select the customers table. This table in the source data can link **OrderID** entities together. 
 
-     ![](./media/image105.png)
+    - Then **Save** the relationship type.    
 
-     ![](./media/image107.png)
+      ![](./media/t9-3.png)
 
-     ![](./media/image108.png)
+12. Save the relationship type. Confirm that the relationship type updated successfully, then select Cancel to close the configuration options. 
 
-1. Choose the relationship type name as **hasTrackingEvent**, Select the Workspace as **Fabric IQ Ontology**, Lakehouse as **IQ_Lakehouse**, Table as **Orders**, Source Column as **OrderID**, then click on **Create**
+13. Now, continue creating other relationships and bound to data in your source table. Continue to the next section to create another relationship type. 
 
-     ![](./media/image109.png)
+14. Follow the same steps that you used for the previous relationship type to create the relationship type described in the following table.
 
-     ![](./media/image111.png)
-
-     ![](./media/image112.png)
-
-1. Choose the relationship type name as **mayLeadTo**, Source entity type as **OrderItem** and Target entity type as **RefundClaim**,then click on **Add relationship type**
-
-     ![](./media/image113.png)
-
-1. Select the Workspace as **Fabric IQ Ontology**, Lakehouse as **IQ_Lakehouse**, Table as **orderitems**, Source Column as **OrderItemID** and another Source Column as **UnitPrice**, then click on **Create**
-
-     ![](./media/image114.png)
-
-     ![](./media/image115.png)
+     | Relationship type name | Source data table                          | Source entity type        |
+     |------------------------|--------------------------------------------|---------------------------|
+     | hasSupportTicket       | Order                                      | SupportTicket             |
+     | hasTrackingEvent       | Order                                      | ShipmentTrackingEvent     |
+     | mayLeadTo              | OrderItem                                  | RefundClaim               |   
 
 ## Task 10: Create data agent with ontology (preview) source
 
 Follow these steps to create a new data agent that connects to your
 ontology (preview) item.
 
-1. Now, click on **Fabric IQ Ontology** on the left-sided navigation
-    pane.
+1. Now, click on **Fabric IQ Ontology** on the left-sided navigation pane.
 
      ![](./media/image116.png)
 
-2. In the **Fabric** home page, select **+New item.** In the Filter by
-    item type search box, enter **data agent** and select the Data
-    agent
+2. In the **Fabric** home page, select **+New item.** In the Filter by item type search box, enter **data agent** and select the Data agent.
 
       ![](./media/image117.png)
 
-3. Enter **IQ_Agent** as the Data agent name and
-    select **Create**.
+3. Enter **IQ_Agent** as the Data agent name and select **Create**.
 
      ![](./media/image118.png)
 
@@ -643,20 +609,17 @@ ontology (preview) item.
 
      ![](./media/image119.png)
 
-5. In the OneLake catalog tab, select the **NetworkOperationsOntology**
-    Ontology and select **Add.**
+5. In the OneLake catalog tab, select the **NetworkOperationsOntology** Ontology and select **Add.**
 
      ![](./media/image120.png)
 
      ![](./media/image121.png)
 
-19. Select **Agent instructions** to configure and customize the
-    behavior of the agent.
+19. Select **Agent instructions** to configure and customize the behavior of the agent.
 
      ![](./media/image122.png)
 
-20. Enter the following data into the **Instructions** section, then
-    select **Publish**.
+20. Enter the following data into the **Instructions** section, then select **Publish**.
 
     ```
      You are a customer operations and order resolution analytics agent.
@@ -770,8 +733,7 @@ ontology (preview) item.
 
     ![](./media/image124.png)
 
-21. After publishing, verify the success message and select **View
-publishing details** to review the agent deployment.
+21. After publishing, verify the success message and select **View publishing details** to review the agent deployment.
 
     ![](./media/image125.png)
 
@@ -786,21 +748,11 @@ publishing details** to review the agent deployment.
 
     ![](./media/image128.png)
 
-    Add the following prompt in the IQ Agent:
-
-    ```
-    predict which products may run out of stock soon
-    ```
-
-    ![](./media/image129.png)
-
 ## Task 11: Create Foundry agent that unifies all IQ’s data
 
-1. Open a browser go to
-    [https://portal.azure.com](https://portal.azure.com/) and
-    sign in with your cloud slice account below.
+1. Open a browser go to [https://portal.azure.com](https://portal.azure.com/) and sign in with your cloud slice account below.
 
-2. Select your **Resource group**
+2. Select your **Resource group**, **AgenticAI**.
 
      ![](./media/image130.png)
 
@@ -808,24 +760,25 @@ publishing details** to review the agent deployment.
 
      ![](./media/image131.png)
 
-4. On the Overview pane, click on **Go to Foundry portal**. This will
-    navigate you to the Microsoft Foundry portal.
+4. On the Overview pane, click on **Go to Foundry portal**. This will navigate you to the Microsoft Foundry portal.
 
      ![](./media/image132.png)
+
+     >**Note:** In the Microsoft Foundry portal, if prompted to select the project, select your recently created project from the list.
+
+      ![](./media/new15.png)
 
 5. Select **Build** to proceed
 
      ![](./media/image133.png)
 
-6. In the **Agents** section, locate and select the newly created agent
-    (for example, **IQAgent**) from the list.
+6. In the **Agents** section, locate and select the newly created agent (for example, **IQAgent**) from the list.
 
      ![](./media/image134.png)
 
      ![](./media/image135.png)
 
-7. In the **Instructions** section, enter the following data to define
-    the agent’s behavior.
+7. In the **Instructions** section, enter the following data to define the agent’s behavior.
 
     ```
      You are Contoso’s Resolution Agent for customer shipment and delivery
@@ -864,19 +817,17 @@ publishing details** to review the agent deployment.
 
     ![](./media/image136.png)
 
-8. Click **Save**
+8. Click **Save.**
 
      ![](./media/image137.png)
 
      ![](./media/image138.png)
 
-9. In the **Knowledge** section, select **Add**, then choose **Connect
-    to Foundry IQ** to link the agent with the data source.
+9. In the **Knowledge** section, select **Add**, then choose **Connect to Foundry IQ** to link the agent with the data source.
 
      ![](./media/image139.png)
 
-10. In the **Connect to Foundry IQ** window, select **Connect to an AI
-    Search resource** to configure the connection.
+10. In the **Connect to Foundry IQ** window, select **Connect to an AI Search resource** to configure the connection.
 
      ![](./media/image140.png)
 
@@ -892,7 +843,7 @@ publishing details** to review the agent deployment.
 
 12. In the Choose a knowledge type window, first select the **Storage account** and **Container name** that were created in the previous steps. Then select Chat completions model as gpt-4.1 and click on **Create**.
 
-     ![](./media/image142.png)
+     ![](./media/img2.png)
 
 13. After configuring the knowledge base details, select **Save
     knowledge base** to create and save it.
@@ -911,25 +862,21 @@ publishing details** to review the agent deployment.
      > **Note:** If the status is not displayed as “Active”, refresh the page once and verify the status again.
 
 
-11. Select **Use in an agent**, then choose the created agent (for
-    example, **IQAgent**) to associate the knowledge base with it
+11. Select **Use in an agent**, then choose the created agent (for example, **IQAgent**) to associate the knowledge base with it
 
      ![](./media/image147.png)
 
      ![](./media/image148.png)
 
-12. In the **Tools** section, select **Add**, then choose **Browse all
-    tools** to view and configure additional tools for the agent.
+12. In the **Tools** section, select **Add**, then choose **Browse all tools** to view and configure additional tools for the agent.
 
      ![](./media/image149.png)
 
-13. In the **Catalog** tab, search for **Work IQ**, select **Work IQ
-    Mail**, and then click **Create** to add the tool to the agent.
+13. In the **Catalog** tab, search for **Work IQ**, select **Work IQ Mail**, and then click **Create** to add the tool to the agent.
 
      ![](./media/image150.png)
 
-14. In the **Connect the Work IQ Mail tool** window, review the default
-    settings and select **Connect** to complete the configuration.
+14. In the **Connect the Work IQ Mail tool** window, review the default settings and select **Connect** to complete the configuration.
 
      ![](./media/image151.png)
 
@@ -937,31 +884,27 @@ publishing details** to review the agent deployment.
 
      ![](./media/image152.png)
 
-16. In the **Tools** section, select **Add**, then choose **Browse all
-    tools** to view and configure additional tools for the agent.
+16. In the **Tools** section, select **Add**, then choose **Browse all tools** to view and configure additional tools for the agent.
 
      ![](./media/image153.png)
 
-17. Select **Fabric Data Agent**, and then click **Create** to add the
-    tool to the agent.
+17. Select **Fabric Data Agent**, and then click **Create** to add the tool to the agent.
 
      ![](./media/image154.png)
 
-18. In the **Connect to Fabric Data Agent** window, enter the required
-    **Workspace ID** and **Artifact ID**, then select **Connect** to
-    complete the setup.
+18. In the **Connect to Fabric Data Agent** window, enter the required **Workspace ID** and **Artifact ID**, then select **Connect** to complete the setup.
 
      ![](./media/image155.png)
 
-19. Verify that **Fabric Data Agent** and **Work IQ Mail** is connected
-    successfully.
+19. Verify that **Fabric Data Agent** and **Work IQ Mail** is connected successfully.
 
      ![](./media/image156.png)
 
-20. A chat panel will open where you can enter your prompts. The agent
-    will now respond.
+20. A chat panel will open where you can enter your prompts. The agent will now respond.
 
-    - Review the latest Apex Legal email and tell me what happened.
+     ```
+     Review the latest Apex Legal email and tell me what happened.
+     ```
 
       ![](./media/image157.png)
 
@@ -973,49 +916,53 @@ publishing details** to review the agent deployment.
 
      ![](./media/image159.png)
 
-23. A chat panel will open where you can enter your prompts. The agent
-    will now respond
+23. A chat panel will open where you can enter your prompts. The agent will now respond
 
-    - Is this customer eligible for replacement based on our policy?
+     ```
+     Is this customer eligible for replacement based on our policy?
+     ```
 
       ![](./media/image160.png)
 
       ![](./media/image161.png)
 
-25. A chat panel will open where you can enter your prompts. The agent
-    will now respond
+25. A chat panel will open where you can enter your prompts. The agent will now respond
 
-    - Do we have enough stock to resolve this today?
+     ```
+     Do we have enough stock to resolve this today?
+     ```
 
         ![](./media/image162.png)
 
         ![](./media/image163.png)
 
-26. A chat panel will open where you can enter your prompts. The agent
-    will now respond.
+26. A chat panel will open where you can enter your prompts. The agent will now respond.
 
-    - Should this issue be escalated?
+     ```
+     Should this issue be escalated?
+     ```
 
        ![](./media/image164.png)
 
        ![](./media/image165.png)
 
-27. A chat panel will open where you can enter your prompts. The agent
-    will now respond.
+27. A chat panel will open where you can enter your prompts. The agent will now respond.
 
-     - Draft a customer response based on the issue and our communication
-standards.
+     ```
+     Draft a customer response based on the issue and our communication standards.
+     ```
 
         ![](./media/image166.png)
 
-28. A chat panel will open where you can enter your prompts. The agent
-    will now respond
+28. A chat panel will open where you can enter your prompts. The agent will now respond
 
-    - What is the best operational resolution for order O5001?
+     ```
+     What is the best operational resolution for order O5001?
+     ```
 
-         ![](./media/image167.png)
+      ![](./media/image167.png)
 
-        ![](./media/image168.png)
+      ![](./media/image168.png)
 
 > **Summary**
 >

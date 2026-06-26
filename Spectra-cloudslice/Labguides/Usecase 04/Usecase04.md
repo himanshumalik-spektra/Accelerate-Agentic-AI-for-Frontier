@@ -57,7 +57,7 @@ In this exercise, you will create an Azure AI Search resource from the Azure por
 
    ![A screenshot of a computer AI-generated content may be incorrect.](./media/image2.png)
 
-3. In the **AI Foundry page**, select **AI Search** under **Use with Foundry** from the left pane and then select **+ Create**.
+3. In the **Misrosoft Foundry page**, select **AI Search** under **Use with Foundry** from the left pane and then select **+ Create**.
 
     ![](./media/image3.png)
 
@@ -179,9 +179,13 @@ In this exercise, you will create an Azure AI Search resource from the Azure por
 
 13. Select **Managed identity (1)** and then select **+ Select members (2)**. Select **Search service (3)** under **Managed identity** and select the **searchleaves (4)** search service that gets listed, then click on **Select (5)**.
 
-14. Select **Review + assign (6)** in the next 2 screens.
+14. Select **Review + assign (6)** .
 
      ![](./media/new30.png)
+
+1. Click on **Review & Assign** to assign the roles 
+
+     ![](./media/n1.png)
 
    ### Congratulations!
 
@@ -225,7 +229,11 @@ In this task, you will create a Foundry resource which is required to access the
 
      ![](./media/image36.png)
 
-6. Open the **agentic-ai-project-<inject key="DeploymentID" enableCopy="false"/>** and select **Go to Foundry portal**.
+1. Navigate to your **AgenticAI** resource group
+
+     ![](./media/n2.png)
+
+6. Open the **agentic-ai-project-<inject key="DeploymentID" enableCopy="false"/>** and select **Go to Foundry portal**. 
 
      ![](./media/129.png)
 
@@ -307,8 +315,6 @@ In this task, you create a Fabric workspace. The workspace contains all the item
 
      ![](./media/image49.png)
 
-     ![](./media/image50.png)
-
 4. You will see a notification stating **Successfully created SQL endpoint**.
 
      ![A screenshot of a computer AI-generated content may be incorrect.](./media/image51.png)
@@ -363,7 +369,7 @@ In this task, you create a Fabric workspace. The workspace contains all the item
 
      > **Note:** If you encounter the “TooManyRequestsForCapacity” error while loading data, it indicates a capacity/rate limit issue rather than an SKU configuration issue wait for 20-25 minutes and retry loading the data. The operation should complete successfully once the capacity becomes available.
 
-     >**Note:** If you still face issues in loading the tables, restart the Fabric Capcity from the Azure portal. FOllow the steps below: 
+     >**Note:** If you still face issues in loading the tables, restart the Fabric Capcity from the Azure portal. Follow the steps below: 
 
      - In the Azure portal search bar, search and select Resource groups.
 
@@ -406,6 +412,8 @@ In this task, you create a Fabric workspace. The workspace contains all the item
 3. The ontology opens when it's ready.
 
       ![](./media/image69.png)
+
+     >**Note:** If you still face issues in loading the tables, restart the Fabric Capcity from the Azure portal.
 
 4. Next, create entity types, data bindings, and relationships based on data from your lakehouse tables.
 
@@ -458,50 +466,11 @@ Entity types represent categories of objects in your business domain. For this s
 
      ![](./media/new37.png)
 
-11. Enter **Order** as the name and select **Add Entity Type**. 
-
-     ![](./media/image80.png)
-
-12. On the configuration canvas, select **(...) (1)** next to the entity name and select **Bind data (2)**. 
-
-     ![](./media/new25.png)
-
-13. Select **Add data binding (1) > Lakehouse table (2)**. 
-
-     ![](./media/new26.png)
-
-14. Select the **IQ_Lakehouse** lakehouse **(1)** as the data source, and then click **Next** **(2)** to continue configuring the ontology.
-
-     ![](./media/new27.png)
-
-15. Expand the **Tables** folder **(1)** under **IQ_Lakehouse**, select the **orders** table **(2)**, and then click **Select** **(3)** to add the table to the ontology.
-
-     ![](./media/new28.png)
-
-16. Select **Define entity type key** at the top of the configuration. 
-
-     ![](./media/new33.png)
-
-17. Select **OrderID** as the key property and select **Save**. 
-
-     ![](./media/new34.png)
-
-18. Click on **Save** to save the data binding. 
-
-     ![](./media/new35.png)
-
-19. Confirm that the entity type updated successfully, then select **Cancel** to close the configuration options. 
-
-     ![](./media/new36.png)
-
-20. Select **+ Add entity type** from the ribbon. 
-
-     ![](./media/new37.png)
-
 18. Follow the same steps that you used for the **Store** entity type to create the entity types described in the following table. Each entity has a static data binding with the default columns from its source table.
 
      | Entity type name        | Source table in IQ_Lakehouse | Entity type key |
      |-------------------------|------------------------------|-----------------|
+     | Order                   | Orders                       | OrderId         |
      | OrderItem               | OrderItems                   | OrderItemID     |
      | SupportTicket           | SupportTickets               | TicketID        |
      | RefundClaim             | RefundClaims                 | ClaimID         |
@@ -543,15 +512,6 @@ Next, create relationship types between the entity types to represent contextual
 5. Click **Home** to return to the ontology home page after verifying the relationship between the **Customer** and **Order** entities.
 
       ![](./media/l1-0.png)
-
-6. Follow the same steps that you used for the first relationship type to create the relationship type described in the following table.
-
-     | Relationship type name | Source data table                          | Source entity type        |
-     |------------------------|--------------------------------------------|---------------------------|
-     | Contains               | Tutorial workspace → Lakehouse → Order     | Products (OrderItem)      |
-     | hasSupportTicket       | Order                                      | SupportTicket             |
-     | hasTrackingEvent       | Order                                      | ShipmentTrackingEvent     |
-     | mayLeadTo              | OrderItem                                  | RefundClaim               |  
 
 7. Select the **Order** entity type **(1)** from the **Explorer** pane, and then click **+ Add relationship** **(2)** to define a new relationship for the selected entity.
 
@@ -878,7 +838,7 @@ Follow these steps to create a new data agent that connects to your ontology (pr
 
      ![](./media/image141.png)     
 
-13. In the Choose a knowledge type window, first select the **Storage account** and **Container name** that were created in the previous steps. Then select Chat completions model as gpt-4.1 and click on **Create**.
+13. In the Choose a knowledge type window, first select the **Storage account** and **Container name** that were created in the previous steps. Then select Chat completions model as gpt-5.2 and click on **Create**.
 
      ![](./media/img2.png)
 

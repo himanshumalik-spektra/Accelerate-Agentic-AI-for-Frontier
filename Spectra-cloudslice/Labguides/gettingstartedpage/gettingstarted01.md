@@ -42,8 +42,6 @@ Participants should have:
 
 - The required Azure resource providers registered in the subscription,
 
-- Docker Desktop installed for container-based deployment tasks,
-
 - Access to Azure and GitHub credentials for authentication during setup and deployment.
 
 ## Explanation of Components
@@ -156,17 +154,11 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
 
      ![Enter Your Username](media/odlusr.png)
 
-3. Next, provide your **password (1)** and select **Sign In (2)**:
+3. Next, provide **Temporary Access pass**, and select **Sign In (2)**:
 
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+   - Enter **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject> **(1)**
 
-     ![Enter Your Password](./media/password.png)
-
-      >**Note:** If you see **Temporary Access pass**, enter the the password and select **Sign In (2)**:
-
-       - Enter **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject> **(1)**
-
-          ![](./media/image.png)
+        ![](./media/image.png)
 
 4. If **Action required** pop-up window appears, click on **Ask later**.
 5. If prompted to **stay signed in**, you can click **No**.

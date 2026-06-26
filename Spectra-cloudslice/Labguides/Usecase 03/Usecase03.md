@@ -93,9 +93,12 @@ system** can:
 
      ![](./media/image12.png)
 
-2. Click on **fork** and select **Create a new fork** to fork the repo. Give unique name to the repo and click on **Create fork** button.
+2. Click on **fork** and select **Create a new fork** to fork the repo. 
 
     ![](./media/image13(a).png)
+
+1. Click on **Create fork** button.
+   
     ![](./media/image13(b).png)
 
 1. Click on **Code (1)**, switch to the **Codespaces (2)** tab, and select **Create codespace on main (3)** to launch the development environment.
@@ -153,45 +156,29 @@ incorrect.](./media/image21.png)
 
     ![](./media/image23.png)
 
-1. To create an environment for Azure resources, enter any name of your choice and press enter (eg :** macaedev[@lab.LabInstance.Id](mailto:Ontology@lab.LabInstance.Id)**)
+1. If prompted with **Would you like to check your Azure development tools?:**, type **Yes** and click on Enter.
 
-    ![](./media/image24.png)
+     ![](./media/f30.png)
+   
+1. If prompted with any tools installations like Github & Azure tools, click on **Enter** to proceed with the installation.
 
-    ![](./media/image25.png)
+     ![](./media/f31.png)
 
-1. Select below values.
+1. When prompted with the following, provide the below values:
 
-    - **Select an Azure Subscription to use** : Select your subscription
+    - Enter a unique environment name: **AgenticAI**
+    - Select an Azure subscription to use: Click on **Enter**
+    - Enter a value for the 'location' infrastructure parameter: Select **Sweden Central** if present or any other location in case of Sweden Central not present.
 
-    - **azureAiServiceLocation**: Sweden Central
+      ![](./media/f32.png)
+      
+1. Enter **Y** to proceed with the deployment.
 
-    - **‘location' infrastructure parameter:** Central US
+      ![](./media/f33.png)
 
-    - **Pick a resource group to use:** Existing resource group
+    >**Note:** The deployment might take 15-20 minutes to complete.
 
-      ![](./media/image26.png)
-
-      ![](./media/image27.png)
-
-      ![](./media/image28.png)
-
-      ![](./media/image29.png)
-
-1. This deployment will take *7-10 minutes* to provision the resources in your account and set up the solution with sample data.
-
-    ![](./media/image30.png)
-
-    ![](./media/image31.png)
-
-    ![](./media/image32.png)
-
-1. Now the deployment is complete
-
-    ![](./media/image33.png)
-
-1. After the application has been successfully deployed, you see a URL displayed in the terminal. Copy the **Frontend application URL**
-
-    ![](./media/image34.png)
+1. If prompted with any installations, type **"yes"** or click on **Enter** as required.
 
 ## Task 4: Post-Deployment Configuration
 
@@ -213,7 +200,7 @@ incorrect.](./media/image21.png)
 
     ![](./media/image31(a).png)
 
-1. Select your subscription
+1. Navigate back and type 1 for **Select a subscription or Tenant** and click on **Enter**.
 
      ![](./media/image39.png)
 
@@ -231,14 +218,7 @@ incorrect.](./media/image21.png)
 
 ## Task 5: Verify deployed resources in the Azure portal
 
-1. Navigate to **Azure portal** and select **Resource groups**
-
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image45.png)
-
-1. Click on your assigned **Resource group**.
-
-    ![](./media/image46.png)
+1. Navigate to **Azure portal** and select the AgenticAI rg in the **Resource groups** list.
 
 1. Make sure the below resource got deployed successfully
 
@@ -260,31 +240,19 @@ incorrect.](./media/image45.png)
 
     - Azure Storage account
 
-      ![](./media/image47.png)
+      ![](./media/f50.png)
 
-      ![](./media/image48.png)
+1. Select the **Azure Storage account** that has been created. From the left navigation menu, click on **Data Storage (1)** > **Containers (2)** and **verify (3)** if all the containers have been deployed.
 
-1. On the resource group and click on **Azure Storage account.**
+      ![](./media/f51.png)
 
-    ![](./media/image49.png)
+1. Navigate back to the resource group and select the **Foundry Project.** Click on **Go to Foundry portal** to verify if all the models have been successfully deployed.    
 
-1. From the left navigation menu, click on **Containers** , Make sure data should be deployed successfully
-
-    ![](./media/image50.png)
-
-1. Go back to resource group and click on **Foundry Project.**
-
-     ![](./media/image51.png)
-
-1. Click **Go to Foundry portal** to verify that the model has been successfully deployed.    
+      ![](./media/f52.png)
     
-    ![](./media/image52.png)
+1. Click on **Build** from the top menu and click on **Deployments (1)** from the left navigation menu to verify the **models (2)** that have been deployed.
 
-1. Click on **Build** from the top menu.
-
-    ![](./media/f10.png)
-
-1. Click on **Deployments (1)** from the left navigation menu to see the **models (2)** that have been deployed.
+    ![](./media/f10.png) 
 
     ![](./media/f11.png)
 
@@ -300,17 +268,11 @@ incorrect.](./media/image45.png)
 
 ## Task 6: Add Authentication in Azure App Service configuration
 
-1. Go back to resourcegroup and click on **App Service(app-macaedevXXX).**
+1. Navigate back to the resource group and select the App Service that has been created.
 
-    ![](./media/image54.png)
+1. On the web app home page, select **Settings (1)** from the left navigation pane and select **Authentication (2)** from the drop down. Click on **Add identity provider (3)** to see a list of identity providers.
 
-1. On the web app home page, go to **Settings** and click **Authentication** from the left menu.
-
-    ![](./media/image55.png)
-
-1. Click on **Add identity provider** to see a list of identity providers.
-
-    ![](./media/image56.png)
+      ![](./media/f53.png)
 
 1. Click on Identity Provider dropdown to see a list of identity providers and select the first option **Microsoft** from the drop-down list.
 
@@ -321,17 +283,17 @@ incorrect.](./media/image45.png)
     ![A screenshot of a computer AI-generated content may be
  incorrect.](./media/image58.png)
 
-1. You have successfully added app authentication, and now required to log in to access the application.
+1. You have successfully added app authentication.
 
     ![](./media/image59.png)
 
     ![](./media/image60.png)
 
-1. On the web app home page, go to **Overview** and click **Browse**.
+1. Navigate to **Overview** from the left navigation pane and click on **Browse**.
 
     ![](./media/image61.png)
 
-1. Wait for the web application deployment to complete and click on **Accept**.
+1. Click on **Accept** on the Permissions required pop-up.
 
     ![](./media/image62.png)
 
@@ -339,7 +301,7 @@ incorrect.](./media/image45.png)
 
 ## Task 7: Review and Explore the Sample Questions for Your Copilot Application
 
-1. Select the **RFP Team** option from the top-left section and explore the different teams.
+1. Select the **Current Team** option from the top-left section and explore the different teams.
 
     ![](./media/image64.png)
 
@@ -363,9 +325,9 @@ actions.
    
    **Agents Used:** Customer, Order, Analysis Recommendation
 
-     ![](./media/image67.png)
+      ![](./media/image67.png)
 
-1. In the **Multi-Agent Planner**, under *Quick tasks*, select ***Satisfaction Plan* to generate an analysis of Emily Thompson’s satisfaction with Contoso along with recommended actions to improve it.**
+1. In the **Multi-Agent Planner**, under *Quick tasks*, select **Satisfaction Plan** to generate an analysis of Emily Thompson’s satisfaction with Contoso along with recommended actions to improve it.
 
     ![](./media/image68.png)
 
@@ -375,7 +337,7 @@ actions.
 
     ![](./media/image70.png)
 
-1. Click **"Approve Task Plan"** Button.
+1. Click on the **"Approve Task Plan"** Button.
 
     ![](./media/image71.png)
 
@@ -396,13 +358,7 @@ plan.
 This scenario demonstrates how AI agents streamline marketing content
 creation while ensuring alignment with product details and brand voice.
 
-1. Select the Marketing team, follow the prompts below. 
-
-    Click on **Contoso** from the left side.
-
-    ![](./media/image73.png)
-
-1. Switch to **"Product Marketing Team"** from the top left section and click **"Continue"** button.
+1. Click on the Current Team option on the left pane and switch to **"Product Marketing Team"** and click **"Continue"** button.
 
     **Agents Used:** Product, Marketing , Proxy
 
@@ -443,12 +399,6 @@ prepare everything needed for the employee’s first day.
 
 This demonstrates how AI agents can orchestrate cross-functional
 onboarding activities efficiently and accurately
-
-1. Select the HR team, follow the prompts below.
-
-    Click on **Contoso** at the left side.
-
-    ![](./media/image79.png)
 
 1. Switch to **"Human Resources Team"** from the top left section and click **"Continue"** button.
 
@@ -492,12 +442,6 @@ the system summarizes the document, identifies risks, and checks
 compliance requirements - helping teams respond faster and more
 accurately
 
-1. Select the RFP team, follow the prompts below.
-
-    Click on **Contoso** at the left side.
-
-    ![](./media/image85.png)
-
 1. Switch to **"RFP Team"** from the top left section and click **"Continue"** button.
 
     **Agents Used:** RFP Summary, RFP Risk, RFP Compliance
@@ -538,12 +482,6 @@ standards.
 
 This scenario highlights how AI supports faster, more consistent
 contract reviews while keeping humans in control of final decisions.
-
-1. Select the Contract Compliance team, follow the prompts below.
-
-    Click on **Contoso** at the left side.
-
-    ![](./media/image91.png)
 
 1. Switch to the **"Contract Compliance Review Team"** from the
     top left section and click **"Continue"** button.

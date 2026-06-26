@@ -72,11 +72,10 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 ## Lab Objective
 
 - Task 1: Register Service provider
-- Task 2: Retrieve resource group name and location
-- Task 3: Open Github Codespaces environment
-- Task 4: Provision Services and deploy application to Azure
-- Task 5: Verify deployed resources in the Azure portal
-- Task 6: Test the Application
+- Task 2: Open Github Codespaces environment
+- Task 3: Provision Services and deploy application to Azure
+- Task 4: Verify deployed resources in the Azure portal
+- Task 5: Test the Application
 
 ## Task 1: Register Service provider
 
@@ -104,17 +103,7 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     - **Microsoft.Insights**
 
-## Task 2: Retrieve resource group name and location
-
-1. In the Azure portal search bar, type **Resource groups (1)**, then select **Resource groups (2)** from the Services list to open it.
-
-    ![](./media/image17(a).png)
-
-1. In **Resource group** page, copy **resource group name and location** and paste them in a notepad, then **Save** the notepad to use the information in the upcoming tasks.
-
-    ![](./media/image17(b).png)
-
-## Task 3: Open Github Codespaces environment
+## Task 2: Open Github Codespaces environment
 
 > **Note:** You are expected to have your own GitHub login credentials. If you do not have an account, please create one by visiting below shared URL: 
    
@@ -132,7 +121,7 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     ![](./media/image17(c).png)
 
-1. And give a unique name to the repo and click on **Create fork** button.
+1. Click on **Create fork** button.
 
     ![](./media/uc2-23.png) 
 
@@ -160,39 +149,9 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     ![](./media/image26.png)
 
-## Task 4: Provision Services and deploy application to Azure
+## Task 3: Provision Services and deploy application to Azure
 
-1. In the LabVM search bar, type **Docker (1)** and select **Docker Desktop (2)** from the results to open the application.
-
-    ![](./media/uc9-14.png)
-
-    > **Note:** Before moving on to the next steps please make sure your Docker Desktop is up and running. It should not be in stopped state.
-
-1. Click **Accept** to agree to the Docker Subscription Service Agreement and continue.
-
-    ![](./media/uc8-23.png)
-
-1. Click **Skip** to bypass the setup questionnaire and proceed.
-
-    ![](./media/uc8-19.png)
-
-1. Click **Continue without signing in** to proceed without logging into Docker.
-
-    ![](./media/uc8-18.png)
-
-1. Select **Use recommended settings** and click **Finish** to complete the Docker Desktop setup.
-
-    ![](./media/uc8-24.png)  
-
-1. Click the **Close (X)** button to exit the Windows Subsystem for Linux (WSL) welcome screen.
-
-    ![](./media/uc8-17.png)
-
-1. Wait for Docker Desktop to finish starting the Docker Engine before proceeding.
-
-    ![](./media/uc8-16.png)     
-
-1. Navigate back to the Codespace and run the following command on the Terminal. It generates the code to copy. Copy the code and press Enter.
+ 1. Run the following command on the terminal:
 
     ```
     azd auth login
@@ -200,7 +159,7 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     ![](./media/image27.png)
 
-1. Run the azd auth login command, copy the displayed authentication code, and click on **Enter**.
+1. Copy the displayed authentication code, and click on **Enter**.
 
     ![](./media/image28.png)
 
@@ -208,7 +167,7 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
      ![](./media/image29.png)
 
-1. Sign in with your Azure credentials.
+1. Select the existing ODL account and click on **Continue**.
 
     ![](./media/image30.png)
 
@@ -216,7 +175,7 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     ![](./media/image32.png)
 
-1. Run the az login command, copy the displayed authentication code, and complete the sign-in process in your browser to authenticate your environment by clicking on the link.
+1. Navigate back to the terminal and run the following command on the Terminal:
 
     ```
     az login
@@ -224,17 +183,19 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     ![](./media/image33.png)
 
+1. Copy the displayed authentication code and complete the sign-in process in your browser to authenticate your environment by clicking on the link.
+
     ![](./media/image34.png)
 
     ![](./media/image30.png)
 
     ![](./media/image31(a).png)
 
-1. Type 1 for **Select a subscription or Tenant**.
+1. Navigate back and type 1 for **Select a subscription or Tenant** and click on **Enter**.
 
     ![](./media/image35.png)
 
-1. Run azd up - This will provision Azure resources
+1. Run the following command to provision Azure resources.
 
     ```
     azd up
@@ -242,35 +203,29 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     ![](./media/image36.png)
 
-1. Enter any name of your choice and press enter (eg: **prior-auth-devXXXX**)
+1. If prompted with **Would you like to check your Azure development tools?:**, type **Yes** and click on Enter.
 
-    ![](./media/image37.png)
+     ![](./media/f30.png)
+   
+1. If prompted with any tools installations like Github & Azure tools, click on **Enter** to proceed with the installation.
 
-    ![](./media/image38.png)
+     ![](./media/f31.png)
 
-1. Select below values.
+1. When prompted with the following, provide the below values:
 
-    - **Select an Azure Subscription to use** : Press Enter to select your subscription
+    - Enter a unique environment name: **AgenticAI**
+    - Select an Azure subscription to use: Click on **Enter**
+    - Enter a value for the 'location' infrastructure parameter: Select **Sweden Central** if present or any other location in case of Sweden Central not present.
 
-    - **Enter a value for existingResourceGroup Name:** AgenticAI
-
-    - **Enter location**: Sweden Central
-
-      ![](./media/image39.png)
-
-      ![](./media/image40.png)
-
-      ![](./media/image41.png)
+      ![](./media/f32.png)
 
 1. Enter **Y** to proceed with the deployment.
 
-    ![](./media/image42.png)
+      ![](./media/f33.png)
 
-    ![](./media/image43.png)
+    >**Note:** The deployment might take 15-20 minutes to complete.
 
-    ![](./media/image44.png)
-
-    ![](./media/image45.png)
+1. If prompted with any installations, type **"yes"** or click on **Enter** as required.
 
 1. The deployment process is currently building container images using a remote Azure Container Registry (ACR) build.
 
@@ -294,11 +249,11 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     ![](./media/image51.png)
 
-1. Agent-synthesis image build process completed
+1. Agent-synthesis image build process has been completed.
 
     ![](./media/image52.png)
 
-1. Backend and frontend container app updated successfully
+1. Backend and frontend container app are updated successfully.
 
      ![](./media/image53.png)
 
@@ -310,15 +265,13 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
      ![](./media/image55.png)
 
-## Task 5: Verify deployed resources in the Azure portal
+## Task 4: Verify deployed resources in the Azure portal
 
-1. Select **Resource groups**
+1. Navigate back to the portal and select **Resource groups**
 
     ![](./media/image56.png)
 
-1. Click on your assigned **Resource group**.
-
-    ![](./media/image57.png)
+1. Select the **rg-AgenticAI** rg that's created.
 
 1. Make sure the below resource got deployed successfully
 
@@ -330,55 +283,7 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     - Container registry
 
-    - Container App Environment
-
-    ![](./media/image58.png)
-
-1. Click on **Foundry Project.**
-
-    ![](./media/image58.png)
-
-1. Click **Go to Foundry portal** to verify that the agents has been
-    successfully deployed.
-
-    ![](./media/image59.png)
-
-1. In Microsoft Foundry, enable the **New Foundry** option and navigate to the **Build** section from the top
-    menu to start creating and managing your AI solutions.
-
-    ![](./media/image60.png)
-
-1. Agents has been successfully deployed
-
-    ![](./media/image61.png)
-
-1. Select the **synthesis-agent**.
-
-    ![](./media/image61.png)
-
-1. Click on **Start agent deployment** to deploy the synthesis-agent.
-
-    ![](./media/image62.png)
-
-    ![](./media/image63.png)
-
-1. Select the **compliance-agent**.
-
-    ![](./media/image64.png)
-
-1. Click on **Start agent deployment** to deploy the **compliance-agent**.
-
-    ![](./media/image65.png)
-
-    ![](./media/image66.png)
-
-1. Repeat steps 10 and 11 to run the **coverage-assessment-agent** and **clinical-reviewer-agent**.
-
-    ![](./media/image67.png)
-
-    ![](./media/image68.png)
-
-    ![](./media/image69.png)      
+    - Container App Environment     
 
    ### Congratulations!
 
@@ -390,13 +295,9 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
    - Need help? cloudlabs-support@spektrasystems.com
    <validation step="7a657a19-9fda-4427-bf5b-4929e924c67c" />
 
-## Task 6: Test the Application
+## Task 5: Test the Application
 
-1. Go back to the codespace and copy the **Frontend URL**; it will be used later to launch the application.
-
-    ![](./media/image70.png)
-
-1. Run the following command to verify agent connections and application health status.
+1. Go back to the codespace and run the following command to verify agent connections and application health status.
 
     ```
     python scripts/check_agents.py
@@ -436,7 +337,7 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     ![](./media/image77.png)
 
-1. Click **"Submit for Review"**
+1. Scroll down and click on **"Submit for Review"**
 
     ![](./media/image78.png)
 
@@ -450,21 +351,17 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     ![](./media/image81.png)
 
-1. Click **Accept Recommendation**
+1. Provide any reviewer name and click on **Accept Recommendation**
 
     ![](./media/image82.png)
 
-    ![](./media/image83.png)
-
-    ![](./media/image84.png)
-
-    ![](./media/image85.png)       
+    ![](./media/image83.png)   
 
 ## Important
 
-   > **Note**: Please delete the resources that you have created in the **AgenticAI** resource group. 
+   > **Note**: Delete the **rg-AgenticAI** resource group. 
 
-   ![](./media/f13.png) 
+   ![](./media/F34.png) 
 
 
    ### Congratulations!

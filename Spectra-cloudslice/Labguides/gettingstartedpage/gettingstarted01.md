@@ -42,8 +42,6 @@ Participants should have:
 
 - The required Azure resource providers registered in the subscription,
 
-- Docker Desktop installed for container-based deployment tasks,
-
 - Access to Azure and GitHub credentials for authentication during setup and deployment.
 
 ## Explanation of Components

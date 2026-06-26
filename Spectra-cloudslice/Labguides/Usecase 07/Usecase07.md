@@ -742,15 +742,11 @@ requests.
 
      ![](./media/usx86.png) 
 
-1. Back in the Foundry portal select **Agents**, then click on the **contoso-travel-traced** agent to view its details and traces.
-
-     ![](./media/usx87.png)
+1. Back in the Foundry portal select **Agents**, then click on the **contoso-travel-portal** agent to view its details and traces.
 
 1. Click on the **Tracing** tab for your agent. You should see your traces listed with the span names that were defined.
 
-     ![](./media/usx88.png)
-
-1. Click on a trace to see the full span tree
+1. Click on a trace to see the full span tree.
 
      ![](./media/aaae2t2s12.png)
 
@@ -857,9 +853,7 @@ identify areas for improvement.
 
      ![](./media/aaae2t7s15.png)
 
-1. Click on the **Evaluations** tab in the left navigation
-
-     ![](./media/usx120.png)
+1. Click on the **Evaluations** tab in the left navigation.
 
 1. You should see the Quality, Safety, and Agentic evaluation runs  listed
 
@@ -892,8 +886,6 @@ the agent operates safely and adheres to responsible AI principles.
      ![](./media/usx126.png)
 
 1. Run the cell under **Setup** to connect to Microsoft Foundry and initialize the red teaming environment.
-
-     ![](./media/usx127.png)
 
 1. Run the cell under **Create the Travel Agent and Red Team** to create a versioned agent and set up a red team evaluation for safety
     testing.
@@ -929,7 +921,7 @@ the agent operates safely and adheres to responsible AI principles.
 
      ![](./media/usx136.png)
 
-1. Navigate to **Evaluations** → select the red team evaluation
+1. Navigate to **Evaluations** → select the red team evaluation.
 
      ![](./media/usx137.png)
 

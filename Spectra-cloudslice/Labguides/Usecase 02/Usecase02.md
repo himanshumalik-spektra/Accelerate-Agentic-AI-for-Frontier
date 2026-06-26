@@ -74,8 +74,8 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 - Task 1: Register Service provider
 - Task 2: Open Github Codespaces environment
 - Task 3: Provision Services and deploy application to Azure
-- Task 5: Verify deployed resources in the Azure portal
-- Task 6: Test the Application
+- Task 4: Verify deployed resources in the Azure portal
+- Task 5: Test the Application
 
 ## Task 1: Register Service provider
 

@@ -203,7 +203,7 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     ![](./media/image36.png)
 
-1. If prompted with **Would you like to check your Azure development tools?:**, click on **Yes**.
+1. If prompted with **Would you like to check your Azure development tools?:**, type **Yes** and click on Enter.
 
      ![](./media/f30.png)
    

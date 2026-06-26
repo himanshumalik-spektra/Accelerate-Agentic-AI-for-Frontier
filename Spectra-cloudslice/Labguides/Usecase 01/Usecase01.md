@@ -61,16 +61,16 @@ incorrect.](./media/uc1-3.png)
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/uc1-4.png) 
 
-1. On the AI Search service **Overview** page, locate the **URL** under the **Essentials** section and click the **copy icon** next to it to copy the service endpoint for later use.
+1. On the AI Search service **Overview** page, locate the **URL** under the **Essentials** section and click the **copy icon** next to it to copy the service endpoint in a notepad for later use.
 
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/uc1-5.png) 
 
-1. In the AI Search service, navigate to **Security + networking**, select **Keys (1)**, and under **Manage admin keys**, click the **copy icon (2)** next to the **Primary admin key** to copy it for later use.
+1. In the AI Search service, navigate to **Security + networking**, select **Keys (1)**, and under **Manage admin keys**, click the **copy icon (2)** next to the **Primary admin key** to copy it in a notepad for later use.
 
     ![A](./media/f1.png) 
 
-1. In the AI Search service, go to **Identity (1)**, switch the **Status** to **On (2)** to enable the system-assigned managed identity, and then click **Save** to apply the changes.
+1. Under the same drop-down, select **Identity (1)**, switch the **Status** to **On (2)** to enable the system-assigned managed identity, and then click **Save (3)** to apply the changes. 
 
     ![A](./media/f2.png) 
 
@@ -80,7 +80,7 @@ incorrect.](./media/uc1-5.png)
 
 ## Exercise 2: Create a Storage account
 
-1. In the Azure portal, go to the **top search bar**, enter **Storage accounts (1)**, and from the results, choose **Storage accounts (2)** under the **Services**.
+1. In the Azure portal , enter **Storage accounts (1)** in the **top search bar**, and from the results, choose **Storage accounts (2)** under the **Services**.
 
     ![image](./media/uc1-9.png)
 
@@ -91,14 +91,12 @@ incorrect.](./media/uc1-5.png)
 1. On the **Create a storage account** page under the **Basics** tab, configure the required settings as follows:
 
     - Select **Resource group**: **AgenticAI (1)**
-    - Enter **Storage account name** as **leavepolicystg (2)<inject key="DeploymentID" enableCopy="false"/>**
+    - Enter **Storage account name** as **leavepolicystg <inject key="DeploymentID" enableCopy="false"/> (2)**
     - Choose **Region (3)**
-    - Set **Preferred storage type**: **Azure Blob Storage or ADLS Gen2 (4)**
+    - Set **Preferred storage type**: **Azure Blob Storage or Azure Data Lake Storage (4)**
     - Keep **Performance**: **Standard (5)**
     - Set **Redundancy**: **LRS (6)**
     - Click **Review + create (7)**
-
-      ![image](./media/uc1-11.png)
 
 1. On the **Review + create** tab, verify all the configured storage account settings and click **Create** to deploy the storage account.
 
@@ -108,7 +106,7 @@ incorrect.](./media/uc1-5.png)
 
     ![image](./media/uc1-13.png)
 
-1. In the storage account, navigate to **Data storage (1)**, select **Containers (2)**, and then click **+ Add container (3)** to create a new container.
+1. In the storage account, navigate to **Data storage (1)** from the left navigation pane, select **Containers (2)**, and then click **+ Add container (3)** to create a new container.
 
     ![image](./media/uc1-14.png)
 
@@ -124,7 +122,7 @@ incorrect.](./media/uc1-5.png)
 
     ![image](./media/uc1-17.png)
 
-1. In the storage account, navigate to **Access Control (IAM) (1)**, click **+ Add (2)**, and select **Add role assignment (3)** to begin assigning permissions.
+1. Navigate back to the storage account, select **Access Control (IAM) (1)** from the left navigation pane, click **+ Add (2)**, and select **Add role assignment (3)** to begin assigning permissions.
 
     ![image](./media/uc1-18.png)
 
@@ -132,11 +130,11 @@ incorrect.](./media/uc1-5.png)
 
     ![image](./media/uc1-19.png)
 
-1. In the **Members** tab, keep **Assign access to** as **User, group, or service principal (1)**, click **Select members (2)**, **search (3)** and **choose (4)** the ODL user **<inject key="AzureAdUserEmail"></inject>**, click **Select (5)** and then proceed.
+1. In the **Members** tab, keep **Assign access to** as **User, group, or service principal (1)**, click **Select members (2)**, **search for **<inject key="AzureAdUserEmail"></inject>** (3)** and **choose (4)** the ODL user , and click **Select (5)**.
 
     ![image](./media/uc1-20.png)
 
-1. In the **Members** tab, select **Managed identity (1)**, click **Select members(2)**, choose **Search service (3)** from the managed identity dropdown, select your **AI Search service instance (4)**, and proceed to assign it.
+1. On the same page, in the **Members** tab, select **Managed identity (1)**, click **Select members(2)**, choose **Search service (Foundry IQ) (3)** from the managed identity dropdown, select your **AI Search service instance (4)**, and click on **Select (4)**.
 
     ![image](./media/uc1-22.png)
 
@@ -177,7 +175,7 @@ document and required Role permissions to it.
 
     ![image](./media/uc1-31.png)
 
-1. In the **Members** tab, keep **Assign access to** as **User, group, or service principal (1)**, click **Select members (2)**, **search (3)** and **choose (4)** the ODL user **<inject key="AzureAdUserEmail"></inject>**, then click **Select (5)** and proceed.
+1. In the **Members** tab, keep **Assign access to** as **User, group, or service principal (1)**, click **Select members (2)**, **search **<inject key="AzureAdUserEmail"></inject>** (3)** and **choose (4)** the ODL user , then click **Select (5)** and proceed.
 
     ![image](./media/uc1-32.png)
 
@@ -197,7 +195,7 @@ document and required Role permissions to it.
 
     ![A](./media/f3.png) 
 
-1. On the Your project is set up pop-up, click on **Skip**.
+1. On the **Your project is set up. What would you like to do next?** pop-up, click on **Skip**.
 
     ![A](./media/f4.png) 
 
@@ -213,25 +211,25 @@ document and required Role permissions to it.
 
     ![A](./media/f7.png) 
 
-1. In the **Deploy text-embedding-3-large** pane, keep the **Deployment type** as **Standard (1)** and click **Deploy (2)** to create the model deployment.      
+1. In the **Deploy text-embedding-3-large** pane, keep the **Deployment type** as **Standard (1)** and click **Deploy (2)**.      
 
     ![A](./media/f8.png) 
 
-   ### Congratulations!
+### Congratulations!
 
-   You’ve completed the task. Now let’s validate it:
+You’ve completed the task. Now let’s validate it:
+     - Hit the **Validate** button for the corresponding task.
+     - If successful, proceed to the next task.
+     - If not, retry using the lab guide.
+     - Need help? cloudlabs-support@spektrasystems.com\
      
-   - Hit the **Validate** button for the corresponding task.
-   - If successful, proceed to the next task.
-   - If not, retry using the lab guide.
-   - Need help? cloudlabs-support@spektrasystems.com
    <validation step="84aae3c9-71f4-401e-a136-f446d2da1749" />
 
 ## Exercise 4: Create a vector index
 
-1. In the Azure portal search bar, type **AI Search (1)**, then select **AI Search (2)** from the Services list to open it and click on the **searchleaves (3)**.
+1. Navigate back to the Azure portal, search for **AI Search**, then select **AI Search** from the Services list to open it.
 
-1. On the AI Search service page, click **Import data** to start importing data into the search index.
+1. Select **searchleaves-<inject key="DeploymentID" enableCopy="false"/>** and click on **Import data** to start importing data into the search index.
 
     ![image](./media/uc1-40.png)
 
@@ -243,7 +241,7 @@ document and required Role permissions to it.
 
     ![image](./media/uc1-42.png)
 
-1. In the **Configure your Azure Blob Storage** step, select * **leavepolicystg<inject key="DeploymentID" enableCopy="false"/> (1)** for the **Storage account**, choose the **Blob container** as **document (2)**, and click **Next (3)** to proceed.
+1. In the **Configure your Azure Blob Storage** step, select **leavepolicystg<inject key="DeploymentID" enableCopy="false"/> (1)** for the **Storage account**, choose **document (2)** for **Blob container** , and click **Next (3)** to proceed.
 
     ![image](./media/uc1-43.png)
 
@@ -287,7 +285,7 @@ document and required Role permissions to it.
 
 ## Exercise 5: Create a knowledge assistant agent
 
-1. In a new tab, enter the following URL to open **Microsoft Copilot Studio** using your login credentials.
+1. In a new tab, navigate to the following URL to open **Microsoft Copilot Studio** using your login credentials.
 
     ```
     https://copilotstudio.microsoft.com

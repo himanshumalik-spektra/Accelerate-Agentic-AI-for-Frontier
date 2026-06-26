@@ -229,6 +229,8 @@ In this task, you will refine and test your agent’s behavior using prompt engi
 
         ![](./media/aaae1t4s10.png)
 
+1. Close the Configuration pane.
+
 1. In the Test pane select **new chat (1)** , enter the below **prompt (2)** and click **Send.**
 
      ```
@@ -296,21 +298,21 @@ the *Tracing* and *Evaluations* capabilities in the agent playground.
 Microsoft Foundry has a large number of built-in evaluators that you can
 also invoke *code-first*.
 
-1. Click on the **Evaluations** item in the sidebar menu.
+1. Click on the **Evaluations** from the sidebar menu.
 
      ![](./media/aaae1t5s1.png)
 
-1. Select the **Evaluators catalog** to see the full list of supported evaluators
+1. Select the **Evaluators catalog** tab from the top to see the full list of supported evaluators.
 
      ![](./media/aaae1t5s2.png)
 
-1. Filter to see evaluators for a particular category - e.g., agents
+1. Filter to see evaluators for a particular category - e.g., agents.
 
      ![](./media/us47new.png)
 
      ![](./media/us48.png)
 
-1. Use "Ask AI" to get explanations for any of them - e.g., ask:
+1. Use "Ask AI" to get an explanation. 
 
     ```
     Tell me more about the Protected-Material evaluator        
@@ -318,11 +320,11 @@ also invoke *code-first*.
 
      ![](./media/aaae1t5s4.png)
 
-1. Click the **Create evaluator** button.
+1. Click on the **Create evaluator** button.
 
      ![](./media/aaae1t5s5.png)
 
-1. Give the following details:
+1. Provide the following details:
 
     - Enter **Evaluator name** as **customevaluator (1)**
     - Select **Model** as **gpt-4.1 (Global Standard deployment) (2)**
@@ -331,13 +333,15 @@ also invoke *code-first*.
 
       ![](./media/aaae1t5s6.png)
 
+      > **Note:** It may take a few minutes for the evaluator to be created. 
+
 1. Review the generated rubric and scoring details, Click on **Save evaluator**.
 
       ![](./media/aaae1t5s6.0.png)
 
       ![](./media/aaae1t5s6.1.png)
 
-      > **Note:** It may take a few minutes for the evaluator to be created. 
+
 
 ### Task 6: Run a Red Teaming Scan
 
@@ -350,7 +354,7 @@ behaves responsibly under different conditions.
 
      ![](./media/aaae1t6s1.png)
 
-1. For now, select the **Model (1)** option and pick the default model used  in your agent e.g, **gpt-4.1 (2)** and click **Next (3)**
+1. Select the **Model (1)** option and pick the default model used in your agent - **gpt-5 (2)** and click **Next (3)**
 
      ![](./media/us54.png)
 
@@ -366,7 +370,7 @@ behaves responsibly under different conditions.
 
      ![](./media/us58.png)
 
-     > **Note:** It may take 5-7 min to complete
+     > **Note:** It may take 5-7 minutes to complete
 
 ## Exercise 2: Building Contoso Travel Using Prompt Agents
 
@@ -397,23 +401,33 @@ Codespace, and prepare your workspace for development.
 
      ![](./media/usx1.png)
 
-1. Click on **fork** to fork the repo. 
+1. Click on **fork** followed with **Create a new fork** to fork the repo. 
 
      ![](./media/usx3.png)
 
-1. Give the name to the repo as **Foundry-Control-<inject key="DeploymentID" enableCopy="false"/> (1)** and click on **Create Fork (2)** .
+1. Replace the name with **Foundry-Control-<inject key="DeploymentID" enableCopy="false"/> (1)** and click on **Create Fork (2)** .
 
      ![](./media/usx2.png)
 
-1. Click on **Code (1) -\> Codespaces (2) -\> Create Codespace (3)**
+1. Click on **Code (1) -\> Codespaces (2) -\> Create Codespaces on main (3)**
 
      ![](./media/usx4.png)
 
-     ![](./media/usx5.png)
+      > **Note:** It can take a few minutes for the codespace to spin up completely.
 
-      > **Note:** It can take a few minutes for the codespace to spin up completely
+1. Click the highlighted Back button to navigate back to the previous Github page.
+
+    ![](./media/image17(d).png)
+
+1. Select the **Code (1)** dropdown and navigate to the **Codespaces (2)** tab, select the **ellipsis menu(3)** and choose **Open in Browser (4)**
+
+    ![](./media/image17(e).png)
+
+1. Wait for the Codespaces environment to setup. It takes few minutes to setup completely.
+
+     ![](./media/usx5.png)
    
-1. Open the Terminal and Run the below command to run the script to set up the required environment for the lab.
+1. Run the below command to run the script to set up the required environment for the lab.
 
      ```
      ./labs/notebooks/setup-env.sh         
@@ -421,7 +435,7 @@ Codespace, and prepare your workspace for development.
 
      ![](./media/usx6.png)
 
-1. It should prompt you to log into Azure as shown. Open the link shown in terminal and Complete this step, then let the script run till complete. 
+1. It should prompt you to log into Azure as shown. Open the link shown in terminal and complete this step, then let the script run till complete. 
 
      ![](./media/usx7.png)
 
@@ -458,19 +472,19 @@ and the Foundry project.
 
      ![](./media/usx14.png)
 
-1. Click **Select Kernel** in the top-right corner of the notebook and choose the appropriate Python environment to run the lab.
+1. Click **Select Kernel** in the top-right corner of the notebook.
 
      ![](./media/usx15.png)
 
-1. Select **Python Environments**
+1. Select **Python Environments**.
 
      ![](./media/usx16.png)
 
-1. If prompted to select the path, then select the **Python** version  i.e **3.12.13**
+1. If prompted to select the path, then select the **Python** version  i.e **3.12.13**.
 
      ![](./media/usx17new.png)
 
-1. To install dependencies, run the first cell in the notebook
+1. To install dependencies, run the first cell in the notebook.
 
      ![](./media/usx18.png)
 

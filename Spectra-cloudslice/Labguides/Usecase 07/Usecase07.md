@@ -44,49 +44,30 @@ This task introduces you to the process of setting up your Microsoft Foundry pro
 
 Follow the steps below to complete the setup of your Microsoft Foundry project.
 
-1. Open a browser tab and copy and paste this link https://ai.azure.com/templates. If prompted to sign in, kindly sign in.
+1. Open a new tab and copy and navigate to this link `https://ai.azure.com/templates`. 
 
-1. Click **Start building** in Microsoft Foundry to begin creating your AI solution
+1. You should see a dialog box prompting you to select a project to continue.
 
-     ![](./media/us11.1.png)
-
-      > **Note:** Switch toggle to "New Foundry".
-
-1. You should see a dialog prompting you to select a project to continue.
-
-1. Click the input area - you will see the ***Create a new project*** option and select it
-
-     ![](./media/us12.1.png)
-
-1. Enter a unique project name as **Contoso-Travel-<inject key="DeploymentID" enableCopy="false"/> (1)**
-
-     - Select the default **subscription (2)**
-     - Resource group: **Agentic AI (3)**
-     - Click **Create (4)** to set up your Microsoft Foundry project.
-
-        ![](./media/aaae1t1s5.png)
+1. Replace the existing project name with **Contoso-Travel-<inject key="DeploymentID" enableCopy="false"/>** and click on **Create** to set up your Microsoft Foundry project.
 
 1. The project creation process may take a few minutes to complete.
    
-1. You should now see your Foundry project landing page. **Take note of the Project Endpoint information shown here** - we will use it later.
-
-     ![](./media/aaae1t1s7.png)
+1. On the **Your project is set up. What would you like to do next?** pop-up, click on **Skip**.
 
 ### Task 2: Create an AI Agent
 
 In this task, you will create your first AI agent within the Foundry environment. The agent will act as a travel assistant designed to help users plan trips and provide relevant recommendations. You will define the agent’s identity, deploy it, and test its functionality using the playground interface.
 
-1. Click **Build (1)**, then select **New agent (2)** > **Build an agent (3)** to begin creating a new AI agent in Microsoft Foundry.
+1. Select **Build (1)** from the top navigation pane, then select **New agent (2)** > **Build an agent (3)** to begin creating a new AI agent in Microsoft Foundry.
 
      ![](./media/aaae1t2s1.png)
 
-1. Enter the Agent name as **contoso-travel-portal (1)** and click on **Create and open playground(2)** to create the Agent.
+1. Enter the Agent name as **contoso-travel-portal (1)** and click on **Create (2)** to create the Agent.
 
-     ![](./media/aaae1t2s2.png)
 
-     >**Note:** This takes a few minutes to complete
+     >**Note:** This will take a few minutes to complete
 
-1. The agent is now ready to test in playground
+1. The agent is now ready.
 
      ![](./media/aaae1t2s4.png)  
 
@@ -98,10 +79,7 @@ agent activity, collect telemetry data, and analyze system performance.
 This is a critical step in understanding how your agent behaves in
 real-time and identifying potential issues.
 
-1. Open a browser and login to Azure portal at `https://portal.azure.com` with your credentials.
-
-     - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
-     - **Password:** <inject key="AzureAdUserPassword"></inject>
+1. Navigate back to the Azure Portal.
 
 1. In the search bar, type **Resource group (1)** and select **Resource groups (2)** from the results.
 
@@ -113,9 +91,7 @@ real-time and identifying potential issues.
 
 1. Select **contoso-travel-<inject key="Deployment ID" enableCopy="false"></inject>-resource-appinsights** from the list of resources.   
 
-     ![](./media/aaae1t3s4.png)
-
-1. Select **Access control (IAM) (1)**, then click on **Add (2)** and choose **Add role assignment (3)**.
+1. Select **Access control (IAM) (1)** from the left navigation pane, then click on **Add (2)** and choose **Add role assignment (3)**.
 
      ![](./media/aaae1t3s5.png)
 
@@ -123,7 +99,7 @@ real-time and identifying potential issues.
 
      ![](./media/aaae1t3s6.png)
 
-1. Select **Managed identity (1)**, click on **Select members (2)**, choose **Foundry project (1) (3)**, click the selected members (4), click on **Select (5)**, and then click on **Review + assign (6)**.
+1. Select **Managed identity (1)**, click on **Select members (2)**, choose **Foundry project (1) (3)**, click on the **project (4)**, click on **Select (5)**, and then click on **Review + assign (6)**.
 
      ![](./media/aaae1t3s7.png)
 
@@ -193,7 +169,7 @@ In this task, you will refine and test your agent’s behavior using prompt engi
 
      ![](./media/us22.png)
 
-1. Enter the below in the chat panel and select **Send**
+1. Enter the below in the chat panel and hit **Send**.
    
      ```
      Hi, I'm thinking about planning a trip to Paris. What should I know? 
@@ -203,7 +179,7 @@ In this task, you will refine and test your agent’s behavior using prompt engi
 
      ![](./media/aaae1t4s4.png)
 
-1. Click on the **Metrics** link above the response panel - it shows  you available evaluators.
+1. Click on the **Metrics** dropdown above the response panel and check the boxes for **Task adherence, Intent Resolution and Coherence**.
 
      ![](./media/aaae1t4s5.png)
 
@@ -221,7 +197,7 @@ In this task, you will refine and test your agent’s behavior using prompt engi
 
      ![](./media/aaae1t4s8.png)
 
-1. Select **Configure**
+1. Select **Configure**.
 
      ![](./media/aaae1t4s9.png)
 
@@ -232,21 +208,21 @@ In this task, you will refine and test your agent’s behavior using prompt engi
      - **Description (2)**
 
         ```
-        Welcome to Contoso Travel. We can help you plan your next itinerary with flight bookings, car rentals and hotel reservations. Just tell us your destination and the number of travellers in your group - and we'll do the rest. 
+        Welcome to Contoso Travel. We can help you plan your next itinerary with flight bookings, car rentals and hotel reservations. Just tell us your destination and the number of travelers in your group - and we'll do the rest. 
         ```
 
      - **Starter prompts (3)**
 
         ```
-        I want to plan a multi-day travel itinerary 
+        I want to plan a multi-day travel itinerary. 
         ```  
         
         ```
-        I want to rent a car at my travel destination
+        I want to rent a car at my travel destination.
         ```  
         
         ```
-        I want to book a flight and hotel for my travels
+        I want to book a flight and hotel for my travels.
         ``` 
 
      - Click on **Reset (4)**
@@ -256,7 +232,7 @@ In this task, you will refine and test your agent’s behavior using prompt engi
 1. In the Test pane select **new chat (1)** , enter the below **prompt (2)** and click **Send.**
 
      ```
-     I want to plan a multi-day travel itinerary 
+     I want to plan a multi-day travel itinerary.
      ```  
 
       ![](./media/aaae1t4s11.png)
@@ -265,7 +241,7 @@ In this task, you will refine and test your agent’s behavior using prompt engi
 
      ![](./media/aaae1t4s12.png)
 
-1. Enter the following text in the same chat and click on the **Submit icon** .
+1. Enter the following promot in the same chat and click on the **Submit icon** .
 
      ```
      Hi! I'm thinking about planning a trip to Paris from Jul 1–4 with my family (3 people total). We are vegetarian. We love sports, historic homes, art and food tours
@@ -281,16 +257,6 @@ In this task, you will refine and test your agent’s behavior using prompt engi
 
      ![](./media/aaae1t4s15.png)
 
-1. Want to understand what the Trace ID is showing - try **Ask AI** and enter the below prompt and click on **Send**
-
-     ```
-     Explain what the trace ID is showing     
-     ```
- 
-      ![](./media/aaae1t4s16.png)
-
-      ![](./media/aaae1t4s16.0.png)
-
 1. Click on the Trace ID - you should see something like this:
 
      ![](./media/aaae1t4s17.png)
@@ -303,13 +269,13 @@ In this task, you will refine and test your agent’s behavior using prompt engi
 
      ![](./media/aaae1t4s18.0.png)
 
-1. Enter the following text and click on the **Submit icon** as shown in the below image.
+1. Enter the following text and click on the **Submit icon**.
 
      ```
-     I want to plan a multi-day travel itinerary leaving JFK on Jul 1 for Paris and returning Jul 5. I am traveling with my family (3 people total). We are vegetarians. We love sports, historic homes and art and food tours. Plan my itinerary and show me hotels and flights for my stay           
+     I want to plan a multi-day travel itinerary leaving JFK on Jul 1 for Paris and returning Jul 5. I am traveling with my family (3 people total). We are vegetarians. We love sports, historic homes and art and food tours. Plan my itinerary and show me hotels and flights for my stay.           
      ```
 
-1. You can review the agent response in the preview tab itself
+1. You can review the agent response in the preview tab itself.
 
      ![](./media/aaae1t4s20.png)
 

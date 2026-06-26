@@ -240,21 +240,16 @@ incorrect.](./media/image21.png)
 
     - Azure Storage account
 
-1. Select the **Azure Storage account** that has been created.
+      ![](./media/f50.png)
 
+1. Select the **Azure Storage account** that has been created. From the left navigation menu, click on **Data Storage (1)** > **Containers (2)** and **verify (3)** if all the containers have been deployed.
 
+      ![](./media/f51.png)
 
-1. From the left navigation menu, click on Data Storage and select **Containers** and verify if all the containers have been deployed.
+1. Navigate back to the resource group and select the **Foundry Project.** Click on **Go to Foundry portal** to verify if all the models have been successfully deployed.    
 
-
-
-1. Navigate back to the resource group and click on **Foundry Project.**
-
-
-1. Click **Go to Foundry portal** to verify if all the models has been successfully deployed.    
+      ![](./media/f52.png)
     
-
-
 1. Click on **Build** from the top menu and click on **Deployments (1)** from the left navigation menu to verify the **models (2)** that have been deployed.
 
     ![](./media/f10.png) 
@@ -276,6 +271,8 @@ incorrect.](./media/image21.png)
 1. Navigate back to the resource group and select the App Service that has been created.
 
 1. On the web app home page, select **Settings (1)** from the left navigation pane and select **Authentication (2)** from the drop down. Click on **Add identity provider (3)** to see a list of identity providers.
+
+      ![](./media/f53.png)
 
 1. Click on Identity Provider dropdown to see a list of identity providers and select the first option **Microsoft** from the drop-down list.
 
@@ -304,7 +301,7 @@ incorrect.](./media/image21.png)
 
 ## Task 7: Review and Explore the Sample Questions for Your Copilot Application
 
-1. Select the **RFP Team** option from the top-left section and explore the different teams.
+1. Select the **Current Team** option from the top-left section and explore the different teams.
 
     ![](./media/image64.png)
 

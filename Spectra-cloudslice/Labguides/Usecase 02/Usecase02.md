@@ -359,9 +359,9 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
 ## Important
 
-   > **Note**: Please delete the resources that you have created in the **AgenticAI** resource group. 
+   > **Note**: Delete the **rg-AgenticAI** resource group. 
 
-   ![](./media/f13.png) 
+   ![](./media/F34.png) 
 
 
    ### Congratulations!

@@ -203,9 +203,13 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     ![](./media/image36.png)
 
-1. If prompted with Would you like to check your Azure development tools?:, click on **Yes**.
+1. If prompted with **Would you like to check your Azure development tools?:**, click on **Yes**.
 
+     ![](./media/f30.png)
+   
 1. If prompted with any tools installations like Github & Azure tools, click on **Enter** to proceed with the installation.
+
+     ![](./media/f31.png)
 
 1. When prompted with the following, provide the below values:
 
@@ -213,7 +217,11 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
     - Select an Azure subscription to use: Click on **Enter**
     - Enter a value for the 'location' infrastructure parameter: Select **Sweden Central** if present or any other location in case of Sweden Central not present.
 
+      ![](./media/f32.png)
+
 1. Enter **Y** to proceed with the deployment.
+
+      ![](./media/f33.png)
 
     >**Note:** The deployment might take 15-20 minutes to complete.
 

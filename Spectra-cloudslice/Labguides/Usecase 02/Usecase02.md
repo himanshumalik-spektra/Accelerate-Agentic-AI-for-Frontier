@@ -72,9 +72,8 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 ## Lab Objective
 
 - Task 1: Register Service provider
-- Task 2: Retrieve resource group name and location
-- Task 3: Open Github Codespaces environment
-- Task 4: Provision Services and deploy application to Azure
+- Task 2: Open Github Codespaces environment
+- Task 3: Provision Services and deploy application to Azure
 - Task 5: Verify deployed resources in the Azure portal
 - Task 6: Test the Application
 
@@ -104,17 +103,7 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     - **Microsoft.Insights**
 
-## Task 2: Retrieve resource group name and location
-
-1. In the Azure portal search bar, type **Resource groups (1)**, then select **Resource groups (2)** from the Services list to open it.
-
-    ![](./media/image17(a).png)
-
-1. In **Resource group** page, copy **resource group name and location** and paste them in a notepad, then **Save** the notepad to use the information in the upcoming tasks.
-
-    ![](./media/image17(b).png)
-
-## Task 3: Open Github Codespaces environment
+## Task 2: Open Github Codespaces environment
 
 > **Note:** You are expected to have your own GitHub login credentials. If you do not have an account, please create one by visiting below shared URL: 
    
@@ -132,7 +121,7 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     ![](./media/image17(c).png)
 
-1. And give a unique name to the repo and click on **Create fork** button.
+1. Click on **Create fork** button.
 
     ![](./media/uc2-23.png) 
 
@@ -160,7 +149,7 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     ![](./media/image26.png)
 
-## Task 4: Provision Services and deploy application to Azure
+## Task 3: Provision Services and deploy application to Azure
 
  1. Run the following command on the terminal:
 
@@ -170,7 +159,7 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     ![](./media/image27.png)
 
-1. Run the azd auth login command, copy the displayed authentication code, and click on **Enter**.
+1. Copy the displayed authentication code, and click on **Enter**.
 
     ![](./media/image28.png)
 
@@ -186,7 +175,7 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     ![](./media/image32.png)
 
-1. Navigate back to the terminal and run the following command on the Terminal
+1. Navigate back to the terminal and run the following command on the Terminal:
 
     ```
     az login
@@ -202,7 +191,7 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     ![](./media/image31(a).png)
 
-1. Navigate back and type 1 for **Select a subscription or Tenant** and click on Enter.
+1. Navigate back and type 1 for **Select a subscription or Tenant** and click on **Enter**.
 
     ![](./media/image35.png)
 
@@ -214,35 +203,21 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     ![](./media/image36.png)
 
-1. Enter any name of your choice and press enter (eg: **prior-auth-devXXXX**)
+1. If prompted with Would you like to check your Azure development tools?:, click on **Yes**.
 
-    ![](./media/image37.png)
+1. If prompted with any tools installations like Github & Azure tools, click on **Enter** to proceed with the installation.
 
-    ![](./media/image38.png)
+1. When prompted with the following, provide the below values:
 
-1. Select below values.
-
-    - **Select an Azure Subscription to use** : Press Enter to select your subscription
-
-    - **Enter a value for existingResourceGroup Name:** AgenticAI
-
-    - **Enter location**: Sweden Central
-
-      ![](./media/image39.png)
-
-      ![](./media/image40.png)
-
-      ![](./media/image41.png)
+    - Enter a unique environment name: **AgenticAI**
+    - Select an Azure subscription to use: Click on **Enter**
+    - Enter a value for the 'location' infrastructure parameter: Select **Sweden Central** if present or any other location in case of Sweden Central not present.
 
 1. Enter **Y** to proceed with the deployment.
 
-    ![](./media/image42.png)
+    >**Note:** The deployment might take 15-20 minutes to complete.
 
-    ![](./media/image43.png)
-
-    ![](./media/image44.png)
-
-    ![](./media/image45.png)
+1. If prompted with any installations, type **"yes"** or click on **Enter** as required.
 
 1. The deployment process is currently building container images using a remote Azure Container Registry (ACR) build.
 
@@ -266,11 +241,11 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     ![](./media/image51.png)
 
-1. Agent-synthesis image build process completed
+1. Agent-synthesis image build process has been completed.
 
     ![](./media/image52.png)
 
-1. Backend and frontend container app updated successfully
+1. Backend and frontend container app are updated successfully.
 
      ![](./media/image53.png)
 
@@ -282,7 +257,7 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
      ![](./media/image55.png)
 
-## Task 5: Verify deployed resources in the Azure portal
+## Task 4: Verify deployed resources in the Azure portal
 
 1. Navigate back to the portal and select **Resource groups**
 
@@ -312,7 +287,7 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
    - Need help? cloudlabs-support@spektrasystems.com
    <validation step="7a657a19-9fda-4427-bf5b-4929e924c67c" />
 
-## Task 6: Test the Application
+## Task 5: Test the Application
 
 1. Go back to the codespace and run the following command to verify agent connections and application health status.
 

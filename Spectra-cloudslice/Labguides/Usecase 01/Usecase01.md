@@ -72,7 +72,7 @@ incorrect.](./media/uc1-5.png)
 
 1. Under the same drop-down, select **Identity (1)**, switch the **Status** to **On (2)** to enable the system-assigned managed identity, and then click **Save (3)** to apply the changes. 
 
-    ![A](./media/f2.png) 
+    ![A](./media/f14.png) 
 
 1. In the confirmation dialog to enable the system-assigned managed identity, click **Yes** to proceed and register the identity with Microsoft Entra ID.
 
@@ -97,6 +97,8 @@ incorrect.](./media/uc1-5.png)
     - Keep **Performance**: **Standard (5)**
     - Set **Redundancy**: **LRS (6)**
     - Click **Review + create (7)**
+
+         ![image](./media/f15.png)
 
 1. On the **Review + create** tab, verify all the configured storage account settings and click **Create** to deploy the storage account.
 
@@ -136,7 +138,7 @@ incorrect.](./media/uc1-5.png)
 
 1. On the same page, in the **Members** tab, select **Managed identity (1)**, click **Select members(2)**, choose **Search service (Foundry IQ) (3)** from the managed identity dropdown, select your **AI Search service instance (4)**, and click on **Select (4)**.
 
-    ![image](./media/uc1-22.png)
+    ![image](./media/f16.png)
 
 1. In the **Add role assignment** pane, verify that both the required user and the **Search service managed identity** are listed under **Members (1)**, then click **Review + assign (2)** twice to complete the role assignment.
 
@@ -181,7 +183,7 @@ document and required Role permissions to it.
 
 1. In the **Members** tab, select **Managed identity (1)**, click **Select members (2)**, choose **Search service (3)** from the managed identity dropdown, select your **AI Search service instance (4)**, and proceed.
 
-    ![image](./media/uc1-33.png)
+    ![image](./media/f17.png)
 
 1. In the **Add role assignment** pane, verify that both the required user and the **Search service managed identity** are listed under **Members (1)**, then click **Review + assign (2)** twice to complete the role assignment.
 
@@ -344,6 +346,8 @@ You’ve completed the task. Now let’s validate it:
 1. Now, let us test the agent with the same question we tried before.
 
 1. In the Test window, click on the **"+ (1)"** icon and select **Start new test session (2)**.
+
+    ![image](./media/f18.png)
 
 1. Enter the following query and review the generated response to verify the agent’s accuracy.
 

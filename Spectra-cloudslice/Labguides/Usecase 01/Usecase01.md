@@ -317,7 +317,7 @@ You’ve completed the task. Now let’s validate it:
 
 ## Exercise 6: Add the Azure AI Search as a knowledge source
 
-1. From the **Overview** page of the agent, select **Add knowledge**.
+1. Click on **Overview** from the top and select **Add knowledge**.
 
     ![A screenshot of a computer AI-generated content may be incorrect.](./media/cs1.png)
 
@@ -329,7 +329,7 @@ You’ve completed the task. Now let’s validate it:
 
     ![A screenshot of a search engine AI-generated content may be incorrect.](./media/image65.png)
 
-1. Enter the **Endpoint url** and the **Admin key** values which we saved to a notepad in a previous exercise and then click on **Create** to create the connection.
+1. Enter the **Endpoint url** and the **Admin key** values which we saved to a notepad in the first exercise and then click on **Create** to create the connection.
 
     ![A screenshot of a computer AI-generated content may be incorrect.](./media/image66.png)
 
@@ -343,7 +343,9 @@ You’ve completed the task. Now let’s validate it:
 
 1. Now, let us test the agent with the same question we tried before.
 
-1. Click **New test session**, enter your query, and review the generated response to verify the agent’s accuracy.
+1. In the Test window, click on the **"+ (1)"** icon and select **Start new test session (2)**.
+
+1. Enter the following query and review the generated response to verify the agent’s accuracy.
 
     ```
     How many days of Maternity leaves can I avail?

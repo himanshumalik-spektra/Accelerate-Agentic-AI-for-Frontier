@@ -54,12 +54,11 @@ system** can:
 - Task 4: Post-Deployment Configuration
 - Task 5: Verify deployed resources in the Azure portal
 - Task 6: Add Authentication in Azure App Service configuration
-- Task 7: Review and Explore the Sample Questions for Your Copilot Application
-- Task 8: Retail Scenario
-- Task 9 :Product Marketing Scenario
-- Task 10: HR Onboarding Scenario
-- Task 11: RFP Analysis Scenario
-- Task 12: Contract Compliance Review Scenario
+- Task 7: Retail Scenario
+- Task 8 :Product Marketing Scenario
+- Task 9 :HR Onboarding Scenario
+- Task 10: RFP Analysis Scenario
+- Task 11: Contract Compliance Review Scenario
 
 ## Task 1: Register Service provider
 
@@ -299,17 +298,7 @@ incorrect.](./media/image21.png)
 
     ![](./media/image63.png)
 
-## Task 7: Review and Explore the Sample Questions for Your Copilot Application
-
-1. Select the **Current Team** option from the top-left section and explore the different teams.
-
-    ![](./media/image64.png)
-
-    ![](./media/image65.png)
-
-    ![](./media/image66.png)
-
-## Task 8: Retail Scenario
+## Task 7: Retail Scenario
 
 In this Retail scenario, Contoso’s Retail Support Team uses a
 multi-agent AI system to improve customer satisfaction. When a customer
@@ -321,9 +310,11 @@ This process is powered by multiple AI agents working together to
 understand customer history, analyze sentiment, and recommend corrective
 actions.
 
+1. Select the **Current Team** option from the top-left section and explore the different teams.
+
+    ![](./media/image64.png)
+
 1. Select the Retail Customer Success Team and click on **Continue**.
-   
-   **Agents Used:** Customer, Order, Analysis Recommendation
 
       ![](./media/image67.png)
 
@@ -346,7 +337,7 @@ actions.
 
     ![](./media/image72.png)
 
-## Task 9 :Product Marketing Scenario
+## Task 8 :Product Marketing Scenario
 
 In this scenario, Contoso’s Product Marketing Team uses a multi-agent AI
 system to quickly generate a professional press release for a product
@@ -389,7 +380,7 @@ creation while ensuring alignment with product details and brand voice.
 
     ![](./media/image78.png)
 
-## Task 10: HR Onboarding Scenario
+## Task 9: HR Onboarding Scenario
 
 In this scenario, Contoso’s Human Resources Team uses a multi-agent AI
 system to streamline the onboarding of a new employee. Instead of
@@ -432,7 +423,7 @@ onboarding activities efficiently and accurately
 
       ![](./media/image84.png)
 
-## Task 11: RFP Analysis Scenario
+## Task 10: RFP Analysis Scenario
 
 In this scenario, Contoso’s RFP Team uses a multi-agent AI system to
 analyze Request for Proposal (RFP) and contract documents. Reviewing
@@ -470,7 +461,7 @@ accurately
 
     ![](./media/image90.png)
 
-## Task 12: Contract Compliance Review Scenario
+## Task 11: Contract Compliance Review Scenario
 
 In this scenario, Contoso’s Contract Compliance Review Team uses a
 multi-agent AI system to analyze Non-Disclosure Agreements (NDAs) and

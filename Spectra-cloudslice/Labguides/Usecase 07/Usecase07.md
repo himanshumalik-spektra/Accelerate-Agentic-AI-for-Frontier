@@ -905,7 +905,7 @@ the agent operates safely and adheres to responsible AI principles.
 
 1. Navigate to **Evaluations** → select the red team evaluation.
 
-     ![](./media/usx137.png)
+     ![](./media/f113.png)
 
      ![](./media/f114.png)
 

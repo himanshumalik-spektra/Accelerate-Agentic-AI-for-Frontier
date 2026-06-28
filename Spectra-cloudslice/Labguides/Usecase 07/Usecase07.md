@@ -454,6 +454,8 @@ environment. This includes selecting the appropriate Python environment,
 installing dependencies, and verifying connectivity to Azure services
 and the Foundry project.
 
+1. Navigate to the **labs/notebooks/1-prompt-agents** folder and select the **.env (1)** file and update the AZURE_AI_MODEL_DEPLOYMENT_NAME to **gpt-5.2 (2)**. 
+
 1. Navigate to the **labs/notebooks/1-prompt-agents** folder and open the **lab-01-setup.ipynb** notebook to begin the environment setup lab.
 
      ![](./media/usx14.png)

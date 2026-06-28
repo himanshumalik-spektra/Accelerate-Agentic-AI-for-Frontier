@@ -48,11 +48,15 @@ Follow the steps below to complete the setup of your Microsoft Foundry project.
 
 1. You should see a dialog box prompting you to select a project to continue.
 
-1. Replace the existing project name with **Contoso-Travel-<inject key="DeploymentID" enableCopy="false"/>** and click on **Create** to set up your Microsoft Foundry project.
+1. Replace the existing project name with **Contoso-Travel-<inject key="DeploymentID" enableCopy="false"/> (1)** and click on **Create (2)** to set up your Microsoft Foundry project.
+
+     ![](./media/f100.png)
 
 1. The project creation process may take a few minutes to complete.
    
 1. On the **Your project is set up. What would you like to do next?** pop-up, click on **Skip**.
+
+     ![](./media/f101.png)
 
 ### Task 2: Create an AI Agent
 
@@ -60,16 +64,23 @@ In this task, you will create your first AI agent within the Foundry environment
 
 1. Select **Build (1)** from the top navigation pane, click on **Deployments (2)** from the left navigation pane, click on **Deploy (3)** & select **Deploy a base model (4)** from the dropdown.
 
+     ![](./media/f115.png)
+
 1. Click on **Models (1)** from the left navigation pane, **search (2)** & **select (3)** gpt-5.2 from the results.
+
+     ![](./media/f116.png)
 
 1. Click on **Deploy (1)** and select **Default settings (2)** from the dropdown.
 
-1. Select **Build (1)** from the top navigation pane, then select **New agent (2)** > **Build an agent (3)** to begin creating a new AI agent in Microsoft Foundry.
+     ![](./media/f117.png)
+
+1. Navigate back to the main foundry page, select **Build (1)** from the top navigation pane, then select **New agent (2)** > **Build an agent (3)** to begin creating a new AI agent in Microsoft Foundry.
 
      ![](./media/aaae1t2s1.png)
 
 1. Enter the Agent name as **contoso-travel-portal (1)** and click on **Create (2)** to create the Agent.
 
+     ![](./media/f102.png)
 
      >**Note:** This will take a few minutes to complete
 
@@ -97,6 +108,8 @@ real-time and identifying potential issues.
 
 1. Select **contoso-travel-<inject key="Deployment ID" enableCopy="false"></inject>-resource-appinsights** from the list of resources.   
 
+     ![](./media/f103.png)
+
 1. Select **Access control (IAM) (1)** from the left navigation pane, then click on **Add (2)** and choose **Add role assignment (3)**.
 
      ![](./media/aaae1t3s5.png)
@@ -123,6 +136,8 @@ real-time and identifying potential issues.
 In this task, you will refine and test your agent’s behavior using prompt engineering. You will define clear instructions for the agent , execute sample queries, and evaluate the responses. This helps ensure that the agent provides accurate, relevant, and user-friendly outputs while adhering to its intended role
 
 1. Navigate to the **Playground** tab,  to test your agent prompt and view responses.
+
+     ![](./media/f109-1.png)
 
 1. In the Playground tab, update the **Instructions (1)** section with your  agent prompt, and click on **Save (2)**
 

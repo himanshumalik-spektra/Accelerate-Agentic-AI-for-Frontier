@@ -58,6 +58,12 @@ Follow the steps below to complete the setup of your Microsoft Foundry project.
 
 In this task, you will create your first AI agent within the Foundry environment. The agent will act as a travel assistant designed to help users plan trips and provide relevant recommendations. You will define the agent’s identity, deploy it, and test its functionality using the playground interface.
 
+1. Select **Build (1)** from the top navigation pane, click on **Deployments (2)** from the left navigation pane, click on **Deploy (3)** & select **Deploy a base model (4)** from the dropdown.
+
+1. Click on **Models (1)** from the left navigation pane, **search (2)** & **select (3)** gpt-5.2 from the results.
+
+1. Click on **Deploy (1)** and select **Default settings (2)** from the dropdown.
+
 1. Select **Build (1)** from the top navigation pane, then select **New agent (2)** > **Build an agent (3)** to begin creating a new AI agent in Microsoft Foundry.
 
      ![](./media/aaae1t2s1.png)
@@ -118,8 +124,6 @@ In this task, you will refine and test your agent’s behavior using prompt engi
 
 1. Navigate to the **Playground** tab,  to test your agent prompt and view responses.
 
-     ![](./media/aaae1t4s1.png)
-
 1. In the Playground tab, update the **Instructions (1)** section with your  agent prompt, and click on **Save (2)**
 
     ```
@@ -166,8 +170,6 @@ In this task, you will refine and test your agent’s behavior using prompt engi
     sanctions), firmly refuse, clearly explaining why you cannot assist,
     referencing safety, legality, or policy as needed.
     ```
-
-     ![](./media/us22.png)
 
 1. Enter the below in the chat panel and hit **Send**.
    
@@ -306,7 +308,7 @@ also invoke *code-first*.
 
      ![](./media/aaae1t5s2.png)
 
-1. Filter to see evaluators for a particular category - e.g., agents.
+1. Filter to see evaluators for a **particular category (1)** and select **agents (2)**.
 
      ![](./media/us47new.png)
 
@@ -327,21 +329,13 @@ also invoke *code-first*.
 1. Provide the following details:
 
     - Enter **Evaluator name** as **customevaluator (1)**
-    - Select **Model** as **gpt-4.1 (Global Standard deployment) (2)**
+    - Select **Model** as **gpt-5.2 (2)**
     - Choose **Target agent** as **contoso-travel-portal (3)**
     - Click on **Generate rubric (4)**
-
-      ![](./media/aaae1t5s6.png)
 
       > **Note:** It may take a few minutes for the evaluator to be created. 
 
 1. Review the generated rubric and scoring details, Click on **Save evaluator**.
-
-      ![](./media/aaae1t5s6.0.png)
-
-      ![](./media/aaae1t5s6.1.png)
-
-
 
 ### Task 6: Run a Red Teaming Scan
 
@@ -354,21 +348,13 @@ behaves responsibly under different conditions.
 
      ![](./media/aaae1t6s1.png)
 
-1. Select the **Model (1)** option and pick the default model used in your agent - **gpt-5 (2)** and click **Next (3)**
+1. Select the **Model (1)** option and pick the default model used in your agent - **gpt-5.2 (2)** and click **Next (3)**
 
-     ![](./media/us54.png)
-
-1. Click on Next
+1. Click on Next.
 
      ![](./media/us55.png)
 
 1. Submit the scan. This takes a while to complete - we will revisit it later.
-
-     ![](./media/us56new.png)
-
-     ![](./media/us57.png)
-
-     ![](./media/us58.png)
 
      > **Note:** It may take 5-7 minutes to complete
 
@@ -496,7 +482,7 @@ and the Foundry project.
 
      ![](./media/usx19.png)
 
-     ![](./media/usx20.png)
+     ![](./media/f104.png)
 
      > **Note:** If you encounter a `ModuleNotFoundError` for `dotenv`, install the required package by running **pip install python-dotenv**, and then re-run the cell.
 
@@ -512,7 +498,7 @@ and the Foundry project.
 
      ![](./media/usx24.png)
 
-     ![](./media/usx25.png)
+     ![](./media/f105.png)
 
 1. Explore the Contoso Travel sample data by running the 5<sup>th</sup>, 6<sup>th</sup>, 7<sup>th</sup> and 8<sup>th</sup> cells in the notebook.
 
@@ -547,7 +533,7 @@ responses.
 
      ![](./media/usx33.png)
 
-     ![](./media/usx34.png)
+     ![](./media/f106.png)
 
 1. To create the Concierge Agent, run the second cell in the notebook.
 
@@ -742,7 +728,7 @@ requests.
 
      ![](./media/usx86.png) 
 
-1. Back in the Foundry portal select **Agents**, then click on the **contoso-travel-portal** agent to view its details and traces.
+1. Back in the Foundry portal select **Agents**, then click on the **contoso-travel-traced** agent to view its details and traces.
 
 1. Click on the **Tracing** tab for your agent. You should see your traces listed with the span names that were defined.
 
@@ -784,8 +770,6 @@ identify areas for improvement.
 1. Run the cell under **Setup** to connect to Microsoft Foundry and initialize the evaluation client.
 
      ![](./media/usx97.png)
-
-     ![](./media/usx98.png)
 
 1. Run the cell under **Create the Travel Agent for Evaluation** to create a versioned agent that will be used for evaluation.
 
@@ -853,15 +837,13 @@ identify areas for improvement.
 
      ![](./media/aaae2t7s15.png)
 
-1. Click on the **Evaluations** tab in the left navigation.
+1. Click on the **Evaluations** tab from the left navigation pane.
 
-1. You should see the Quality, Safety, and Agentic evaluation runs  listed
+1. If prompted with Do you want to save your agent?, click on **Save**.
 
-     ![](./media/usx121.png)
+1. You should see the Quality, Safety, and Agentic evaluation runs  listed.
 
 1. Select **Contoso Travel-Safety Evaluation**.
-
-     ![](./media/usx122.png)
 
      ![](./media/usx123.png)
 
@@ -917,7 +899,7 @@ the agent operates safely and adheres to responsible AI principles.
 
      ![](./media/usx135.png)
 
-1. Back in the Foundry portal, navigate to the **contoso-travel-redteam** agent
+1. Back in the Foundry portal, navigate to the **contoso-travel-redteam** agent.
 
      ![](./media/usx136.png)
 
@@ -925,7 +907,9 @@ the agent operates safely and adheres to responsible AI principles.
 
      ![](./media/usx137.png)
 
-     ![](./media/usx138.png)
+     ![](./media/f114.png)
+
+      >**Note:** If prompted with Do you want to save your agent?, click on **Save**.
 
 1. Review individual attack attempts, agent responses, and evaluator  scores
 

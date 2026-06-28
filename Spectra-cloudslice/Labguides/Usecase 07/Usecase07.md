@@ -82,11 +82,7 @@ In this task, you will create your first AI agent within the Foundry environment
 
      ![](./media/f102.png)
 
-     >**Note:** This will take a few minutes to complete
-
-1. The agent is now ready.
-
-     ![](./media/aaae1t2s4.png)  
+     >**Note:** This will take a few minutes to complete. 
 
 ### Task 3: Configure Application Insights Access for Azure AI Foundry Traces
 
@@ -126,10 +122,9 @@ real-time and identifying potential issues.
 
      ![](./media/aaae1t3s8.png)
 
-1. Verify that the **Added Role assignment** notification appears, confirming the role has been successfully assigned
+1. Verify that the **Added Role assignment** notification appears, confirming the role has been successfully assigned.
 
      ![](./media/aaae1t3s9.png)
-
 
 ### Task 4: Test the Agent Prompt
 
@@ -194,11 +189,11 @@ In this task, you will refine and test your agent’s behavior using prompt engi
 
 1. Observe the response.
 
-     ![](./media/aaae1t4s4.png)
+     ![](./media/ff109-2.png)
 
 1. Click on the **Metrics** dropdown above the response panel and check the boxes for **Task adherence, Intent Resolution and Coherence**.
 
-     ![](./media/aaae1t4s5.png)
+     ![](./media/ff109-3.png)
 
 1. Customize the list to reflect evaluation criteria you want to use and try a new request.
 
@@ -206,7 +201,7 @@ In this task, you will refine and test your agent’s behavior using prompt engi
      Hi. I'm thinking about planning a trip to Paris. What should I know? 
      ```    
 
-     ![](./media/aaae1t4s6.png)
+      ![](./media/ff109-4.png)
 
 1. Observe the *AI Quality* and *Safety* metrics in the line below the response.
 
@@ -216,9 +211,9 @@ In this task, you will refine and test your agent’s behavior using prompt engi
 
 1. Select **Configure**.
 
-     ![](./media/aaae1t4s9.png)
+     ![](./media/ff109-5.png)
 
-1. Enter the details
+1. Enter the following details:
 
      - **Display name (1)**: Contoso Travel Assistant
 
@@ -254,11 +249,11 @@ In this task, you will refine and test your agent’s behavior using prompt engi
      I want to plan a multi-day travel itinerary.
      ```  
 
-      ![](./media/aaae1t4s11.png)
+      ![](./media/ff109-6.png)
 
 1. View the response. The agent will prompt you for additional information as instructed.
 
-     ![](./media/aaae1t4s12.png)
+     ![](./media/ff109-7.png)
 
 1. Enter the following promot in the same chat and click on the **Submit icon** .
 
@@ -266,11 +261,11 @@ In this task, you will refine and test your agent’s behavior using prompt engi
      Hi! I'm thinking about planning a trip to Paris from Jul 1–4 with my family (3 people total). We are vegetarian. We love sports, historic homes, art and food tours
      ```
 
-      ![](./media/aaae1t4s13.png)
+      ![](./media/ff109-8.png)
 
 1. Note how the agent remembers and uses context from the history.
 
-     ![](./media/aaae1t4s14.png)
+      ![](./media/ff109-9.png)
 
 1. Click the **Traces (1)** tab and select **Responses (2)** - you should see rows for each **conversation run (3)** .
 

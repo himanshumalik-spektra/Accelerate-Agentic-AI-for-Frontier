@@ -52,7 +52,7 @@ By implementing this use case, you will:
 
      ![A screenshot of a computer AI-generated content may be incorrect.](./media/135.png)
 
-4. Expand Settings from the left navigation menu. Click on **Resource providers**, enter  **Microsoft.CognitiveServices** and select it, and then click **Register**.
+4. Expand Settings from the left navigation menu. Click on **Resource providers**, enter **Microsoft.CognitiveServices** and select it, and then click **Register**.
 
      ![](./media/143.png)
 
@@ -60,7 +60,7 @@ By implementing this use case, you will:
 
      ![](./media/image9.png)
 
-5. Repeat the steps \#4 to register the following Resource provider.
+5. Repeat the steps 4 to register the following Resource provider.
 
     - **Microsoft.AlertsManagement**
 
@@ -269,6 +269,8 @@ By implementing this use case, you will:
      ![](./media/image57.png)
 
      ![](./media/image58.png)
+
+     ![](./media/n4.png)    
 
 ## Task 6: Delete the resources
 

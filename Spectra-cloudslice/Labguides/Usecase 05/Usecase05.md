@@ -64,7 +64,7 @@ To solve this, the organization adopts an **AI-driven solution using Azure Found
 
      ![](./media/image9.png)
 
-5. Repeat the steps \#4 to register the following Resource provider.
+5. Repeat the steps 4 to register the following Resource provider.
 
     - **Microsoft.AlertsManagement**
 

@@ -127,12 +127,12 @@ system** can:
 
 1. Scroll down to line number 54 and update & replace the following to the required model & versions:
 
-  | From Model | From Version | To Model | To Version |
-  |------------|---------------|----------|-------------|
-  | `gpt-4.1` | `2025-04-14` | `gpt-5.4` | `2026-03-05` |
-  | `gpt-4.1-mini` | `2025-04-14` | `gpt-5.4-mini` | `2026-03-17` |
+    | From Model | From Version | To Model | To Version |
+    |------------|---------------|----------|-------------|
+    | `gpt-4.1` | `2025-04-14` | `gpt-5.4` | `2026-03-05` |
+    | `gpt-4.1-mini` | `2025-04-14` | `gpt-5.4-mini` | `2026-03-17` |
 
-   ![](./media/f56.png)
+      ![](./media/f56.png)
 
 1. Run the following command on the Terminal. It generates the code to copy. Copy the code and press Enter.
 

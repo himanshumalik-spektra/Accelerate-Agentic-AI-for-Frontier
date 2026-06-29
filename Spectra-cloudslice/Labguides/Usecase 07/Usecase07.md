@@ -429,11 +429,11 @@ Codespace, and prepare your workspace for development.
 
      ![](./media/usx10.png)
 
-1. To select the default subscription enter 1.
+1. To select the default subscription, **enter 1**.
 
      ![](./media/usx11.png)
 
-1. Enter the resource group as **AgenticAI** 
+1. Enter the resource group as **AgenticAI**.
 
      ![](./media/usx12.png)
 
@@ -448,7 +448,9 @@ environment. This includes selecting the appropriate Python environment,
 installing dependencies, and verifying connectivity to Azure services
 and the Foundry project.
 
-1. Navigate to the **labs/notebooks/1-prompt-agents** folder and select the **.env (1)** file and update the AZURE_AI_MODEL_DEPLOYMENT_NAME to **gpt-5.2 (2)**. 
+1. Navigate to the **labs/notebooks** folder and select the **.env (1)** file, update the AZURE_AI_MODEL_DEPLOYMENT_NAME to **gpt-5.2 (2)** and press **Ctrl+S** to save the file. 
+
+     ![](./media/F118.png)
 
 1. Navigate to the **labs/notebooks/1-prompt-agents** folder and open the **lab-01-setup.ipynb** notebook to begin the environment setup lab.
 
@@ -718,6 +720,12 @@ requests.
 
      ![](./media/usx84.png)
 
+     > **Note:** If you face any error, add a code block, run this code and restart the kernel:
+
+     ```
+     %pip install -U azure-monitor-opentelemetry
+     ```
+
 1. Run the cell under **Run a Traced Travel Query (Azure Monitor)** to execute a query and generate traces that can be viewed in Azure Monitor.
 
      ![](./media/usx85.png)
@@ -899,11 +907,7 @@ the agent operates safely and adheres to responsible AI principles.
 
 1. Back in the Foundry portal, navigate to the **contoso-travel-redteam** agent.
 
-     ![](./media/usx136.png)
-
 1. Navigate to **Evaluations** → select the red team evaluation.
-
-     ![](./media/f113.png)
 
      ![](./media/f114.png)
 

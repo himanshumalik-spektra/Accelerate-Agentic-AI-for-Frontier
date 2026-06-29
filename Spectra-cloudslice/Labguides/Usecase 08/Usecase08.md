@@ -84,6 +84,14 @@ This use case demonstrates how to build a secure end-to-end AI agent, evaluate i
 
     ![](./media/aaau8t2s3.png)
 
+1. Click the highlighted Back button to navigate back to the previous Github page.
+
+    ![](./media/image17(d).png)
+
+1. Select the **Code (1)** dropdown and navigate to the **Codespaces (2)** tab, select the **ellipsis menu(3)** and choose **Open in Browser (4)**.
+
+    ![](./media/image17(e).png)
+
 1. Wait for the Codespaces environment to setup .It takes few minutes to setup completely.
 
     ![A screenshot of a computer AI-generated content may be
@@ -91,41 +99,11 @@ incorrect.](./media/image18.png)
 
     ![](./media/image19.png)
 
-    > **Note:** It can take a few minutes for the codespace to spin up completely
+    > **Note:** It can take a few minutes for the codespace to spin up completely.
 
 ## Task 3: Provision Services and deploy application to Azure
 
-1. In the LabVM search bar, type **Docker (1)** and select **Docker Desktop (2)** from the results to open the application.
-
-    ![](./media/uc9-14.png)
-
-    > **Note:** Before moving on to the next steps please make sure your Docker Desktop is up and running. It should not be in stopped state.
-
-1. Click **Accept** to agree to the Docker Subscription Service Agreement and continue.
-
-    ![](./media/uc8-23.png)
-
-1. Select **Use recommended settings** and click **Finish** to complete the Docker Desktop setup.
-
-    ![](./media/uc8-24.png)
-
-1. Click **Continue without signing in** to proceed without logging into Docker.
-
-    ![](./media/uc8-18.png)
-
-1. Click **Skip** to bypass the setup questionnaire and proceed.
-
-    ![](./media/uc8-19.png)  
-
-1. Wait for Docker Desktop to finish starting the Docker Engine before proceeding.
-
-    ![](./media/uc8-16.png)
-
-    >**Note:** It may take a few minutes to complete the setup. Please wait until the process finishes.     
-
-    >**Note:** Click the **Close (X)** button to exit the Windows Subsystem for Linux (WSL) welcome screen.![](./media/uc8-17.png)
-
-1. Navigate back to the Codespace in the in the browser, run the following command in the Terminal and press Enter.
+1.Run the following command in the Terminal and press Enter.
 
     ```
     azd auth login
@@ -179,20 +157,18 @@ incorrect.](./media/uc8-27.png)
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image28.png)
 
-1. Select below values.
+1. If prompted with **Would you like to check your Azure development tools?:**, type **Yes** and click on Enter.
 
-    - **Select an Azure Subscription to use** : Select your subscription
+     ![](./media/f30.png)
+   
+1. If prompted with any tools installations like Github & Azure tools, click on **Enter** to proceed with the installation.
 
-    - **azureAiServiceLocation**: East US 2, East US, West US , West US 3 , Sweden Central 
+     ![](./media/f31.png)
 
-    >**Note** - If it throws quota issue try with other location
-
-    >**Note:** If prompted with **“Would you like to check your Azure development tools? [Y/n]”**, type **n** and press **Enter** to skip the check and continue with the setup. ![](./media/aaau8t3s16.png
-      ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image29.png)
-
-      ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image30.png)
+1. When prompted with the following, provide the below values:
+   
+    - Select an Azure subscription to use: Click on **Enter**
+    - **AzureAiServiceLocation**: East US 2, East US, West US , West US 3 , Sweden Central.
 
 1. This deployment will take *10-15 minutes* to provision the resources in your account and set up the solution with sample data.
 
@@ -213,7 +189,7 @@ incorrect.](./media/image37.png)
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/uc8-15.png)
 
-1. From the **Resource groups** list, select the newly created resource group with prifix **rg-ai-agent-<inject key="DeploymentID" enableCopy="false"/>** to open it.
+1. From the **Resource groups** list, select the newly created resource group with prefix **rg-ai-agent-<inject key="DeploymentID" enableCopy="false"/>** to open it.
 
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/uc8-48.png)
@@ -231,25 +207,23 @@ incorrect.](./media/uc8-48.png)
     - Storage account  
 
 
-      ![A screenshot of a computer AI-generated content may be
+         ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/aaau8t4s3.png)
 
-1. In the resource group and click on **Azure Storage account.**
+1. Select the **Azure Storage account** from the list.
 
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/aaau8t4s4.png)
 
-1. From the left navigation menu, click on **Containers** under **Data storage**, Make sure data should be deployed successfully
+1. Select the **Azure Storage account** that has been created. From the left navigation menu, click on **Data Storage (1)** > **Containers (2)** and **verify (3)** if all the containers have been deployed.
 
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image42.png)
 
-1. Go back to resorcegroup and click on **Foundry Project.**
+1. Navigate back to the resource group and select the **Foundry Project.** Click on **Go to Foundry portal** to verify if all the models have been successfully deployed.  
 
     ![A screenshot of a computer AI-generated content may be
  incorrect.](./media/aaau8t4s6.png)
-
-1. Click **Go to Foundry portal** to verify that the model has been successfully deployed, it will navigate you to the **Microsoft Foundry** tab in your browser.
 
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image44.png)

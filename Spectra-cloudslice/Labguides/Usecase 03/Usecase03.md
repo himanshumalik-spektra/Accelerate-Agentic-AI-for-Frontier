@@ -87,7 +87,7 @@ system** can:
 1. In a new tab, enter the following URL to open the GitHub repository.
 
     ```
-    https://github.com/technofocus-pte/MultiAgentAccelerator/tree/main
+    https://github.com/CloudLabsAI-Azure/MultiAgentAccelerator.git
     ```
 
      ![](./media/image12.png)
@@ -110,12 +110,12 @@ system** can:
 
     ![](./media/image13(d).png)
 
-1. Select the **Code (1)** dropdown and navigate to the **Codespaces (2)** tab, select the **ellipsis menu(3)** and choose **Open in Browser (4)**
+1. Select the **Code (1)** dropdown and navigate to the **Codespaces (2)** tab, select the **ellipsis menu(3)** and choose **Open in Browser (4)**.
 
     ![](./media/image13(e).png)
 
 1. Wait for the Codespaces environment to setup .It takes few minutes
-    to setup completely
+    to setup completely.
 
      ![](./media/image15.png)
 
@@ -147,6 +147,7 @@ incorrect.](./media/image21.png)
 
     ![](./media/image22.png)
 
+
 1. Run azd up - This will provision Azure resources
 
     ```
@@ -167,7 +168,7 @@ incorrect.](./media/image21.png)
 
     - Enter a unique environment name: **AgenticAI**
     - Select an Azure subscription to use: Click on **Enter**
-    - Enter a value for the 'location' infrastructure parameter: Select **Sweden Central** if present or any other location in case of Sweden Central not present.
+    - Enter a value for the 'location' infrastructure parameter: Select **Australia East** or **Central US**.
 
       ![](./media/f32.png)
       
@@ -249,11 +250,9 @@ incorrect.](./media/image21.png)
 
       ![](./media/f52.png)
     
-1. Click on **Build** from the top menu and click on **Deployments (1)** from the left navigation menu to verify the **models (2)** that have been deployed.
+1. Click on **Build (1)** from the top menu and click on **Deployments (2)** from the left navigation menu to verify the **models (3)** that have been deployed.
 
-    ![](./media/f10.png) 
-
-    ![](./media/f11.png)
+      ![](./media/f57.png)
 
    ### Congratulations!
 
@@ -296,8 +295,6 @@ incorrect.](./media/image21.png)
 
     ![](./media/image62.png)
 
-    ![](./media/image63.png)
-
 ## Task 7: Retail Scenario
 
 In this Retail scenario, Contoso’s Retail Support Team uses a
@@ -312,7 +309,7 @@ actions.
 
 1. Select the **Current Team** option from the top-left section and explore the different teams.
 
-    ![](./media/image64.png)
+      ![](./media/f59.png)
 
 1. Select the Retail Customer Success Team and click on **Continue**.
 

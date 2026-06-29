@@ -44,51 +44,45 @@ This task introduces you to the process of setting up your Microsoft Foundry pro
 
 Follow the steps below to complete the setup of your Microsoft Foundry project.
 
-1. Open a browser tab and copy and paste this link https://ai.azure.com/templates. If prompted to sign in, kindly sign in.
+1. Open a new tab and copy and navigate to this link `https://ai.azure.com/templates`. 
 
-1. Click **Start building** in Microsoft Foundry to begin creating your AI solution
+1. You should see a dialog box prompting you to select a project to continue.
 
-     ![](./media/us11.1.png)
+1. Replace the existing project name with **Contoso-Travel-<inject key="DeploymentID" enableCopy="false"/> (1)** and click on **Create (2)** to set up your Microsoft Foundry project.
 
-      > **Note:** Switch toggle to "New Foundry".
-
-1. You should see a dialog prompting you to select a project to continue.
-
-1. Click the input area - you will see the ***Create a new project*** option and select it
-
-     ![](./media/us12.1.png)
-
-1. Enter a unique project name as **Contoso-Travel-<inject key="DeploymentID" enableCopy="false"/> (1)**
-
-     - Select the default **subscription (2)**
-     - Resource group: **Agentic AI (3)**
-     - Click **Create (4)** to set up your Microsoft Foundry project.
-
-        ![](./media/aaae1t1s5.png)
+     ![](./media/f100.png)
 
 1. The project creation process may take a few minutes to complete.
    
-1. You should now see your Foundry project landing page. **Take note of the Project Endpoint information shown here** - we will use it later.
+1. On the **Your project is set up. What would you like to do next?** pop-up, click on **Skip**.
 
-     ![](./media/aaae1t1s7.png)
+     ![](./media/f101.png)
 
 ### Task 2: Create an AI Agent
 
 In this task, you will create your first AI agent within the Foundry environment. The agent will act as a travel assistant designed to help users plan trips and provide relevant recommendations. You will define the agent’s identity, deploy it, and test its functionality using the playground interface.
 
-1. Click **Build (1)**, then select **New agent (2)** > **Build an agent (3)** to begin creating a new AI agent in Microsoft Foundry.
+1. Select **Build (1)** from the top navigation pane, click on **Deployments (2)** from the left navigation pane, click on **Deploy (3)** & select **Deploy a base model (4)** from the dropdown.
+
+     ![](./media/f115.png)
+
+1. Click on **Models (1)** from the left navigation pane, **search (2)** & **select (3)** gpt-5.2 from the results.
+
+     ![](./media/f116.png)
+
+1. Click on **Deploy (1)** and select **Default settings (2)** from the dropdown.
+
+     ![](./media/f117.png)
+
+1. Navigate back to the main foundry page, select **Build (1)** from the top navigation pane, then select **New agent (2)** > **Build an agent (3)** to begin creating a new AI agent in Microsoft Foundry.
 
      ![](./media/aaae1t2s1.png)
 
-1. Enter the Agent name as **contoso-travel-portal (1)** and click on **Create and open playground(2)** to create the Agent.
+1. Enter the Agent name as **contoso-travel-portal (1)** and click on **Create (2)** to create the Agent.
 
-     ![](./media/aaae1t2s2.png)
+     ![](./media/f102.png)
 
-     >**Note:** This takes a few minutes to complete
-
-1. The agent is now ready to test in playground
-
-     ![](./media/aaae1t2s4.png)  
+     >**Note:** This will take a few minutes to complete. 
 
 ### Task 3: Configure Application Insights Access for Azure AI Foundry Traces
 
@@ -98,10 +92,7 @@ agent activity, collect telemetry data, and analyze system performance.
 This is a critical step in understanding how your agent behaves in
 real-time and identifying potential issues.
 
-1. Open a browser and login to Azure portal at `https://portal.azure.com` with your credentials.
-
-     - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
-     - **Password:** <inject key="AzureAdUserPassword"></inject>
+1. Navigate back to the Azure Portal.
 
 1. In the search bar, type **Resource group (1)** and select **Resource groups (2)** from the results.
 
@@ -113,9 +104,9 @@ real-time and identifying potential issues.
 
 1. Select **contoso-travel-<inject key="Deployment ID" enableCopy="false"></inject>-resource-appinsights** from the list of resources.   
 
-     ![](./media/aaae1t3s4.png)
+     ![](./media/f103.png)
 
-1. Select **Access control (IAM) (1)**, then click on **Add (2)** and choose **Add role assignment (3)**.
+1. Select **Access control (IAM) (1)** from the left navigation pane, then click on **Add (2)** and choose **Add role assignment (3)**.
 
      ![](./media/aaae1t3s5.png)
 
@@ -123,7 +114,7 @@ real-time and identifying potential issues.
 
      ![](./media/aaae1t3s6.png)
 
-1. Select **Managed identity (1)**, click on **Select members (2)**, choose **Foundry project (1) (3)**, click the selected members (4), click on **Select (5)**, and then click on **Review + assign (6)**.
+1. Select **Managed identity (1)**, click on **Select members (2)**, choose **Foundry project (1) (3)**, click on the **project (4)**, click on **Select (5)**, and then click on **Review + assign (6)**.
 
      ![](./media/aaae1t3s7.png)
 
@@ -131,10 +122,9 @@ real-time and identifying potential issues.
 
      ![](./media/aaae1t3s8.png)
 
-1. Verify that the **Added Role assignment** notification appears, confirming the role has been successfully assigned
+1. Verify that the **Added Role assignment** notification appears, confirming the role has been successfully assigned.
 
      ![](./media/aaae1t3s9.png)
-
 
 ### Task 4: Test the Agent Prompt
 
@@ -142,7 +132,7 @@ In this task, you will refine and test your agent’s behavior using prompt engi
 
 1. Navigate to the **Playground** tab,  to test your agent prompt and view responses.
 
-     ![](./media/aaae1t4s1.png)
+     ![](./media/f109-1.png)
 
 1. In the Playground tab, update the **Instructions (1)** section with your  agent prompt, and click on **Save (2)**
 
@@ -191,9 +181,7 @@ In this task, you will refine and test your agent’s behavior using prompt engi
     referencing safety, legality, or policy as needed.
     ```
 
-     ![](./media/us22.png)
-
-1. Enter the below in the chat panel and select **Send**
+1. Enter the below in the chat panel and hit **Send**.
    
      ```
      Hi, I'm thinking about planning a trip to Paris. What should I know? 
@@ -201,11 +189,11 @@ In this task, you will refine and test your agent’s behavior using prompt engi
 
 1. Observe the response.
 
-     ![](./media/aaae1t4s4.png)
+     ![](./media/ff109-2.png)
 
-1. Click on the **Metrics** link above the response panel - it shows  you available evaluators.
+1. Click on the **Metrics** dropdown above the response panel and check the boxes for **Task adherence, Intent Resolution and Coherence**.
 
-     ![](./media/aaae1t4s5.png)
+     ![](./media/ff109-3.png)
 
 1. Customize the list to reflect evaluation criteria you want to use and try a new request.
 
@@ -213,7 +201,7 @@ In this task, you will refine and test your agent’s behavior using prompt engi
      Hi. I'm thinking about planning a trip to Paris. What should I know? 
      ```    
 
-     ![](./media/aaae1t4s6.png)
+      ![](./media/ff109-4.png)
 
 1. Observe the *AI Quality* and *Safety* metrics in the line below the response.
 
@@ -221,75 +209,67 @@ In this task, you will refine and test your agent’s behavior using prompt engi
 
      ![](./media/aaae1t4s8.png)
 
-1. Select **Configure**
+1. Select **Configure**.
 
-     ![](./media/aaae1t4s9.png)
+     ![](./media/ff109-5.png)
 
-1. Enter the details
+1. Enter the following details:
 
      - **Display name (1)**: Contoso Travel Assistant
 
      - **Description (2)**
 
         ```
-        Welcome to Contoso Travel. We can help you plan your next itinerary with flight bookings, car rentals and hotel reservations. Just tell us your destination and the number of travellers in your group - and we'll do the rest. 
+        Welcome to Contoso Travel. We can help you plan your next itinerary with flight bookings, car rentals and hotel reservations. Just tell us your destination and the number of travelers in your group - and we'll do the rest. 
         ```
 
      - **Starter prompts (3)**
 
         ```
-        I want to plan a multi-day travel itinerary 
+        I want to plan a multi-day travel itinerary. 
         ```  
         
         ```
-        I want to rent a car at my travel destination
+        I want to rent a car at my travel destination.
         ```  
         
         ```
-        I want to book a flight and hotel for my travels
+        I want to book a flight and hotel for my travels.
         ``` 
 
      - Click on **Reset (4)**
 
         ![](./media/aaae1t4s10.png)
 
+1. Close the Configuration pane.
+
 1. In the Test pane select **new chat (1)** , enter the below **prompt (2)** and click **Send.**
 
      ```
-     I want to plan a multi-day travel itinerary 
+     I want to plan a multi-day travel itinerary.
      ```  
 
-      ![](./media/aaae1t4s11.png)
+      ![](./media/ff109-6.png)
 
 1. View the response. The agent will prompt you for additional information as instructed.
 
-     ![](./media/aaae1t4s12.png)
+     ![](./media/ff109-7.png)
 
-1. Enter the following text in the same chat and click on the **Submit icon** .
+1. Enter the following promot in the same chat and click on the **Submit icon** .
 
      ```
      Hi! I'm thinking about planning a trip to Paris from Jul 1–4 with my family (3 people total). We are vegetarian. We love sports, historic homes, art and food tours
      ```
 
-      ![](./media/aaae1t4s13.png)
+      ![](./media/ff109-8.png)
 
 1. Note how the agent remembers and uses context from the history.
 
-     ![](./media/aaae1t4s14.png)
+      ![](./media/ff109-9.png)
 
 1. Click the **Traces (1)** tab and select **Responses (2)** - you should see rows for each **conversation run (3)** .
 
      ![](./media/aaae1t4s15.png)
-
-1. Want to understand what the Trace ID is showing - try **Ask AI** and enter the below prompt and click on **Send**
-
-     ```
-     Explain what the trace ID is showing     
-     ```
- 
-      ![](./media/aaae1t4s16.png)
-
-      ![](./media/aaae1t4s16.0.png)
 
 1. Click on the Trace ID - you should see something like this:
 
@@ -303,13 +283,13 @@ In this task, you will refine and test your agent’s behavior using prompt engi
 
      ![](./media/aaae1t4s18.0.png)
 
-1. Enter the following text and click on the **Submit icon** as shown in the below image.
+1. Enter the following text and click on the **Submit icon**.
 
      ```
-     I want to plan a multi-day travel itinerary leaving JFK on Jul 1 for Paris and returning Jul 5. I am traveling with my family (3 people total). We are vegetarians. We love sports, historic homes and art and food tours. Plan my itinerary and show me hotels and flights for my stay           
+     I want to plan a multi-day travel itinerary leaving JFK on Jul 1 for Paris and returning Jul 5. I am traveling with my family (3 people total). We are vegetarians. We love sports, historic homes and art and food tours. Plan my itinerary and show me hotels and flights for my stay.           
      ```
 
-1. You can review the agent response in the preview tab itself
+1. You can review the agent response in the preview tab itself.
 
      ![](./media/aaae1t4s20.png)
 
@@ -330,21 +310,21 @@ the *Tracing* and *Evaluations* capabilities in the agent playground.
 Microsoft Foundry has a large number of built-in evaluators that you can
 also invoke *code-first*.
 
-1. Click on the **Evaluations** item in the sidebar menu.
+1. Click on the **Evaluations** from the sidebar menu.
 
      ![](./media/aaae1t5s1.png)
 
-1. Select the **Evaluators catalog** to see the full list of supported evaluators
+1. Select the **Evaluators catalog** tab from the top to see the full list of supported evaluators.
 
      ![](./media/aaae1t5s2.png)
 
-1. Filter to see evaluators for a particular category - e.g., agents
+1. Filter to see evaluators for a **particular category (1)** and select **agents (2)**.
 
      ![](./media/us47new.png)
 
      ![](./media/us48.png)
 
-1. Use "Ask AI" to get explanations for any of them - e.g., ask:
+1. Use "Ask AI" to get an explanation. 
 
     ```
     Tell me more about the Protected-Material evaluator        
@@ -352,26 +332,20 @@ also invoke *code-first*.
 
      ![](./media/aaae1t5s4.png)
 
-1. Click the **Create evaluator** button.
+1. Click on the **Create evaluator** button.
 
      ![](./media/aaae1t5s5.png)
 
-1. Give the following details:
+1. Provide the following details:
 
     - Enter **Evaluator name** as **customevaluator (1)**
-    - Select **Model** as **gpt-4.1 (Global Standard deployment) (2)**
+    - Select **Model** as **gpt-5.2 (2)**
     - Choose **Target agent** as **contoso-travel-portal (3)**
     - Click on **Generate rubric (4)**
 
-      ![](./media/aaae1t5s6.png)
+      > **Note:** It may take a few minutes for the evaluator to be created. 
 
 1. Review the generated rubric and scoring details, Click on **Save evaluator**.
-
-      ![](./media/aaae1t5s6.0.png)
-
-      ![](./media/aaae1t5s6.1.png)
-
-      > **Note:** It may take a few minutes for the evaluator to be created. 
 
 ### Task 6: Run a Red Teaming Scan
 
@@ -384,23 +358,15 @@ behaves responsibly under different conditions.
 
      ![](./media/aaae1t6s1.png)
 
-1. For now, select the **Model (1)** option and pick the default model used  in your agent e.g, **gpt-4.1 (2)** and click **Next (3)**
+1. Select the **Model (1)** option and pick the default model used in your agent - **gpt-5.2 (2)** and click **Next (3)**
 
-     ![](./media/us54.png)
-
-1. Click on Next
+1. Click on Next.
 
      ![](./media/us55.png)
 
 1. Submit the scan. This takes a while to complete - we will revisit it later.
 
-     ![](./media/us56new.png)
-
-     ![](./media/us57.png)
-
-     ![](./media/us58.png)
-
-     > **Note:** It may take 5-7 min to complete
+     > **Note:** It may take 5-7 minutes to complete
 
 ## Exercise 2: Building Contoso Travel Using Prompt Agents
 
@@ -431,23 +397,33 @@ Codespace, and prepare your workspace for development.
 
      ![](./media/usx1.png)
 
-1. Click on **fork** to fork the repo. 
+1. Click on **fork** followed with **Create a new fork** to fork the repo. 
 
      ![](./media/usx3.png)
 
-1. Give the name to the repo as **Foundry-Control-<inject key="DeploymentID" enableCopy="false"/> (1)** and click on **Create Fork (2)** .
+1. Replace the name with **Foundry-Control-<inject key="DeploymentID" enableCopy="false"/> (1)** and click on **Create Fork (2)** .
 
      ![](./media/usx2.png)
 
-1. Click on **Code (1) -\> Codespaces (2) -\> Create Codespace (3)**
+1. Click on **Code (1) -\> Codespaces (2) -\> Create Codespaces on main (3)**
 
      ![](./media/usx4.png)
 
-     ![](./media/usx5.png)
+      > **Note:** It can take a few minutes for the codespace to spin up completely.
 
-      > **Note:** It can take a few minutes for the codespace to spin up completely
+1. Click the highlighted Back button to navigate back to the previous Github page.
+
+    ![](./media/image17(d).png)
+
+1. Select the **Code (1)** dropdown and navigate to the **Codespaces (2)** tab, select the **ellipsis menu(3)** and choose **Open in Browser (4)**
+
+    ![](./media/image17(e).png)
+
+1. Wait for the Codespaces environment to setup. It takes few minutes to setup completely.
+
+     ![](./media/usx5.png)
    
-1. Open the Terminal and Run the below command to run the script to set up the required environment for the lab.
+1. Run the below command to run the script to set up the required environment for the lab.
 
      ```
      ./labs/notebooks/setup-env.sh         
@@ -455,7 +431,7 @@ Codespace, and prepare your workspace for development.
 
      ![](./media/usx6.png)
 
-1. It should prompt you to log into Azure as shown. Open the link shown in terminal and Complete this step, then let the script run till complete. 
+1. It should prompt you to log into Azure as shown. Open the link shown in terminal and complete this step, then let the script run till complete. 
 
      ![](./media/usx7.png)
 
@@ -488,23 +464,25 @@ environment. This includes selecting the appropriate Python environment,
 installing dependencies, and verifying connectivity to Azure services
 and the Foundry project.
 
+1. Navigate to the **labs/notebooks/1-prompt-agents** folder and select the **.env (1)** file and update the AZURE_AI_MODEL_DEPLOYMENT_NAME to **gpt-5.2 (2)**. 
+
 1. Navigate to the **labs/notebooks/1-prompt-agents** folder and open the **lab-01-setup.ipynb** notebook to begin the environment setup lab.
 
      ![](./media/usx14.png)
 
-1. Click **Select Kernel** in the top-right corner of the notebook and choose the appropriate Python environment to run the lab.
+1. Click **Select Kernel** in the top-right corner of the notebook.
 
      ![](./media/usx15.png)
 
-1. Select **Python Environments**
+1. Select **Python Environments**.
 
      ![](./media/usx16.png)
 
-1. If prompted to select the path, then select the **Python** version  i.e **3.12.13**
+1. If prompted to select the path, then select the **Python** version  i.e **3.12.13**.
 
      ![](./media/usx17new.png)
 
-1. To install dependencies, run the first cell in the notebook
+1. To install dependencies, run the first cell in the notebook.
 
      ![](./media/usx18.png)
 
@@ -516,7 +494,7 @@ and the Foundry project.
 
      ![](./media/usx19.png)
 
-     ![](./media/usx20.png)
+     ![](./media/f104.png)
 
      > **Note:** If you encounter a `ModuleNotFoundError` for `dotenv`, install the required package by running **pip install python-dotenv**, and then re-run the cell.
 
@@ -532,7 +510,7 @@ and the Foundry project.
 
      ![](./media/usx24.png)
 
-     ![](./media/usx25.png)
+     ![](./media/f105.png)
 
 1. Explore the Contoso Travel sample data by running the 5<sup>th</sup>, 6<sup>th</sup>, 7<sup>th</sup> and 8<sup>th</sup> cells in the notebook.
 
@@ -567,7 +545,7 @@ responses.
 
      ![](./media/usx33.png)
 
-     ![](./media/usx34.png)
+     ![](./media/f106.png)
 
 1. To create the Concierge Agent, run the second cell in the notebook.
 
@@ -764,13 +742,9 @@ requests.
 
 1. Back in the Foundry portal select **Agents**, then click on the **contoso-travel-traced** agent to view its details and traces.
 
-     ![](./media/usx87.png)
-
 1. Click on the **Tracing** tab for your agent. You should see your traces listed with the span names that were defined.
 
-     ![](./media/usx88.png)
-
-1. Click on a trace to see the full span tree
+1. Click on a trace to see the full span tree.
 
      ![](./media/aaae2t2s12.png)
 
@@ -808,8 +782,6 @@ identify areas for improvement.
 1. Run the cell under **Setup** to connect to Microsoft Foundry and initialize the evaluation client.
 
      ![](./media/usx97.png)
-
-     ![](./media/usx98.png)
 
 1. Run the cell under **Create the Travel Agent for Evaluation** to create a versioned agent that will be used for evaluation.
 
@@ -877,17 +849,15 @@ identify areas for improvement.
 
      ![](./media/aaae2t7s15.png)
 
-1. Click on the **Evaluations** tab in the left navigation
+1. Click on the **Evaluations** tab from the left navigation pane.
 
-     ![](./media/usx120.png)
+1. If prompted with Do you want to save your agent?, click on **Save**.
 
-1. You should see the Quality, Safety, and Agentic evaluation runs  listed
+     ![](./media/f110.png)
 
-     ![](./media/usx121.png)
+1. You should see the Quality, Safety, and Agentic evaluation runs  listed.
 
 1. Select **Contoso Travel-Safety Evaluation**.
-
-     ![](./media/usx122.png)
 
      ![](./media/usx123.png)
 
@@ -912,8 +882,6 @@ the agent operates safely and adheres to responsible AI principles.
      ![](./media/usx126.png)
 
 1. Run the cell under **Setup** to connect to Microsoft Foundry and initialize the red teaming environment.
-
-     ![](./media/usx127.png)
 
 1. Run the cell under **Create the Travel Agent and Red Team** to create a versioned agent and set up a red team evaluation for safety
     testing.
@@ -945,15 +913,17 @@ the agent operates safely and adheres to responsible AI principles.
 
      ![](./media/usx135.png)
 
-1. Back in the Foundry portal, navigate to the **contoso-travel-redteam** agent
+1. Back in the Foundry portal, navigate to the **contoso-travel-redteam** agent.
 
      ![](./media/usx136.png)
 
-1. Navigate to **Evaluations** → select the red team evaluation
+1. Navigate to **Evaluations** → select the red team evaluation.
 
-     ![](./media/usx137.png)
+     ![](./media/f113.png)
 
-     ![](./media/usx138.png)
+     ![](./media/f114.png)
+
+      >**Note:** If prompted with Do you want to save your agent?, click on **Save**.
 
 1. Review individual attack attempts, agent responses, and evaluator  scores
 

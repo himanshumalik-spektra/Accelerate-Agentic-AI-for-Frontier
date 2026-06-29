@@ -64,19 +64,13 @@ In this task, you will create your first AI agent within the Foundry environment
 
 1. Select **Build (1)** from the top navigation pane, click on **Deployments (2)** from the left navigation pane, click on **Deploy (3)** & select **Deploy a base model (4)** from the dropdown.
 
-     ![](./media/f115.png)
-
-1. Click on **Models (1)** from the left navigation pane, **search (2)** & **select (3)** gpt-5.2 from the results.
-
-     ![](./media/f116.png)
+1. **Search (1)** & **select (2)** gpt-5.2 from the results.
 
 1. Click on **Deploy (1)** and select **Default settings (2)** from the dropdown.
 
      ![](./media/f117.png)
 
-1. Navigate back to the main foundry page, select **Build (1)** from the top navigation pane, then select **New agent (2)** > **Build an agent (3)** to begin creating a new AI agent in Microsoft Foundry.
-
-     ![](./media/aaae1t2s1.png)
+1. Click on **Agents (1)** from the left navigation pane, then select **New agent (2)** > **Build an agent (3)** to begin creating a new AI agent in Microsoft Foundry.
 
 1. Enter the Agent name as **contoso-travel-portal (1)** and click on **Create (2)** to create the Agent.
 
@@ -92,7 +86,7 @@ agent activity, collect telemetry data, and analyze system performance.
 This is a critical step in understanding how your agent behaves in
 real-time and identifying potential issues.
 
-1. Navigate back to the Azure Portal.
+1. Navigate to the Azure Portal.
 
 1. In the search bar, type **Resource group (1)** and select **Resource groups (2)** from the results.
 
@@ -130,11 +124,9 @@ real-time and identifying potential issues.
 
 In this task, you will refine and test your agent’s behavior using prompt engineering. You will define clear instructions for the agent , execute sample queries, and evaluate the responses. This helps ensure that the agent provides accurate, relevant, and user-friendly outputs while adhering to its intended role
 
-1. Navigate to the **Playground** tab,  to test your agent prompt and view responses.
+1. Navigate back to the Microsoft Foundry tab and select your previously created agent - **contoso-travel-portal** from the list of agents
 
-     ![](./media/f109-1.png)
-
-1. In the Playground tab, update the **Instructions (1)** section with your  agent prompt, and click on **Save (2)**
+1. On the Playground tab, update the **Instructions (1)** section with your  agent prompt, and click on **Save (2)**
 
     ```
     You are the Contoso Travel Concierge, a friendly and knowledgeable
@@ -195,7 +187,7 @@ In this task, you will refine and test your agent’s behavior using prompt engi
 
      ![](./media/ff109-3.png)
 
-1. Customize the list to reflect evaluation criteria you want to use and try a new request.
+1. Run the same prompt again & observe the response.
 
      ```
      Hi. I'm thinking about planning a trip to Paris. What should I know? 
@@ -208,6 +200,8 @@ In this task, you will refine and test your agent’s behavior using prompt engi
 1. Hover over each number - you should see the custom metrics used and their **Pass/Fail** status.
 
      ![](./media/aaae1t4s8.png)
+
+     >**Note:** The result might differ.
 
 1. Select **Configure**.
 
@@ -243,7 +237,7 @@ In this task, you will refine and test your agent’s behavior using prompt engi
 
 1. Close the Configuration pane.
 
-1. In the Test pane select **new chat (1)** , enter the below **prompt (2)** and click **Send.**
+1. Select **new chat (1)** from the top pane of the chat panel, enter the below **prompt (2)** and click **Send.**
 
      ```
      I want to plan a multi-day travel itinerary.
@@ -267,26 +261,26 @@ In this task, you will refine and test your agent’s behavior using prompt engi
 
       ![](./media/ff109-9.png)
 
-1. Click the **Traces (1)** tab and select **Responses (2)** - you should see rows for each **conversation run (3)** .
+1. Click on the **Traces (1)** tab and select **Responses (2)** - you should see rows for each **conversation run (3)** .
 
-     ![](./media/aaae1t4s15.png)
+     ![](./media/f205.png)
 
 1. Click on the Trace ID - you should see something like this:
 
-     ![](./media/aaae1t4s17.png)
+     ![](./media/f206.png)
 
      ![](./media/aaae1t4s17.0.png)
 
-1. Click on **Publish (1)**, then select **Preview web app (2)** to open the agent in a new web browser tab
+1. Click on **Publish (1)**, then select **Preview web app (2)** to open the agent in a new web browser tab.
 
-     ![](./media/aaae1t4s18.png)
+     ![](./media/f207.png)
 
      ![](./media/aaae1t4s18.0.png)
 
 1. Enter the following text and click on the **Submit icon**.
 
      ```
-     I want to plan a multi-day travel itinerary leaving JFK on Jul 1 for Paris and returning Jul 5. I am traveling with my family (3 people total). We are vegetarians. We love sports, historic homes and art and food tours. Plan my itinerary and show me hotels and flights for my stay.           
+     I want to plan a multi-day travel itinerary leaving JFK on Jul 1 for Paris and returning Jul 5. I am traveling with my family (3 people total). We are vegetarians. We love sports, historic homes and art and food tours. Plan my itinerary and show me hotels and flights for my stay.
      ```
 
 1. You can review the agent response in the preview tab itself.
@@ -295,7 +289,7 @@ In this task, you will refine and test your agent’s behavior using prompt engi
 
 1. Note that if you return to agent you can now see this interaction captured in the traces as well.
 
-     ![](./media/aaae1t4s21.png)
+     ![](./media/f208.png)
 
 ### Task 5: Explore Evaluations Tab
 
@@ -310,15 +304,9 @@ the *Tracing* and *Evaluations* capabilities in the agent playground.
 Microsoft Foundry has a large number of built-in evaluators that you can
 also invoke *code-first*.
 
-1. Click on the **Evaluations** from the sidebar menu.
+1. Click on the **Evaluations** from the left navigation menu.
 
-     ![](./media/aaae1t5s1.png)
-
-1. Select the **Evaluators catalog** tab from the top to see the full list of supported evaluators.
-
-     ![](./media/aaae1t5s2.png)
-
-1. Filter to see evaluators for a **particular category (1)** and select **agents (2)**.
+1. Select the **Evaluators catalog** tab from the top to see the full list of supported evaluators. Filter to see evaluators for a **particular category (1)** and select **agents (2)**.
 
      ![](./media/us47new.png)
 
@@ -330,17 +318,17 @@ also invoke *code-first*.
     Tell me more about the Protected-Material evaluator        
     ```
 
-     ![](./media/aaae1t5s4.png)
+     ![](./media/f209.png)
 
 1. Click on the **Create evaluator** button.
 
-     ![](./media/aaae1t5s5.png)
+     ![](./media/f210.png)
 
 1. Provide the following details:
 
     - Enter **Evaluator name** as **customevaluator (1)**
     - Select **Model** as **gpt-5.2 (2)**
-    - Choose **Target agent** as **contoso-travel-portal (3)**
+    - Choose **Target agent (Optional)** as **contoso-travel-portal (3)**
     - Click on **Generate rubric (4)**
 
       > **Note:** It may take a few minutes for the evaluator to be created. 
@@ -356,17 +344,13 @@ behaves responsibly under different conditions.
 
 1. Navigate to the **Evaluations (1)** section, select the **Red team (2)** tab, then click **Create (3)** to start a new red teaming run.
 
-     ![](./media/aaae1t6s1.png)
-
-1. Select the **Model (1)** option and pick the default model used in your agent - **gpt-5.2 (2)** and click **Next (3)**
+1. Select **Model (1)** for Target and pick the default model used in your agent - **gpt-5.2 (2)** and click on **Next (3)**.
 
 1. Click on Next.
 
      ![](./media/us55.png)
 
-1. Submit the scan. This takes a while to complete - we will revisit it later.
-
-     > **Note:** It may take 5-7 minutes to complete
+1. Click on **Submit**. It may take 5-7 minutes to complete. Please proceed with the next exercise.
 
 ## Exercise 2: Building Contoso Travel Using Prompt Agents
 

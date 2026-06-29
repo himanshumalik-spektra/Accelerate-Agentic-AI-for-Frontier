@@ -853,6 +853,8 @@ identify areas for improvement.
 
 1. If prompted with Do you want to save your agent?, click on **Save**.
 
+     ![](./media/f110.png)
+
 1. You should see the Quality, Safety, and Agentic evaluation runs  listed.
 
 1. Select **Contoso Travel-Safety Evaluation**.

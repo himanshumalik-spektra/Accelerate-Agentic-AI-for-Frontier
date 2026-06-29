@@ -261,11 +261,9 @@ incorrect.](./media/image21.png)
 
       ![](./media/f52.png)
     
-1. Click on **Build** from the top menu and click on **Deployments (1)** from the left navigation menu to verify the **models (2)** that have been deployed.
+1. Click on **Build (1)** from the top menu and click on **Deployments (2)** from the left navigation menu to verify the **models (3)** that have been deployed.
 
-    ![](./media/f10.png) 
-
-    ![](./media/f11.png)
+      ![](./media/f57.png)
 
    ### Congratulations!
 

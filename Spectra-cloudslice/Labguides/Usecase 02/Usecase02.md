@@ -351,18 +351,11 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     ![](./media/image81.png)
 
-1. Provide any reviewer name and click on **Accept Recommendation**
+1. Provide the reviewer's name and click on **Accept Recommendation**
 
     ![](./media/image82.png)
 
     ![](./media/image83.png)   
-
-## Important
-
-   > **Note**: Delete the **rg-AgenticAI** resource group. 
-
-   ![](./media/F34.png) 
-
 
    ### Congratulations!
 
@@ -374,6 +367,12 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
    - Need help? cloudlabs-support@spektrasystems.com
    <validation step="0cd5f7a0-43ba-4390-88dd-e8f7a18e6a7e" />
 
+## Important
+
+   > **Note**: Delete the **rg-AgenticAI** resource group. 
+
+   ![](./media/F34.png) 
+   
 ## Summary
 
 In this usecase, you successfully built and deployed a **multi-agent

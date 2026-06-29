@@ -306,8 +306,6 @@ incorrect.](./media/image21.png)
 
     ![](./media/image62.png)
 
-    ![](./media/image63.png)
-
 ## Task 7: Retail Scenario
 
 In this Retail scenario, Contoso’s Retail Support Team uses a
@@ -321,8 +319,6 @@ understand customer history, analyze sentiment, and recommend corrective
 actions.
 
 1. Select the **Current Team** option from the top-left section and explore the different teams.
-
-    ![](./media/image64.png)
 
 1. Select the Retail Customer Success Team and click on **Continue**.
 

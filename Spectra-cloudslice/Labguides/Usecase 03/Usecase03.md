@@ -110,18 +110,29 @@ system** can:
 
     ![](./media/image13(d).png)
 
-1. Select the **Code (1)** dropdown and navigate to the **Codespaces (2)** tab, select the **ellipsis menu(3)** and choose **Open in Browser (4)**
+1. Select the **Code (1)** dropdown and navigate to the **Codespaces (2)** tab, select the **ellipsis menu(3)** and choose **Open in Browser (4)**.
 
     ![](./media/image13(e).png)
 
 1. Wait for the Codespaces environment to setup .It takes few minutes
-    to setup completely
+    to setup completely.
 
      ![](./media/image15.png)
 
      ![](./media/image16.png)
 
 ## Task 3: Provision Services and deploy application to Azure
+
+1. Navigate to **infra (1)** from left navigation pane and select **main.bicep (2)** file.
+
+1. Scroll down to line number 54 and update & replace the following to the required model & versions:
+
+  | From Model | From Version | To Model | To Version |
+  |------------|---------------|----------|-------------|
+  | `gpt-4.1` | `2025-04-14` | `gpt-5.4` | `2026-03-05` |
+  | `gpt-4.1-mini` | `2025-04-14` | `gpt-5.4-mini` | `2026-03-17` |
+
+   ![](./media/f56.png)
 
 1. Run the following command on the Terminal. It generates the code to copy. Copy the code and press Enter.
 
@@ -146,6 +157,7 @@ incorrect.](./media/image20.png)
 incorrect.](./media/image21.png)
 
     ![](./media/image22.png)
+
 
 1. Run azd up - This will provision Azure resources
 

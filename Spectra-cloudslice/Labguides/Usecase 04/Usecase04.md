@@ -57,7 +57,7 @@ In this exercise, you will create an Azure AI Search resource from the Azure por
 
    ![A screenshot of a computer AI-generated content may be incorrect.](./media/image2.png)
 
-3. In the **AI Foundry page**, select **AI Search** under **Use with Foundry** from the left pane and then select **+ Create**.
+3. In the **Misrosoft Foundry page**, select **AI Search** under **Use with Foundry** from the left pane and then select **+ Create**.
 
     ![](./media/image3.png)
 
@@ -71,11 +71,11 @@ In this exercise, you will create an Azure AI Search resource from the Azure por
 
     - Location - **Central US (3)**
 
-      ![A screenshot of a search service AI-generated content may be incorrect.](./media/111.png)
+      ![](./media/111.png)
 
 5. Once the validation passes, select **Create**.
 
-    ![A screenshot of a search engine AI-generated content may be incorrect.](./media/112.png)
+    ![](./media/112.png)
 
 6. The deployment takes around 10 minutes to complete. Select **Go to resource** once the search service is created.
 
@@ -179,9 +179,13 @@ In this exercise, you will create an Azure AI Search resource from the Azure por
 
 13. Select **Managed identity (1)** and then select **+ Select members (2)**. Select **Search service (3)** under **Managed identity** and select the **searchleaves (4)** search service that gets listed, then click on **Select (5)**.
 
-14. Select **Review + assign (6)** in the next 2 screens.
+14. Select **Review + assign (6)** .
 
      ![](./media/new30.png)
+
+1. Click on **Review & Assign** to assign the roles 
+
+     ![](./media/n1.png)
 
    ### Congratulations!
 
@@ -225,7 +229,11 @@ In this task, you will create a Foundry resource which is required to access the
 
      ![](./media/image36.png)
 
-6. Open the **agentic-ai-project-<inject key="DeploymentID" enableCopy="false"/>** and select **Go to Foundry portal**.
+1. Navigate to your **AgenticAI** resource group
+
+     ![](./media/n2.png)
+
+6. Open the **agentic-ai-project-<inject key="DeploymentID" enableCopy="false"/>** and select **Go to Foundry portal**. 
 
      ![](./media/129.png)
 
@@ -273,14 +281,25 @@ In this task, you create a Fabric workspace. The workspace contains all the item
 
      ![](./media/new20.png)
 
-3. Then enter the following Password:
+3. Then enter the following Password if prompted :
 
     - Password: **<inject key="AzureAdUserPassword"></inject>**  
 
+1. If PowerBI opens by default , please folllow the below steps , other wise skip this step 
+
+   - Click on PowerBI
+
+     ![](./media/n5.png)
+
+   - Select Fabric from the option 
+
+     ![](./media/n6.png)
+
+
 4. In the Workspaces pane, click on **+ New workspace** tile
 
-     ![](./media/image43.png)
-
+     ![](./media/image43.png)     
+       
 5. In the **Create a workspace** pane that appears on the right side, enter the following details, and click on the **Apply** button.
 
      - Name: **Fabric IQ Ontology-<inject key="DeploymentID" enableCopy="false"/> (1)**
@@ -306,8 +325,6 @@ In this task, you create a Fabric workspace. The workspace contains all the item
 3. In the **New lakehouse** dialog box, enter **IQ_Lakehouse** in the **Name** field and **unselect** the lakehouses schemas. Click on the **Create** button and open the new lakehouse.
 
      ![](./media/image49.png)
-
-     ![](./media/image50.png)
 
 4. You will see a notification stating **Successfully created SQL endpoint**.
 
@@ -351,19 +368,13 @@ In this task, you create a Fabric workspace. The workspace contains all the item
 
      ![](./media/image61.png)
 
-9. Repeat Steps 7 through 9 to push the remaining file into the tables.
-
-     ![](./media/image62.png)
-
-     ![](./media/image63.png)
-
-     ![](./media/image64.png)
+9. Repeat Steps 6 through 9 to push the remaining file into the tables.
 
      ![](./media/image65.png)
 
      > **Note:** If you encounter the “TooManyRequestsForCapacity” error while loading data, it indicates a capacity/rate limit issue rather than an SKU configuration issue wait for 20-25 minutes and retry loading the data. The operation should complete successfully once the capacity becomes available.
 
-     >**Note:** If you still face issues in loading the tables, restart the Fabric Capcity from the Azure portal. FOllow the steps below: 
+     >**Note:** If you still face issues in loading the tables, restart the Fabric Capcity from the Azure portal. Follow the steps below: 
 
      - In the Azure portal search bar, search and select Resource groups.
 
@@ -389,6 +400,8 @@ In this task, you create a Fabric workspace. The workspace contains all the item
 
      ![](./media/image66.png)
 
+     ![](./media/n7.png)
+
 ## Task 7: Create ontology (preview) item
 
 1. In your Fabric workspace, select **+ New item**. Search for and select the **Ontology (preview)** item.
@@ -406,6 +419,8 @@ In this task, you create a Fabric workspace. The workspace contains all the item
 3. The ontology opens when it's ready.
 
       ![](./media/image69.png)
+
+     >**Note:** If you still face issues in loading the tables, restart the Fabric Capcity from the Azure portal.
 
 4. Next, create entity types, data bindings, and relationships based on data from your lakehouse tables.
 
@@ -454,47 +469,11 @@ Entity types represent categories of objects in your business domain. For this s
 
      ![](./media/new36.png)
 
+1. Click on **Home** . 
+
+     ![](./media/n8.png)
+
 10. Select **+ Add entity type** from the ribbon. 
-
-     ![](./media/new37.png)
-
-11. Enter **Order** as the name and select **Add Entity Type**. 
-
-     ![](./media/image80.png)
-
-12. On the configuration canvas, select **(...) (1)** next to the entity name and select **Bind data (2)**. 
-
-     ![](./media/new25.png)
-
-13. Select **Add data binding (1) > Lakehouse table (2)**. 
-
-     ![](./media/new26.png)
-
-14. Select the **IQ_Lakehouse** lakehouse **(1)** as the data source, and then click **Next** **(2)** to continue configuring the ontology.
-
-     ![](./media/new27.png)
-
-15. Expand the **Tables** folder **(1)** under **IQ_Lakehouse**, select the **orders** table **(2)**, and then click **Select** **(3)** to add the table to the ontology.
-
-     ![](./media/new28.png)
-
-16. Select **Define entity type key** at the top of the configuration. 
-
-     ![](./media/new33.png)
-
-17. Select **OrderID** as the key property and select **Save**. 
-
-     ![](./media/new34.png)
-
-18. Click on **Save** to save the data binding. 
-
-     ![](./media/new35.png)
-
-19. Confirm that the entity type updated successfully, then select **Cancel** to close the configuration options. 
-
-     ![](./media/new36.png)
-
-20. Select **+ Add entity type** from the ribbon. 
 
      ![](./media/new37.png)
 
@@ -502,10 +481,11 @@ Entity types represent categories of objects in your business domain. For this s
 
      | Entity type name        | Source table in IQ_Lakehouse | Entity type key |
      |-------------------------|------------------------------|-----------------|
+     | Order                   | Orders                       | OrderId         |
      | OrderItem               | OrderItems                   | OrderItemID     |
      | SupportTicket           | SupportTickets               | TicketID        |
      | RefundClaim             | RefundClaims                 | ClaimID         |
-     | ShipmentTrackingEvent   | ShipmentTracking             | TrackingID      |
+     | ShipmentTrackingEvent   | shipmenttracking             | TrackingID      |
 
 
 ## Task 9: Create relationship types
@@ -544,15 +524,6 @@ Next, create relationship types between the entity types to represent contextual
 
       ![](./media/l1-0.png)
 
-6. Follow the same steps that you used for the first relationship type to create the relationship type described in the following table.
-
-     | Relationship type name | Source data table                          | Source entity type        |
-     |------------------------|--------------------------------------------|---------------------------|
-     | Contains               | Tutorial workspace → Lakehouse → Order     | Products (OrderItem)      |
-     | hasSupportTicket       | Order                                      | SupportTicket             |
-     | hasTrackingEvent       | Order                                      | ShipmentTrackingEvent     |
-     | mayLeadTo              | OrderItem                                  | RefundClaim               |  
-
 7. Select the **Order** entity type **(1)** from the **Explorer** pane, and then click **+ Add relationship** **(2)** to define a new relationship for the selected entity.
 
      ![](./media/l1-2.png)
@@ -565,7 +536,7 @@ Next, create relationship types between the entity types to represent contextual
 
     - **Target entity type**: **OrderItem (3)**
 
-       ![](./media/t9-0.png)      
+       ![](./media/n9.png)      
 
 9. Click **View Relationship Type details** to review and manage the relationships defined between the entity types in the ontology.
 
@@ -872,27 +843,26 @@ Follow these steps to create a new data agent that connects to your ontology (pr
 
      ![](./media/l1-10.png)
 
-12. In the **Choose a knowledge type** window, select **Azure Blob Storage**, then click **Connect** to proceed.
+12. Click **Create a knowledge base** and keep the name default and select model **GPT 5** in chat completions model and scroll down.
 
      ![](./media/UC2-T11-S11.1.png)
 
-     ![](./media/image141.png)     
+     ![](./media/n10.png)     
 
-13. In the Choose a knowledge type window, first select the **Storage account** and **Container name** that were created in the previous steps. Then select Chat completions model as gpt-4.1 and click on **Create**.
+1. Click on **Add Sources** and select **Azure Blob storage** from the list
 
-     ![](./media/img2.png)
+     ![](./media/n11.png)
 
-14. After configuring the knowledge base details, select **Save knowledge base** to create and save it.
+     ![](./media/n12.png) 
 
-     ![](./media/image143.png)
 
-     ![](./media/image144.png)
+13. In the Choose a knowledge type window, first select the **Storage account** and **Container name** that were created in the previous steps. Then select Chat completions model as gpt-5 and click on **Create**.
 
-     ![](./media/image145.png)
+     ![](./media/n13.png)
 
-15. Verify that the knowledge source is added successfully and its status is **Active**.
+14. After configuring the knowledge base details make sure it is in **active** status (wait for 5 minutes or refresh) and select **Save knowledge base** to create and save it.
 
-     ![](./media/image146.png)
+     ![](./media/n14.png)
 
      > **Note:** If the status is not displayed as “Active”, refresh the page once and verify the status again.
 
@@ -934,13 +904,84 @@ Follow these steps to create a new data agent that connects to your ontology (pr
 
      ![](./media/image156.png)
 
+## Task 12: Create Demo mail to agent
+
+1. Enter the following URL in the new tab to navigate to the Outlook:
+
+    ```
+    https://outlook.office.com/
+    ```
+
+1. Login with the ODL user credentials provided below:
+
+    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
+    - **Password:** <inject key="AzureAdUserPassword"></inject>
+
+
+1. In Outlook, select **New mail (1)** to create a new email.
+
+     ![](./media/ne1.png)
+
+1. Enter the following details to draft an email:
+
+    -  **To (1)**: Enter **<inject key="AzureAdUserEmail"></inject>**
+
+    -  **Subject (2)**: Enter the following Subject:
+
+        ```
+        Replacement Request for Product P1001
+        ```
+
+    - **Body (3):** Enter the following body:
+
+       ```
+       Hi Team,
+
+       Please find the details of the order for Product P1001 below:
+
+       Product Details:
+        - Product ID: P1001
+        - Order ID: 101
+        - Customer ID: C001
+        - Quantity Ordered: 2
+        - Unit Price: 1200
+        - Total Order Amount: 2400
+        - Order Date: 2024-01-10
+        - Order Status: Delivered
+
+       Shipment Details:
+        - Shipment Status: Shipped
+        - Shipped Date: 2024-01-11
+        - Delivery Date: 2024-01-14
+
+       Refund Claim Details:
+        - Claim ID: 1
+        - Reason: Damaged product
+        - Claim Status: Approved
+        - Claim Date: 2024-01-15
+
+       As the refund claim has been approved due to the damaged product, I kindly request that you initiate the replacement process at the earliest.
+       Please let me know if any additional information is required. I look forward to your confirmation regarding the replacement.
+
+       Thank you!
+       ```
+
+   - Then click on **Send (4)** to mail the products detail for replacement to ODL User.
+
+     ![](./media/ne2.png)
+
+1. After sending the email, open the Inbox and verify that the recipient has received the message.
+
+     ![](./media/ne3.png)
+
 25. A chat panel will open where you can enter your prompts. The agent will now respond.
 
      ```
-     Review the latest Apex Legal email and tell me what happened.
+     Review the latest Apex Legal email and Summarize.
      ```
 
-      ![](./media/image157.png)
+      ![](./media/ne4.png)
 
 26. Select **Approve** to grant the required permissions and continue.
 
@@ -956,19 +997,7 @@ Follow these steps to create a new data agent that connects to your ontology (pr
      Is this customer eligible for replacement based on our policy?
      ```
 
-      ![](./media/image160.png)
-
-      ![](./media/image161.png)
-
-29. A chat panel will open where you can enter your prompts. The agent will now respond
-
-     ```
-     Do we have enough stock to resolve this today?
-     ```
-
-        ![](./media/image162.png)
-
-        ![](./media/image163.png)
+      ![](./media/n15.png)
 
 30. A chat panel will open where you can enter your prompts. The agent will now respond.
 
@@ -976,9 +1005,7 @@ Follow these steps to create a new data agent that connects to your ontology (pr
      Should this issue be escalated?
      ```
 
-       ![](./media/image164.png)
-
-       ![](./media/image165.png)
+       ![](./media/n17.png)
 
 31. A chat panel will open where you can enter your prompts. The agent will now respond.
 
@@ -986,17 +1013,7 @@ Follow these steps to create a new data agent that connects to your ontology (pr
      Draft a customer response based on the issue and our communication standards.
      ```
 
-        ![](./media/image166.png)
-
-32. A chat panel will open where you can enter your prompts. The agent will now respond
-
-     ```
-     What is the best operational resolution for order O5001?
-     ```
-
-      ![](./media/image167.png)
-
-      ![](./media/image168.png)
+     ![](./media/n18.png)
 
 ## Summary
 

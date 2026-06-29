@@ -64,7 +64,7 @@ To solve this, the organization adopts an **AI-driven solution using Azure Found
 
      ![](./media/image9.png)
 
-5. Repeat the steps \#4 to register the following Resource provider.
+5. Repeat the steps 4 to register the following Resource provider.
 
     - **Microsoft.AlertsManagement**
 
@@ -300,7 +300,9 @@ To solve this, the organization adopts an **AI-driven solution using Azure Found
 
      ![](./media/image54.png)
 
-     ![](./media/image55.png)
+1. click on **Build (1)** and select **Models (2)** and **Deployments (3)** you can see deployed models
+
+     ![](./media/n3.png)
 
    ### Congratulations!
 

@@ -87,7 +87,7 @@ system** can:
 1. In a new tab, enter the following URL to open the GitHub repository.
 
     ```
-    https://github.com/technofocus-pte/MultiAgentAccelerator/tree/main
+    https://github.com/CloudLabsAI-Azure/MultiAgentAccelerator.git
     ```
 
      ![](./media/image12.png)
@@ -122,17 +122,6 @@ system** can:
      ![](./media/image16.png)
 
 ## Task 3: Provision Services and deploy application to Azure
-
-1. Navigate to **infra (1)** from left navigation pane and select **main.bicep (2)** file.
-
-1. Scroll down to line number 54 and update & replace the following to the required model & versions:
-
-    | From Model | From Version | To Model | To Version |
-    |------------|---------------|----------|-------------|
-    | `gpt-4.1` | `2025-04-14` | `gpt-5.4` | `2026-03-05` |
-    | `gpt-4.1-mini` | `2025-04-14` | `gpt-5.4-mini` | `2026-03-17` |
-
-      ![](./media/f56.png)
 
 1. Run the following command on the Terminal. It generates the code to copy. Copy the code and press Enter.
 
@@ -179,7 +168,7 @@ incorrect.](./media/image21.png)
 
     - Enter a unique environment name: **AgenticAI**
     - Select an Azure subscription to use: Click on **Enter**
-    - Enter a value for the 'location' infrastructure parameter: Select **Sweden Central** if present or any other location in case of Sweden Central not present.
+    - Enter a value for the 'location' infrastructure parameter: Select **Australia East** or **Central US**.
 
       ![](./media/f32.png)
       
@@ -319,6 +308,8 @@ understand customer history, analyze sentiment, and recommend corrective
 actions.
 
 1. Select the **Current Team** option from the top-left section and explore the different teams.
+
+      ![](./media/f59.png)
 
 1. Select the Retail Customer Success Team and click on **Continue**.
 

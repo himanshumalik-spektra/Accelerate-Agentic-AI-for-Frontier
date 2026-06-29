@@ -361,7 +361,22 @@ You’ve completed the task. Now let’s validate it:
 
 ## Important
 
-   > **Note**: Please delete the **AgenticAI** resource group. 
+   > **Note**: Please delete the resources that you have created in the **AgenticAI** resource group. 
+
+   ![](./media/f13.png) 
+
+  > **Note:**
+  >
+  > After deleting the resources:
+  >
+  > - Navigate to **Azure OpenAI** and select **openaiservice-<inject key="DeploymentID" enableCopy="false"/>**.
+  >   - From the top menu, click **Manage deleted resources**.
+  >   - Select the checkbox next to **openaiservice-<inject key="DeploymentID" enableCopy="false"/> (1)** and click on **Purge (2)**.    
+
+       ![](./media/f19.png)
+
+  >   - Confirm the action in the pop-up dialog.
+  >   - Verify that the resource has been permanently deleted.
 
 ## Summary
 

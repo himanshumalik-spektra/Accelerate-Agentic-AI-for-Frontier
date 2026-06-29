@@ -114,7 +114,7 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 1. Open your browser, navigate to the address bar, type or paste the following URL: 
 
     ```
-    https://github.com/technofocus-pte/MultiAIAgentAccelerator
+    https://github.com/CloudLabsAI-Azure/Prior-Authorization-Multi-Agent-Solution-Accelerator.git
     ```
 
 1. Click on **Fork** (top-right corner) and select **Create a new fork** to create your own copy of the repository.

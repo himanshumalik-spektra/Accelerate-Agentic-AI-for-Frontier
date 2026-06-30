@@ -69,7 +69,7 @@ By implementing this use case, you will:
 1. Open your browser, navigate to the address bar, type or paste the following URL: 
 
     ```
-    https://github.com/technofocus-pte/Banking-assistant-Agent
+    https://github.com/CloudLabsAI-Azure/Banking-assistant-Agent.git
     ```
 
      ![](./media/image13.png)

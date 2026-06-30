@@ -130,7 +130,7 @@ To solve this, the organization adopts an **AI-driven solution using Azure Found
     ```
     azd env new
     ```
-    - Enter a unique environment name: **agentxxxxxxx**
+    - Enter a unique environment name: **agent<inject key="Deployment ID" enableCopy="false"></inject>**
 
       > **Note:** When creating an environment, ensure that the name consists of lowercase letters.    
 
@@ -268,7 +268,7 @@ To solve this, the organization adopts an **AI-driven solution using Azure Found
 
     ![A screenshot of a computer AI-generated content may be incorrect.](./media/image50.png)
 
-2. Click on your assigned Resource group **rg-agentxxxxxxx**.
+2. Click on your assigned Resource group **rg-agent<inject key="Deployment ID" enableCopy="false"></inject>**.
 
     ![A screenshot of a computer AI-generated content may be incorrect.](./media/139.png)
 

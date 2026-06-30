@@ -65,7 +65,7 @@ By completing this lab, you will be able to:
     https://github.com/technofocus-pte/observeManageScale-agentic-ai-appsFoundry/tree/feb-2026-refresh
     ```
 
-1. Click on **fork** to fork the repo. 
+1. Click on **fork** followed with **Create a new fork** to fork the repo. 
 
     ![](./media/image11.png)
 
@@ -81,6 +81,14 @@ By completing this lab, you will be able to:
 
     ![](./media/uc9-4.png)
 
+1. Click the highlighted Back button to navigate back to the previous Github page.
+
+    ![](./media/image17(d).png)
+
+1. Select the **Code (1)** dropdown and navigate to the **Codespaces (2)** tab, select the **ellipsis menu(3)** and choose **Open in Browser (4)**
+
+    ![](./media/image17(e).png)
+
 1. Wait for the Codespace to finish building.
 
     ![](./media/image13.png)
@@ -89,38 +97,7 @@ By completing this lab, you will be able to:
 
 ## Task 2: Provision Services and deploy application to Azure
 
-1. In the LabVM search bar, type **Docker (1)** and select **Docker Desktop (2)** from the results to open the application.
-
-    ![](./media/aaau9t2s1.png)
-
-    > **Note:** Before moving on to the next steps please make sure your Docker Desktop is up and running. It should not be in stopped state.
-
-1. Click **Accept** to agree to the Docker Subscription Service Agreement and continue.
-
-    ![](../Usecase%2008/media/uc8-23.png)
-
-1. Select **Use recommended settings** and click **Finish** to complete the Docker Desktop setup.
-
-    ![](../Usecase%2008/media/uc8-24.png)
-
-1. Click **Continue without signing in** to proceed without logging into Docker.
-
-    ![](../Usecase%2008/media/uc8-18.png) 
-
-1. Click **Skip** to bypass the setup questionnaire and proceed.
-
-    ![](../Usecase%2008/media/uc8-19.png) 
-
-1. Wait for Docker Desktop to finish starting the Docker Engine before proceeding.
-
-    ![](../Usecase%2008/media/uc8-16.png) 
-
-
-    >**Note:** It may take a few minutes to complete the setup. Please wait until the process finishes.     
-
-    >**Note:** Click the **Close (X)** button to exit the Windows Subsystem for Linux (WSL) welcome screen. ![](../Usecase%2008/media/uc8-17.png)
-
-1. Navigate back to the Codespace in the in the browser, run the following command in the Terminal and press Enter.
+1. Run the following command in the Terminal and press Enter.
 
     ```
     az login
@@ -128,7 +105,7 @@ By completing this lab, you will be able to:
 
     ![](./media/image16.png)
 
-1. Enter the displayed code in the field and click **Next** to proceed with authentication.
+1. Open the link as displayed and enter the displayed code in the field and click **Next** to proceed with authentication.
 
     ![A screenshot of a computer error AI-generated content may be
 incorrect.](../Usecase%2008/media/image22new.png)
@@ -155,7 +132,7 @@ incorrect.](../Usecase%2008/media/image24new.png)
 
     ![](./media/image21.png)
 
-1. Then complete the interactive steps providing responses like this:
+1. Then, complete the interactive steps providing responses like this:
 
     - Enter branch name: **for-release-1.0.4**
 
@@ -190,9 +167,9 @@ incorrect.](../Usecase%2008/media/image24new.png)
 
       ![](./media/image26new.png)
 
-    - Press **Enter** for all other fields.
+      ![](./media/image27new.png)      
 
-      ![](./media/image27new.png)
+    - Press **Enter** for all other fields.
 
 1. Run this script - it will create .env with values extracted by Azure CLI. By default it looks for an  resource group but you can override it.
 
@@ -204,7 +181,7 @@ incorrect.](../Usecase%2008/media/image24new.png)
 
     ![](./media/image28.png)
 
-1. When prompted, type **Y** and press Enter to log in to Azure before continuing with the deployment.
+1. When prompted, type **Y** and press Enter to log in to Azure before continuing with the deployment. Press **Enter** if required to navigate to the login page.
 
     ![](./media/image29.png)
 
@@ -225,15 +202,21 @@ incorrect.](../Usecase%2008/media/image23new.png)
     ![A screenshot of a computer error AI-generated content may be
 incorrect.](../Usecase%2008/media/image24new.png)
 
-1. This deployment will take *12-15minutes* to provision the resources in your account and set up the solution with sample data.
+1. If prompted with **Would you like to check your Azure development tools?:**, type **Yes** and click on Enter.
+
+     ![](./media/f30.png)
+   
+1. If prompted with any tools installations like Github & Azure tools, click on **Enter** to proceed with the installation.
+
+     ![](./media/f31.png)
+
+1. This deployment will take *12-15 minutes* to provision the resources in your account and set up the solution with sample data.
 
     ![](./media/image32.png)
 
     ![](./media/image33.png)
 
     > **Note:** Check the deployment status in your resource group to ensure all resources are provisioned successfully.
-
-    ![](./media/image34.png)
 
     ![](./media/image35.png)
 
@@ -255,7 +238,7 @@ incorrect.](../Usecase%2008/media/image24new.png)
 
     ![](./media/image40.png)
 
-1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image.
+1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image. Observe the response.
 
     ```
     Can you help me choose the best tools for painting my house?
@@ -265,7 +248,7 @@ incorrect.](../Usecase%2008/media/image24new.png)
 
     ![](./media/image42.png)
 
-1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image.
+1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image. Observe the response.
 
     ```
     What are the cheapest products available?
@@ -275,7 +258,7 @@ incorrect.](../Usecase%2008/media/image24new.png)
 
     ![](./media/image44.png)
 
-1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image.
+1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image. Observe the response.
 
     ```
     Suggest eco-friendly paint options?
@@ -285,7 +268,7 @@ incorrect.](../Usecase%2008/media/image24new.png)
 
     ![](./media/image46.png)
 
-1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image.
+1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image. Observe the response.
 
     ```
     How much does the Synthetic Brush set cost and do you have it in stock?

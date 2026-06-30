@@ -103,19 +103,17 @@ incorrect.](./media/image18.png)
 
 ## Task 3: Provision Services and deploy application to Azure
 
-1.Run the following command in the Terminal and press Enter.
+1. Run the following command in the Terminal and press Enter.
 
-    ```
-    azd auth login
-    ```
+   ```bash
+   azd auth login
+   ```
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/aaau8t3s8.png)
+   ![A screenshot of a computer AI-generated content may be incorrect.](./media/aaau8t3s8.png)
 
-1. Copy the displayed authentication code from the terminal, press **Enter**, and complete the Azure login in the browser.
+2. Copy the displayed authentication code from the terminal, press **Enter**, and complete the Azure login in the browser.
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/aaau8t3s9.png)
+   ![A screenshot of a computer AI-generated content may be incorrect.](./media/aaau8t3s9.png)
 
 1. Enter the displayed code in the field and click **Next** to proceed with authentication.
 
@@ -139,7 +137,7 @@ incorrect.](./media/aaau8t3s13.png)
 
 1. Run the following command in the terminal to create a new environment.
 
-   - Enter a unique environment name as **ai-agent-<inject key="DeploymentID" enableCopy="false"/>** when prompted and press **Enter**.
+   - Enter a unique environment name as **ai-agent-<inject key="DeploymentID" enableCopy="false"/>** and press **Enter**.
 
       ```
       azd env new
@@ -159,11 +157,11 @@ incorrect.](./media/image28.png)
 
 1. If prompted with **Would you like to check your Azure development tools?:**, type **Yes** and click on Enter.
 
-     ![](./media/f30.png)
+     ![](./f30.png)
    
 1. If prompted with any tools installations like Github & Azure tools, click on **Enter** to proceed with the installation.
 
-     ![](./media/f31.png)
+     ![](./f31.png)
 
 1. When prompted with the following, provide the below values:
    
@@ -196,19 +194,17 @@ incorrect.](./media/uc8-48.png)
 
 1. Make sure the below resources got deployed successfully:
 
-    - Foundry  
-    - Foundry project  
-    - Application Insights  
-    - Container App  
-    - Container Apps Environment  
-    - Container registry  
-    - Managed Identity  
-    - Log Analytics workspace  
-    - Storage account  
+   - Foundry
+   - Foundry project
+   - Application Insights
+   - Container App
+   - Container Apps Environment
+   - Container registry
+   - Managed Identity
+   - Log Analytics workspace
+   - Storage account
 
-
-         ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/aaau8t4s3.png)
+   ![A screenshot of a computer AI-generated content may be incorrect.](./media/aaau8t4s3.png)
 
 1. Select the **Azure Storage account** from the list.
 
@@ -220,7 +216,7 @@ incorrect.](./media/aaau8t4s4.png)
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image42.png)
 
-1. Navigate back to the resource group and select the **Foundry Project.** Click on **Go to Foundry portal** to verify if all the models have been successfully deployed.  
+1. Navigate back to the resource group and select the **Foundry Project.** Click on **Go to Foundry portal** to verify if all the models have been successfully deployed. 
 
     ![A screenshot of a computer AI-generated content may be
  incorrect.](./media/aaau8t4s6.png)
@@ -228,29 +224,25 @@ incorrect.](./media/image42.png)
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image44.png)
 
-1. Copy the **Project endpoint** and save it for future use, as it is required while configuring the application and connecting to the Azure AI Project in subsequent steps.
+1. Click on **Build (1)** from the top menu and click on **Deployments (2)** from the left navigation menu to verify the **models (3)** that have been deployed.
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/aaau8t4s7.0.png)
+incorrect.](./media/f400.png)
 
-1. In the top navigation, select **Build.**
-
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/aaau8t4s8.png)
-
-1. From the left menu, click **Agents (1)**, then select the **agent-template-assistant (2)** agent from the list to open it.
+1. Navigate back by clicking on the **Microsoft Foundry (1)** option from the top left. Copy the **Project endpoint 
+(2)** and save it in a notepad for future use.
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/aaau8t4s9.png)
+incorrect.](./media/aaau8t4s7.0-1.png)
 
 ## Task 5: Interact with Your AI Agent Using Predefined Questions
 
-1. Go back to GitHub Codespaces and select the **Endpoint URL**.
+1. Navigate back to GitHub Codespaces and select the **Endpoint URL**.
 
     ![A screenshot of a computer AI-generated content may be
  incorrect.](./media/image48.png)
 
-1. Click on **Open** button
+1. Click on the **Open** button.
 
     ![A screenshot of a computer AI-generated content may be
  incorrect.](./media/image49.png)
@@ -260,7 +252,7 @@ incorrect.](./media/aaau8t4s9.png)
     ![A screenshot of a computer AI-generated content may be
  incorrect.](./media/aaau8t5s3.png)
 
-1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image.
+1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image. Observe the response.
 
     ```
     What's the best tent under $200 for two people, and what features does it include?
@@ -272,7 +264,7 @@ incorrect.](./media/aaau8t5s4.png)
     ![A screenshot of a chat AI-generated content may be
 incorrect.](./media/aaau8t5s4.0.png)
 
-1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image.
+1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image. Observe the response.
 
    ```
    What has David Kim purchased in the past, and based on his buying patterns, what other products might interest him?
@@ -284,7 +276,7 @@ incorrect.](./media/aaau8t5s5.png)
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/aaau8t5s5.0.png)
 
-1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image.
+1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image. Observe the response.
 
     ```
     Compare hiking boots from different brands in your inventory - which ones offer the best value for durability and comfort?
@@ -296,7 +288,7 @@ incorrect.](./media/aaau8t5s6.png)
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/aaau8t5s6.0.png)
 
-1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image.
+1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image. Observe the response.
 
    ```
    How do I set up the Alpine Explorer Tent, and what should I know about its weather protection features?
@@ -308,7 +300,7 @@ incorrect.](./media/aaau8t5s7.png)
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/aaau8t5s7.0.png)
 
-4. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image.
+4. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image. Observe the response.
 
    ```
    I'm planning a 3-day camping trip for my family. What complete setup would you recommend under $500, and why?
@@ -327,7 +319,7 @@ incorrect.](./media/aaau8t5s8.0.png)
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/aaau8t6s1.png)
 
-2. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image.
+2. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image. Observe the response.
 
    ```
    Which products have wireless charging capabilities and what are their battery life specifications?
@@ -339,7 +331,7 @@ incorrect.](./media/aaau8t6s2.png)
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/aaau8t6s2.0.png)
 
-1. In the **agent-template-assistant** web app page, enter the following prompts and review the response.
+1. In the **agent-template-assistant** web app page, enter the following prompts and review the response. 
 
     ```
     Find products designed for comfort and temperature control - what features do they offer?
@@ -357,47 +349,48 @@ incorrect.](./media/aaau8t6s3.png)
 Microsoft Foundry offers a number of built-in evaluators to measure the quality, efficiency, risk and safety of your agents. For example, intent resolution, tool call accuracy, and task adherence evaluators are
 targeted to assess the end-to-end and tool call process quality of agent workflow, while content safety evaluator checks for inappropriate content in the responses such as violence or hate. You can also create custom evaluators tailored to your specific requirements, including custom prompt-based evaluators or code-based evaluators that implement your unique assessment criteria.
 
-1. Go back to **GitHub Codespaces**, open the terminal, and run the Python requirements script below to set up your environment
+1. Go back to **GitHub Codespaces**, open the terminal, and run the Python requirements script below to set up your environment.
 
-   ```
+   ```bash
    python -m pip install -r src/requirements.txt
    ```
 
-    ![A screenshot of a computer AI-generated content may beincorrect.](./media/image65.png)
+   ![A screenshot of a computer AI-generated content may be incorrect.](./media/image65.png)
 
-    ![A screenshot of a computer AI-generated content may be incorrect.](./media/image66.png)
+   ![A screenshot of a computer AI-generated content may be incorrect.](./media/image66.png)
 
-    
-    > **Note:** If you encounter dependency conflict errors during installation, run the following commands to remove the conflicting package and reinstall the required dependencies:
-    >
-    > ```bash
-    > pip uninstall api -y
-    > python -m pip install -r src/requirements.txt
-    > ```
+   > **Note:** If you encounter dependency conflict errors during installation, run the following commands to remove the conflicting package and reinstall the required dependencies:
+   >
+   > ```bash
+   > pip uninstall api -y
+   > python -m pip install -r src/requirements.txt
+   > ```
 
+2. Run the following script to set the environment variables.
 
-1. Run the below script to set the variable.
+   ```bash
+   export AZURE_AI_AGENT_DEPLOYMENT_NAME="gpt-5-mini"
 
-    ```
-    export AZURE_AI_AGENT_DEPLOYMENT_NAME="gpt-5-mini"
+   export AZURE_EXISTING_AGENT_ID="agent-template-assistant:1"
 
-    export AZURE_EXISTING_AGENT_ID="agent-template-assistant:1"
+   export AZURE_AI_AGENT_NAME="agent-template-assistant"
+   ```
 
-    export AZURE_AI_AGENT_NAME="agent-template-assistant"
-    ```
+1. Select the **tests (1)** folder from the left hand panel and select the **test_utils.py (2)** file. **Paste (3)** the endpoint that you copied in **Task 4 and Step 8** between the empty double quotes **""** on line 40 after **AZURE_EXISTING_AIPROJECT_ENDPOINT**.
 
-1. Select the **test_utils.py** under the **test** folder in the left hand panel.
+    ![A screenshot of a computer AI-generated content may be
+incorrect.](./media/f401.png)
 
-1. Paste the endpoint that you copied in **Task 4 and Step 8** between the empty double quotes **""** on line 40 after **AZURE_EXISTING_AIPROJECT_ENDPOINT**.
-
-1. Run the below script below
+1. Run the following script:
 
     ```
     export AZURE_EXISTING_AIPROJECT_ENDPOINT="Paste you AZURE_EXISTING_AIPROJECT_ENDPOINT here"
     ```
-    >**Note**- Don't forget to paste your endpoints in the command before running it
+    > **Note**- Don't forget to paste your endpoints in the command before running it.
 
-1. Run the below script below.
+1. Press `Ctrl+S` to save the file.
+
+1. Run the following script:
 
     ```
     pytest tests/test_evaluation.py -s
@@ -406,18 +399,19 @@ targeted to assess the end-to-end and tool call process quality of agent workflo
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/aaau8t7s10.png)
 
-1. Upon completion, the test will display an URL in the output where you can review the detailed evaluation results in the Microsoft Foundry UI, including individual evaluator passing scores and explanations.
+1. Upon completion, the test will display an URL in the output where you can review the detailed evaluation results in the Microsoft Foundry UI, including individual evaluator passing scores and explanations. Select the **URL**.
 
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image69.png)
 
-1. Click on the **Open**
+1. Click on **Open**.
 
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image70.png)
 
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/aaau8t7s10.0.png)
+
 ## Task 8: AI Red Teaming Agent
 
 The AI Red Teaming Agent is a powerful tool designed to help organizations proactively find security and safety risks associated with
@@ -437,7 +431,7 @@ In the red teaming test script, you will be able to set up an AI Red Teaming Age
 No test dataset or adversarial LLM is needed as the AI Red Teaming Agent
 will generate all the attack prompts for you.
 
-1. Run the below script to set the variable
+1. Navigate back to the Codespaces tab and run the following script to set the variable.
 
     ```
     export AZURE_EXISTING_AGENT_ID="agent-template-assistant:1"
@@ -509,10 +503,7 @@ incorrect.](./media/image80.png)
 You can view both the server-side and client-side traces, cost and
 evaluation data in Microsoft Foundry.
 
-1. Go back the Microsoft Foundry and From the left navigation pane, select **Agents (1)**, and then click on **agent-template-assistant (2)** from the list to open the agent details..
-
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/aaau8t11s1.png)
+1. navigate back to the Microsoft Foundry, from the top navigation, select **Build** again and from the left menu, click **Agents (1)**, then select the **agent-template-assistant (2)** agent from the list to open it.
 
 1. Select the **Traces**
 

@@ -1,4 +1,4 @@
-# Use case 9 - Implement end to end agent operations for Zava's shopping assistant in Microsoft Foundry
+# Use case 9 - Implement end to end agent operations for Zava's shopping assistant in Microsoft Foundry [READ-ONLY]
 
 ## Introduction
 

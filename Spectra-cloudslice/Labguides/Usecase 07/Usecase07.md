@@ -760,7 +760,7 @@ requests.
 
      ![](./media/aaae2t2s12.0.png)
 
-     > **Note** Traces may take 2-5 minutes to appear in Azure Monitor after execution.
+     > **Note** Traces may take longer to appear, please proceed with the next step.
 
 1. Return to your Codespace to continue the lab.
 

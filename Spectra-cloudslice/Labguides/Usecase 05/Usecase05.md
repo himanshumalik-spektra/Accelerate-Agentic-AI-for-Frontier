@@ -144,7 +144,15 @@ To solve this, the organization adopts an **AI-driven solution using Azure Found
 
     ![](./media/image25.png)
 
-7. Select below values.
+7. If prompted with **Would you like to check your Azure development tools?**:, type **Yes** and click on **Enter**.
+
+    ![](../Usecase%2002/media/f30.png)
+
+8. If prompted with any tools installations like Github & Azure tools, click on **Enter** to proceed with the installation.
+
+     ![](../Usecase%2002/media/f31.png)
+   
+9. Select below values.
 
     - **Select an Azure Subscription to use** : Select your subscription
 

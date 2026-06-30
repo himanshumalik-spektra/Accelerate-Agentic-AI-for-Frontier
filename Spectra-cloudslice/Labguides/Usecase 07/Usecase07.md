@@ -66,11 +66,15 @@ In this task, you will create your first AI agent within the Foundry environment
 
 1. **Search (1)** & **select (2)** gpt-5.2 from the results.
 
+     ![](./media/f190.png)
+
 1. Click on **Deploy (1)** and select **Default settings (2)** from the dropdown.
 
      ![](./media/f117.png)
 
 1. Click on **Agents (1)** from the left navigation pane, then select **New agent (2)** > **Build an agent (3)** to begin creating a new AI agent in Microsoft Foundry.
+
+     ![](./media/f191.png)
 
 1. Enter the Agent name as **contoso-travel-portal (1)** and click on **Create (2)** to create the Agent.
 
@@ -173,11 +177,15 @@ In this task, you will refine and test your agent’s behavior using prompt engi
     referencing safety, legality, or policy as needed.
     ```
 
+      ![](./media/f192.png)
+
 1. Enter the below in the chat panel and hit **Send**.
    
      ```
      Hi, I'm thinking about planning a trip to Paris. What should I know? 
      ```
+
+      ![](./media/f193.png)
 
 1. Observe the response.
 
@@ -306,6 +314,8 @@ also invoke *code-first*.
 
 1. Click on the **Evaluations** from the left navigation menu.
 
+     ![](./media/f194.png)
+
 1. Select the **Evaluators catalog** tab from the top to see the full list of supported evaluators. Filter to see evaluators for a **particular category (1)** and select **agents (2)**.
 
      ![](./media/us47new.png)
@@ -331,7 +341,9 @@ also invoke *code-first*.
     - Choose **Target agent (Optional)** as **contoso-travel-portal (3)**
     - Click on **Generate rubric (4)**
 
-      > **Note:** It may take a few minutes for the evaluator to be created. 
+         ![](./media/f195.png)
+
+         > **Note:** It may take a few minutes for the evaluator to be created. 
 
 1. Review the generated rubric and scoring details, Click on **Save evaluator**.
 
@@ -342,11 +354,15 @@ robustness and safety of your AI agent. By simulating adversarial
 scenarios, you can identify vulnerabilities and ensure that the agent
 behaves responsibly under different conditions.
 
-1. Navigate to the **Evaluations (1)** section, select the **Red team (2)** tab, then click **Create (3)** to start a new red teaming run.
+1. Navigate to the **Evaluations (1)** section, select the **Red team** tab, then click **Create (2)** to start a new red teaming run.
+
+     ![](./media/f196.png)
 
 1. Select **Model (1)** for Target and pick the default model used in your agent - **gpt-5.2 (2)** and click on **Next (3)**.
 
-1. Click on Next.
+     ![](./media/f197.png)
+
+1. Click on **Next**.
 
      ![](./media/us55.png)
 
@@ -450,7 +466,7 @@ and the Foundry project.
 
 1. Navigate to the **labs/notebooks** folder and select the **.env (1)** file, update the AZURE_AI_MODEL_DEPLOYMENT_NAME to **gpt-5.2 (2)** and press **Ctrl+S** to save the file. 
 
-     ![](./media/F118.png)
+     ![](./media/f118.png)
 
 1. Navigate to the **labs/notebooks/1-prompt-agents** folder and open the **lab-01-setup.ipynb** notebook to begin the environment setup lab.
 
@@ -734,6 +750,8 @@ requests.
 
 1. Back in the Foundry portal select **Agents**, then click on the **contoso-travel-traced** agent to view its details and traces.
 
+     ![](./media/f198.png)
+
 1. Click on the **Tracing** tab for your agent. You should see your traces listed with the span names that were defined.
 
 1. Click on a trace to see the full span tree.
@@ -839,7 +857,7 @@ identify areas for improvement.
 
 1. Back in the Foundry portal, select **Agents**, then click on the **contoso-travel-eval** agent to view its details and evaluation results.
 
-     ![](./media/aaae2t7s15.png)
+     ![](./media/f211.png)
 
 1. Click on the **Evaluations** tab from the left navigation pane.
 
@@ -851,7 +869,7 @@ identify areas for improvement.
 
 1. Select **Contoso Travel-Safety Evaluation**.
 
-     ![](./media/usx123.png)
+     ![](./media/f212.png)
 
 1. Return to your Codespace to continue the lab.
 
@@ -913,9 +931,9 @@ the agent operates safely and adheres to responsible AI principles.
 
       >**Note:** If prompted with Do you want to save your agent?, click on **Save**.
 
-1. Review individual attack attempts, agent responses, and evaluator  scores
+1. Review individual attack attempts, agent responses, and evaluator  scores.
 
-     ![](./media/usx139.png)
+     ![](./media/f214.png)
 
 1. Run the final cell to delete the conversation and agent resources.
 

@@ -64,6 +64,8 @@ In this task, you will create your first AI agent within the Foundry environment
 
 1. Select **Build (1)** from the top navigation pane, click on **Deployments (2)** from the left navigation pane, click on **Deploy (3)** & select **Deploy a base model (4)** from the dropdown.
 
+     ![](./media/F678.png)
+
 1. **Search (1)** & **select (2)** gpt-5.2 from the results.
 
      ![](./media/f190.png)

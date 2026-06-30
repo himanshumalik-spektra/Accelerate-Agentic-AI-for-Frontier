@@ -210,15 +210,13 @@ incorrect.](../Usecase%2008/media/image24new.png)
 
      ![](./media/f31.png)
 
-1. This deployment will take *12-15minutes* to provision the resources in your account and set up the solution with sample data.
+1. This deployment will take *12-15 minutes* to provision the resources in your account and set up the solution with sample data.
 
     ![](./media/image32.png)
 
     ![](./media/image33.png)
 
     > **Note:** Check the deployment status in your resource group to ensure all resources are provisioned successfully.
-
-    ![](./media/image34.png)
 
     ![](./media/image35.png)
 
@@ -240,7 +238,7 @@ incorrect.](../Usecase%2008/media/image24new.png)
 
     ![](./media/image40.png)
 
-1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image.
+1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image. Observe the response.
 
     ```
     Can you help me choose the best tools for painting my house?
@@ -250,7 +248,7 @@ incorrect.](../Usecase%2008/media/image24new.png)
 
     ![](./media/image42.png)
 
-1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image.
+1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image. Observe the response.
 
     ```
     What are the cheapest products available?
@@ -260,7 +258,7 @@ incorrect.](../Usecase%2008/media/image24new.png)
 
     ![](./media/image44.png)
 
-1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image.
+1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image. Observe the response.
 
     ```
     Suggest eco-friendly paint options?
@@ -270,7 +268,7 @@ incorrect.](../Usecase%2008/media/image24new.png)
 
     ![](./media/image46.png)
 
-1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image.
+1. In the **agent-template-assistant** web app page, enter the following prompt and click on the **Submit icon** as shown in the below image. Observe the response.
 
     ```
     How much does the Synthetic Brush set cost and do you have it in stock?

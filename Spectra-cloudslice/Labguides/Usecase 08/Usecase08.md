@@ -226,6 +226,9 @@ incorrect.](./media/image44.png)
 
 1. Click on **Build (1)** from the top menu and click on **Deployments (2)** from the left navigation menu to verify the **models (3)** that have been deployed.
 
+    ![A screenshot of a computer AI-generated content may be
+incorrect.](./media/f400.png)
+
 1. Navigate back by clicking on the **Microsoft Foundry (1)** option from the top left. Copy the **Project endpoint 
 (2)** and save it in a notepad for future use.
 
@@ -373,9 +376,10 @@ targeted to assess the end-to-end and tool call process quality of agent workflo
    export AZURE_AI_AGENT_NAME="agent-template-assistant"
    ```
 
-1. Select the **tests** folder from the left hand panel and select the **test_utils.py** file.
+1. Select the **tests (1)** folder from the left hand panel and select the **test_utils.py (2)** file. **Paste (3)** the endpoint that you copied in **Task 4 and Step 8** between the empty double quotes **""** on line 40 after **AZURE_EXISTING_AIPROJECT_ENDPOINT**.
 
-1. Paste the endpoint that you copied in **Task 4 and Step 8** between the empty double quotes **""** on line 40 after **AZURE_EXISTING_AIPROJECT_ENDPOINT**.
+    ![A screenshot of a computer AI-generated content may be
+incorrect.](./media/f401.png)
 
 1. Run the following script:
 

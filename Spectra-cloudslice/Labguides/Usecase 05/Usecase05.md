@@ -228,7 +228,9 @@ To solve this, the organization adopts an **AI-driven solution using Azure Found
      .\resourcedeployment.ps1
      ```
 
-14. After successfully logging in to Azure, review the deployed resource details and proceed with configuring the Kubernetes infrastructure.
+14. When prompted with **"Please enter your email address for certificate management"**, enter your email address **<inject key="AzureAdUserEmail"></inject>** and then select **Continue**.
+
+15. After successfully logging in to Azure, review the deployed resource details and proceed with configuring the Kubernetes infrastructure.
 
     ![](./media/image36.png)
 
@@ -238,19 +240,19 @@ To solve this, the organization adopts an **AI-driven solution using Azure Found
 
      ![](./media/image39.png)
 
-15. AKS cluster updated successfully
+16. AKS cluster updated successfully
 
      ![](./media/image40.png)
 
-16. Verify that the application routing add-on is enabled, note the external IP address assigned to NGINX, and proceed with assigning a DNS name to the public IP.
+17. Verify that the application routing add-on is enabled, note the external IP address assigned to NGINX, and proceed with assigning a DNS name to the public IP.
 
      ![](./media/image41.png)
 
-17. Assign the required role to the AKS system-assigned managed identity, then monitor the node pool upgrade process until it completes successfully.
+18. Assign the required role to the AKS system-assigned managed identity, then monitor the node pool upgrade process until it completes successfully.
 
      ![](./media/image42.png)
 
-18. Update the Kubernetes YAML files with the container image path and email address, then configure AKS by deploying Cert Manager and application images to the cluster.
+19. Update the Kubernetes YAML files with the container image path and email address, then configure AKS by deploying Cert Manager and application images to the cluster.
 
      ![](./media/image43.png)
 
@@ -260,11 +262,11 @@ To solve this, the organization adopts an **AI-driven solution using Azure Found
 
      ![](./media/image46.png)
 
-19. Once the deployment is successful, review the provided details access the frontend application using the given URL, and proceed with the data import process using the specified command.
+20. Once the deployment is successful, review the provided details access the frontend application using the given URL, and proceed with the data import process using the specified command.
 
     ![](./media/image47.png)
 
-20. Click on **Open** button
+21. Click on **Open** button
 
      ![](./media/image48.png)
 

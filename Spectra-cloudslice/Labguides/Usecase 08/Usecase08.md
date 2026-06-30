@@ -381,14 +381,14 @@ targeted to assess the end-to-end and tool call process quality of agent workflo
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/f401.png)
 
+1. Press `Ctrl+S` to save the file.
+
 1. Run the following script:
 
     ```
     export AZURE_EXISTING_AIPROJECT_ENDPOINT="Paste you AZURE_EXISTING_AIPROJECT_ENDPOINT here"
     ```
     > **Note**- Don't forget to paste your endpoints in the command before running it.
-
-1. Press `Ctrl+S` to save the file.
 
 1. Run the following script:
 
@@ -454,7 +454,7 @@ incorrect.](./media/image73.png)
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image74.png)
 
-1. Click on **Open** button
+1. Click on **Open** button.
 
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image75.png)
@@ -464,13 +464,13 @@ incorrect.](./media/image76.png)
 
 ## Task 9: Tracing and monitoring
 
-1. Enable tracing by setting the environment variable
+1. Enable tracing by setting the environment variable.
 
     ```
     azd env set ENABLE_AZURE_MONITOR_TRACING true
     ```
 
-1. Deploy the resources
+1. Deploy the resources.
 
     ```
     azd deploy
@@ -503,9 +503,12 @@ incorrect.](./media/image80.png)
 You can view both the server-side and client-side traces, cost and
 evaluation data in Microsoft Foundry.
 
-1. navigate back to the Microsoft Foundry, from the top navigation, select **Build** again and from the left menu, click **Agents (1)**, then select the **agent-template-assistant (2)** agent from the list to open it.
+1. Navigate back to the Microsoft Foundry, from the top navigation, select **Build (1)** and from the left menu, click **Agents (2)**, then select the **agent-template-assistant (3)** agent from the list to open it.
 
-1. Select the **Traces**
+    ![A screenshot of a computer AI-generated content may be
+ incorrect.](./media/f403.png)
+
+1. Select the **Traces** tab to view the recent conversations.
 
     ![A screenshot of a computer AI-generated content may be
  incorrect.](./media/aaau8t11s2.png)
@@ -533,7 +536,7 @@ inputs-instead, it evaluates real user conversations as they occur. This means e
 
 To customize continuous evaluation from the Microsoft Foundry:
 
-1. Select **Monitor(1)** Choose the agent you want to enable continuous evaluation for from the agent list and click on **Settings (2)**
+1. On the **Monitor(1)** tab, click on **Settings (2)**.
 
     ![A screenshot of a computer AI-generated content may be
  incorrect.](./media/aaau8t12s1.png)

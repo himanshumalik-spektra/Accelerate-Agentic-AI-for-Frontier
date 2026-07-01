@@ -87,7 +87,7 @@ system** can:
 1. In a new tab, enter the following URL to open the GitHub repository.
 
     ```
-    https://github.com/CloudLabsAI-Azure/MultiAgentAccelerator.git
+    https://github.com/CloudLabsAI-Azure/Multi-Agent-Custom-Automation-Engine-Solution-Accelerator.git
     ```
 
      ![](./media/image12.png)

@@ -1,0 +1,36 @@
+[
+    {
+        "Name": "Azure-AI-Agents",
+        "Language": "English",
+        "Files": [
+          {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Accelerate-Agentic-AI-for-Frontier/refs/heads/main/Spectra-cloudslice/Labguides/gettingstartedpage/custom-getting-started-page-day-02",
+            "Order": 1
+          },
+          {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Accelerate-Agentic-AI-for-Frontier/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2001/Usecase01.md",
+            "Order": 2
+          },
+          {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Accelerate-Agentic-AI-for-Frontier/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2002/Usecase02.md",
+            "Order": 3
+          },
+          {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Accelerate-Agentic-AI-for-Frontier/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2003/Usecase03.md",
+            "Order": 4
+          },
+          {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Accelerate-Agentic-AI-for-Frontier/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/Usecase04.md",
+            "Order": 5
+          },
+          {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Accelerate-Agentic-AI-for-Frontier/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2005/Usecase05.md",
+            "Order": 6
+          },
+          {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Accelerate-Agentic-AI-for-Frontier/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2006/Usecase06.md",
+            "Order": 7
+          }
+        ]
+    }
+]
